@@ -1,0 +1,4 @@
+Cancer,n,test n,Nested C-index,Full-cohort-weight C-index,Gap (leaky - nested),Train-fold weights,Full-cohort weights
+LUAD,440,132,0.557,0.555,-0.0018,1.000/0.000/0.000,0.385/0.385/0.230
+COAD,270,81,0.567,0.546,-0.0214,0.000/0.000/1.000,0.000/1.000/0.000
+
