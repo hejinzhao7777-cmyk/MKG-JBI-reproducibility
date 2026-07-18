@@ -1,0 +1,25 @@
+{
+  "cancers": [
+    "LUAD",
+    "LIHC",
+    "KIRC",
+    "COAD",
+    "STAD",
+    "HNSC"
+  ],
+  "repeats": 3,
+  "seeds": [
+    4200,
+    4201,
+    4202
+  ],
+  "bootstrap_B": 3,
+  "stage1_rf_trees": 50,
+  "rf_jobs": 4,
+  "pgd_max_iter": 80,
+  "pgd_power_iter": 4,
+  "outputs": {
+    "raw": "F:\\Claude\\MKG\\GR\u7b2c\u4e8c\u9879\u5de5\u4f5c_\u6574\u7406\\09_JBI_SUBMISSION_LOCK\\MKG_ROUTING_STABILITY_AUDIT.csv",
+    "summary": "F:\\Claude\\MKG\\GR\u7b2c\u4e8c\u9879\u5de5\u4f5c_\u6574\u7406\\09_JBI_SUBMISSION_LOCK\\MKG_ROUTING_STABILITY_SUMMARY.csv"
+  }
+}
