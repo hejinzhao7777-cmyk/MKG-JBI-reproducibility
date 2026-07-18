@@ -1,0 +1,82 @@
+{
+  "lock_name": "MKG_JBI_SUBMISSION_LOCK",
+  "created_at": "2026-07-05T18:59:22",
+  "cancers": [
+    "LUAD",
+    "LIHC",
+    "KIRC",
+    "COAD",
+    "STAD",
+    "HNSC"
+  ],
+  "primary_external": {
+    "LUAD": "GSE31210",
+    "LIHC": "GSE14520",
+    "KIRC": "GSE29609",
+    "COAD": "GSE39582",
+    "STAD": "GSE84437",
+    "HNSC": "GSE65858"
+  },
+  "final_config": {
+    "lambda1": 0.2,
+    "lambda2": 50.0,
+    "gamma": 10.0,
+    "top_k": 20,
+    "bootstrap_B": 30,
+    "stage1_rf_trees": 300,
+    "rsf_trees": 100,
+    "deepsurv_epochs": 50,
+    "pgd_max_iter": 300,
+    "pgd_power_iter": 8,
+    "rbo": "normalized truncated RBO@20, p=0.9",
+    "no_relation_baseline": "zero Laplacian L0=0",
+    "negative_gain_rule": "reject all graph layers and use no-relation selector"
+  },
+  "step_exit_codes": {
+    "redraw_fig2_submission_weights": 0,
+    "redraw_fig3_submission_generalization": 0,
+    "routing_reliability_simulation": 0,
+    "expanded_stability_baselines_jbi": 0,
+    "redraw_fig4_stability_normalized": 0,
+    "generate_fig1_jbi_framework": 0,
+    "pdflatex_1": 0,
+    "pdflatex_2": 0,
+    "pdflatex_3": 0
+  },
+  "outputs": {
+    "combined_final_config": "F:\\Claude\\MKG\\GR第二项工作_整理\\09_JBI_SUBMISSION_LOCK\\final_config_comparison_ALL_LOCKED.json",
+    "weights": "F:\\Claude\\MKG\\GR第二项工作_整理\\09_JBI_SUBMISSION_LOCK\\tables\\Table_JBI_LOCK_weights.csv",
+    "training_cindex": "F:\\Claude\\MKG\\GR第二项工作_整理\\09_JBI_SUBMISSION_LOCK\\tables\\Table_JBI_LOCK_training_cindex.csv",
+    "external_cindex": "F:\\Claude\\MKG\\GR第二项工作_整理\\09_JBI_SUBMISSION_LOCK\\tables\\Table_JBI_LOCK_external_cindex.csv",
+    "top20": "F:\\Claude\\MKG\\GR第二项工作_整理\\09_JBI_SUBMISSION_LOCK\\tables\\Table_JBI_LOCK_top20.csv"
+  },
+  "hashes": {
+    "F:\\Claude\\MKG\\GR第二项工作_整理\\06_新实验结果\\final_config_comparison.py": "a94a432e917b87150110cd3b081b4264d5505403a6245f2f94501fda16b38c08",
+    "F:\\Claude\\MKG\\GR第二项工作_整理\\06_新实验结果\\nested_deleakage.py": "147928c4a77abb11330cbc0e1000eb3e14322335916887ac8e8217b041ca2a85",
+    "F:\\Claude\\MKG\\GR第二项工作_整理\\06_新实验结果\\routing_reliability_simulation.py": "483e343c972fa898b043adda044560d6ed81acb7a47a002fcd96f92cd7d12651",
+    "F:\\Claude\\MKG\\GR第二项工作_整理\\06_新实验结果\\run_jbi_lock_pipeline.py": "038be336d68321d1ab6cf025c2061e5b65aff0c5f4f0c1f7e69d4725ec1b6da1",
+    "F:\\Claude\\MKG\\GR第二项工作_整理\\06_新实验结果\\redraw_fig2_submission_weights.py": "7d03caf7952166b66745f4d0f199c6e6e19c919ad3054ae8701574ac4553dc0e",
+    "F:\\Claude\\MKG\\GR第二项工作_整理\\06_新实验结果\\redraw_fig3_submission_generalization.py": "f5249394497f3247e3eaca2e23ce77ad3d950e292ed994f271eaa9fc5b53fb55",
+    "F:\\Claude\\MKG\\GR第二项工作_整理\\06_新实验结果\\submission_delta_audit.py": "ad1156aca5f33336992acc5baaf2aefc20afeb5a059412be55c49de82d9270e0",
+    "F:\\Claude\\MKG\\GR第二项工作_整理\\07_论文初稿\\MKG_JBI.tex": "7a6c48e522e07b42ee6ef2dd7572b8857dce31157407c9b4df7e12ac516f197d",
+    "F:\\Claude\\MKG\\GR第二项工作_整理\\07_论文初稿\\MKG_JBI.pdf": "2aa85fecb6f683e338d230b3edeef0839052cd2c6840f2e956535e68bdad8678",
+    "F:\\Claude\\MKG\\GR第二项工作_整理\\07_论文初稿\\MKG_JBI_LOCK.pdf": "052df3119c2586eade0087bbb242f748ec607c6c7a1b8e5f2d01695b59c8baff",
+    "F:\\Claude\\MKG\\GR第二项工作_整理\\07_论文初稿\\MKG_JBI_Supplementary_Methods.tex": "11540af23b9137963ac2a09268f1ea3579b525adadf4e92df27cdcd7ee0bcbde",
+    "F:\\Claude\\MKG\\GR第二项工作_整理\\07_论文初稿\\MKG_JBI_Supplementary_Methods.pdf": "7e0fff46877e8333b6fae220070e2d3e805a562f1d6fec4d25095f515f241282",
+    "F:\\Claude\\MKG\\GR第二项工作_整理\\07_论文初稿\\MKG_JBI_elsarticle.tex": "b5791fe5e6e982ffba25a8c54ab75d97b5fd3947daf66dba189b1b8af1c17852",
+    "F:\\Claude\\MKG\\GR第二项工作_整理\\07_论文初稿\\MKG_JBI_elsarticle.pdf": "69de0c836a55306604eb190ec499653be95f4adb46b50b0fe4d7fbf972fd949e",
+    "F:\\Claude\\MKG\\GR第二项工作_整理\\07_论文初稿\\make_elsarticle_jbi.py": "de151c0678bfa4d78a05a7a692661cb57059feb9cc62e0544bc632ed7168c636",
+    "F:\\Claude\\MKG\\GR第二项工作_整理\\07_论文初稿\\figures\\Fig1_MKG_complete_framework.pdf": "0b8af1699b433b5ae7428abf3470ffa0b6da89432db669d16a8e829c9cf64ef3",
+    "F:\\Claude\\MKG\\GR第二项工作_整理\\07_论文初稿\\figures\\Fig2_omics_weights.pdf": "a3128e164f1622ae70881502a067942b57233ae6c916714f54644032565a8bac",
+    "F:\\Claude\\MKG\\GR第二项工作_整理\\07_论文初稿\\figures\\Fig3_generalization.pdf": "8a294d5cb40305630555d7dc155d04ec6356b5fc4a65ac9d8e19fc2ef7543451",
+    "F:\\Claude\\MKG\\GR第二项工作_整理\\07_论文初稿\\figures\\FigJBI_routing_reliability_simulation.pdf": "20022ec4e68b3ac1c7a5b2e3970fdb0208b278919538584215751efbd6b59465",
+    "F:\\Claude\\MKG\\GR第二项工作_整理\\07_论文初稿\\figures\\FigJBI_expanded_stability_baselines.pdf": "257e44617e36f9c43befc5c741712cda8b13a9b2ec32ea9d406c90fc12646e9c",
+    "F:\\Claude\\MKG\\GR第二项工作_整理\\07_论文初稿\\figures\\Fig4_stability.pdf": "4864154d46dd9a18d0f450b1cd3043ace92f4a73a801474544f9ca42b4bbc102",
+    "F:\\Claude\\MKG\\GR第二项工作_整理\\06_新实验结果\\final_config_comparison_LUAD.json": "d218b3a3772ec27b56dee3291be7461016a3907b80a5ce721ff7a20008535241",
+    "F:\\Claude\\MKG\\GR第二项工作_整理\\06_新实验结果\\final_config_comparison_LIHC.json": "94b55aad23fc9105cc3292236f98e2433d75b0ce2472e6187efaa976ffb24609",
+    "F:\\Claude\\MKG\\GR第二项工作_整理\\06_新实验结果\\final_config_comparison_KIRC.json": "5842acbb720aa51a727a6325d34edbbd72ea0ba5ae4cfcec9e718d404f53abdf",
+    "F:\\Claude\\MKG\\GR第二项工作_整理\\06_新实验结果\\final_config_comparison_COAD.json": "610884d6308bf95864d4dfdffd9bb12903e3a8cc3355e2bcf3f116583590709c",
+    "F:\\Claude\\MKG\\GR第二项工作_整理\\06_新实验结果\\final_config_comparison_STAD.json": "d1d32b74e41aff50079c4a44b7be966c3a22958e2352596ae46fae8f5cca2c0b",
+    "F:\\Claude\\MKG\\GR第二项工作_整理\\06_新实验结果\\final_config_comparison_HNSC.json": "7769381290c230f9ac9e86c1a0aa607aaef26edf3633645f058f71e2b5d005eb"
+  }
+}
