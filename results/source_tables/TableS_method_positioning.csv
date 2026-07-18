@@ -1,0 +1,8 @@
+Method family,Uses multiple relation graphs,Can reject all relation graphs,Routes by stability plus validation utility,Outputs frozen transferable signature,Censoring-aware uncertainty audit
+Multi-view/sample fusion,Yes,Usually no,No,Usually no,No
+Graph-regularized Cox,Usually one fixed graph,No,No,Yes,No
+Stability selection,No,Not applicable,Stability only,Yes,No
+Supervised multi-omics learning,Yes,Usually no,Prediction utility only,Variable,Usually no
+Attention or GAT integration,Yes,Usually no,Learned attention or prediction loss,Variable,No
+MKG,Yes,Yes,Yes,Yes,Yes
+
