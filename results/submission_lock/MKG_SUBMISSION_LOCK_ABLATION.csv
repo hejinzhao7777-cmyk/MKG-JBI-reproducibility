@@ -1,0 +1,30 @@
+Cancer,External cohort,Scheme,c_index,source,n_matched
+LUAD,GSE31210,single_coexpr,0.6178927079987151,locked method GR-SAFS_v1,
+LUAD,GSE31210,equal,0.647928043687761,locked method v2_equal,
+LUAD,GSE31210,joint,0.6480886604561517,locked method GR-SAFS_v2,
+LUAD,GSE31210,stability_only,0.647928043687761,recomputed stability-only signature with frozen direction-score risk,14.0
+LIHC,GSE14520,single_coexpr,0.6584995663486557,locked method GR-SAFS_v1,
+LIHC,GSE14520,equal,0.6579213645562301,locked method v2_equal,
+LIHC,GSE14520,joint,0.6584995663486557,locked method GR-SAFS_v2,
+LIHC,GSE14520,stability_only,0.6579213645562301,recomputed stability-only signature with frozen direction-score risk,17.0
+KIRC,GSE29609,single_coexpr,0.2823275862068966,locked method GR-SAFS_v1,
+KIRC,GSE29609,equal,0.28663793103448276,locked method v2_equal,
+KIRC,GSE29609,joint,0.2823275862068966,locked method GR-SAFS_v2,
+KIRC,GSE29609,stability_only,0.2801724137931034,recomputed stability-only signature with frozen direction-score risk,18.0
+COAD,GSE39582,single_coexpr,0.5169506628099854,locked method GR-SAFS_v1,
+COAD,GSE39582,equal,0.5155523873497196,locked method v2_equal,
+COAD,GSE39582,joint,0.5156072216814948,locked method GR-SAFS_v2,
+COAD,GSE39582,stability_only,0.5155523873497196,recomputed stability-only signature with frozen direction-score risk,17.0
+STAD,GSE84437,single_coexpr,0.5428482149832045,locked method GR-SAFS_v1,
+STAD,GSE84437,equal,0.5463166940082806,locked method v2_equal,
+STAD,GSE84437,joint,0.5470822591985001,locked method GR-SAFS_v2,
+STAD,GSE84437,stability_only,0.5463323177876729,recomputed stability-only signature with frozen direction-score risk,19.0
+HNSC,GSE65858,single_coexpr,0.5407738459654708,locked method GR-SAFS_v1,
+HNSC,GSE65858,equal,0.5406514019835925,locked method v2_equal,
+HNSC,GSE65858,joint,0.5390596302191747,locked method GR-SAFS_v2,
+HNSC,GSE65858,stability_only,0.5406514019835925,recomputed stability-only signature with frozen direction-score risk,20.0
+Mean excl. KIRC,-,single_coexpr,0.5753929996212063,"mean over LUAD, LIHC, COAD, STAD, HNSC",
+Mean excl. KIRC,-,equal,0.5816739783171168,"mean over LUAD, LIHC, COAD, STAD, HNSC",
+Mean excl. KIRC,-,stability_only,0.5816771030729952,"mean over LUAD, LIHC, COAD, STAD, HNSC",
+Mean excl. KIRC,-,joint,0.5816674675807953,"mean over LUAD, LIHC, COAD, STAD, HNSC",
+
