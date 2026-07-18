@@ -1,0 +1,6 @@
+Cancer,n,test_n,bootstrap_B,train_only_C_index,full_weight_C_index,gap_full_minus_train_only,train_weight_mode,full_weight_mode,train_weights_coexpr_meth_cnv,full_weights_coexpr_meth_cnv
+LUAD,440,132,3,0.5357,0.544,0.0083,dual_driven,reject_all_graphs,0.0/1.0/0.0,0.0/0.0/0.0
+COAD,270,81,3,0.6045,0.5959,-0.0086,dual_driven,reject_all_graphs,0.0/0.0/1.0,0.0/0.0/0.0
+LIHC,358,108,3,0.69,0.6845,-0.0055,dual_driven,dual_driven,0.176/0.824/0.0,0.451/0.0/0.549
+Mean,,,3,0.6101,0.6081,-0.0019,,,,
+
