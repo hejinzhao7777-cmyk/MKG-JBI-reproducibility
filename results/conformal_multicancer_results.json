@@ -1,0 +1,805 @@
+{
+  "alpha": 0.1,
+  "rows": [
+    {
+      "cancer": "LUAD",
+      "horizon": "1y",
+      "n_total": 440,
+      "n_train": 220,
+      "n_cal": 110,
+      "n_test": 110,
+      "m_cal_global": 98,
+      "m_test_usable": 96,
+      "coverage_global": 0.9375,
+      "width_global": 0.8373852938031886,
+      "coverage_local": 0.9479166666666666,
+      "width_local": 0.47727142863305033,
+      "width_reduction": 0.36011386517013827,
+      "n_signature_genes": 20
+    },
+    {
+      "cancer": "LUAD",
+      "horizon": "3y",
+      "n_total": 440,
+      "n_train": 220,
+      "n_cal": 110,
+      "n_test": 110,
+      "m_cal_global": 55,
+      "m_test_usable": 57,
+      "coverage_global": 0.9122807017543859,
+      "width_global": 0.9882083100088681,
+      "coverage_local": 0.8421052631578947,
+      "width_local": 0.9843753010342794,
+      "width_reduction": 0.003833008974588714,
+      "n_signature_genes": 20
+    },
+    {
+      "cancer": "LUAD",
+      "horizon": "5y",
+      "n_total": 440,
+      "n_train": 220,
+      "n_cal": 110,
+      "n_test": 110,
+      "m_cal_global": 50,
+      "m_test_usable": 51,
+      "coverage_global": 0.9607843137254902,
+      "width_global": 0.9354817751865885,
+      "coverage_local": 0.8823529411764706,
+      "width_local": 0.9398129694600618,
+      "width_reduction": -0.004331194273473282,
+      "n_signature_genes": 20
+    },
+    {
+      "cancer": "LIHC",
+      "horizon": "1y",
+      "n_total": 358,
+      "n_train": 179,
+      "n_cal": 89,
+      "n_test": 90,
+      "m_cal_global": 77,
+      "m_test_usable": 80,
+      "coverage_global": 0.95,
+      "width_global": 0.8961514679004811,
+      "coverage_local": 0.95,
+      "width_local": 0.717095896278598,
+      "width_reduction": 0.17905557162188301,
+      "n_signature_genes": 20
+    },
+    {
+      "cancer": "LIHC",
+      "horizon": "3y",
+      "n_total": 358,
+      "n_train": 179,
+      "n_cal": 89,
+      "n_test": 90,
+      "m_cal_global": 46,
+      "m_test_usable": 48,
+      "coverage_global": 1.0,
+      "width_global": 0.9906153697597008,
+      "coverage_local": 0.9791666666666666,
+      "width_local": 0.9854006962035986,
+      "width_reduction": 0.005214673556102167,
+      "n_signature_genes": 20
+    },
+    {
+      "cancer": "LIHC",
+      "horizon": "5y",
+      "n_total": 358,
+      "n_train": 179,
+      "n_cal": 89,
+      "n_test": 90,
+      "m_cal_global": 36,
+      "m_test_usable": 37,
+      "coverage_global": 0.918918918918919,
+      "width_global": 0.9403951407005637,
+      "coverage_local": 0.8108108108108109,
+      "width_local": 0.7110425114029713,
+      "width_reduction": 0.22935262929759248,
+      "n_signature_genes": 20
+    },
+    {
+      "cancer": "KIRC",
+      "horizon": "1y",
+      "n_total": 311,
+      "n_train": 155,
+      "n_cal": 77,
+      "n_test": 79,
+      "m_cal_global": 69,
+      "m_test_usable": 67,
+      "coverage_global": 0.9253731343283582,
+      "width_global": 0.8040970278850794,
+      "coverage_local": 0.8955223880597015,
+      "width_local": 0.5291553190994699,
+      "width_reduction": 0.27494170878560953,
+      "n_signature_genes": 20
+    },
+    {
+      "cancer": "KIRC",
+      "horizon": "3y",
+      "n_total": 311,
+      "n_train": 155,
+      "n_cal": 77,
+      "n_test": 79,
+      "m_cal_global": 55,
+      "m_test_usable": 53,
+      "coverage_global": 0.8301886792452831,
+      "width_global": 0.8837691948271987,
+      "coverage_local": 0.8679245283018868,
+      "width_local": 0.9250267758655787,
+      "width_reduction": -0.041257581038379953,
+      "n_signature_genes": 20
+    },
+    {
+      "cancer": "KIRC",
+      "horizon": "5y",
+      "n_total": 311,
+      "n_train": 155,
+      "n_cal": 77,
+      "n_test": 79,
+      "m_cal_global": 41,
+      "m_test_usable": 40,
+      "coverage_global": 0.925,
+      "width_global": 0.9293101068320961,
+      "coverage_local": 0.9,
+      "width_local": 0.9226160864810916,
+      "width_reduction": 0.006694020351004526,
+      "n_signature_genes": 20
+    },
+    {
+      "cancer": "COAD",
+      "horizon": "1y",
+      "n_total": 270,
+      "n_train": 135,
+      "n_cal": 67,
+      "n_test": 68,
+      "m_cal_global": 63,
+      "m_test_usable": 63,
+      "coverage_global": 0.9365079365079365,
+      "width_global": 0.8421891037769701,
+      "coverage_local": 0.9523809523809523,
+      "width_local": 0.7817874791143784,
+      "width_reduction": 0.06040162466259169,
+      "n_signature_genes": 20
+    },
+    {
+      "cancer": "COAD",
+      "horizon": "3y",
+      "n_total": 270,
+      "n_train": 135,
+      "n_cal": 67,
+      "n_test": 68,
+      "m_cal_global": 30,
+      "m_test_usable": 32,
+      "coverage_global": 0.9375,
+      "width_global": 0.9758791637704702,
+      "coverage_local": 0.875,
+      "width_local": 0.9656843351262282,
+      "width_reduction": 0.010194828644242038,
+      "n_signature_genes": 20
+    },
+    {
+      "cancer": "COAD",
+      "horizon": "5y",
+      "n_total": 270,
+      "n_train": 135,
+      "n_cal": 67,
+      "n_test": 68,
+      "m_cal_global": 24,
+      "m_test_usable": 27,
+      "coverage_global": 0.8888888888888888,
+      "width_global": 0.9692721095200478,
+      "coverage_local": 0.8888888888888888,
+      "width_local": 0.9713663931866997,
+      "width_reduction": -0.002094283666651875,
+      "n_signature_genes": 20
+    },
+    {
+      "cancer": "STAD",
+      "horizon": "1y",
+      "n_total": 362,
+      "n_train": 181,
+      "n_cal": 90,
+      "n_test": 91,
+      "m_cal_global": 76,
+      "m_test_usable": 79,
+      "coverage_global": 0.9493670886075949,
+      "width_global": 0.974480814158077,
+      "coverage_local": 0.9620253164556962,
+      "width_local": 0.9895616811533614,
+      "width_reduction": -0.015080866995284437,
+      "n_signature_genes": 20
+    },
+    {
+      "cancer": "STAD",
+      "horizon": "3y",
+      "n_total": 362,
+      "n_train": 181,
+      "n_cal": 90,
+      "n_test": 91,
+      "m_cal_global": 42,
+      "m_test_usable": 47,
+      "coverage_global": 0.9574468085106383,
+      "width_global": 0.9772991658644179,
+      "coverage_local": 0.9148936170212766,
+      "width_local": 0.9740332323291887,
+      "width_reduction": 0.003265933535229193,
+      "n_signature_genes": 20
+    },
+    {
+      "cancer": "STAD",
+      "horizon": "5y",
+      "n_total": 362,
+      "n_train": 181,
+      "n_cal": 90,
+      "n_test": 91,
+      "m_cal_global": 36,
+      "m_test_usable": 38,
+      "coverage_global": 1.0,
+      "width_global": 0.9134263425087833,
+      "coverage_local": 1.0,
+      "width_local": 0.9375126282619782,
+      "width_reduction": -0.024086285753194936,
+      "n_signature_genes": 20
+    },
+    {
+      "cancer": "HNSC",
+      "horizon": "1y",
+      "n_total": 513,
+      "n_train": 256,
+      "n_cal": 128,
+      "n_test": 129,
+      "m_cal_global": 119,
+      "m_test_usable": 121,
+      "coverage_global": 0.9090909090909091,
+      "width_global": 0.8928968803635071,
+      "coverage_local": 0.9586776859504132,
+      "width_local": 0.8759294269066595,
+      "width_reduction": 0.01696745345684758,
+      "n_signature_genes": 20
+    },
+    {
+      "cancer": "HNSC",
+      "horizon": "3y",
+      "n_total": 513,
+      "n_train": 256,
+      "n_cal": 128,
+      "n_test": 129,
+      "m_cal_global": 75,
+      "m_test_usable": 85,
+      "coverage_global": 0.9411764705882353,
+      "width_global": 0.971019035431644,
+      "coverage_local": 0.9529411764705882,
+      "width_local": 0.9819599858707134,
+      "width_reduction": -0.010940950439069397,
+      "n_signature_genes": 20
+    },
+    {
+      "cancer": "HNSC",
+      "horizon": "5y",
+      "n_total": 513,
+      "n_train": 256,
+      "n_cal": 128,
+      "n_test": 129,
+      "m_cal_global": 59,
+      "m_test_usable": 61,
+      "coverage_global": 0.9344262295081968,
+      "width_global": 0.9490690172401811,
+      "coverage_local": 0.9508196721311475,
+      "width_local": 0.9728807879811437,
+      "width_reduction": -0.023811770740962634,
+      "n_signature_genes": 20
+    }
+  ],
+  "details": {
+    "LUAD": {
+      "n_total": 440,
+      "n_train": 220,
+      "n_cal": 110,
+      "n_test": 110,
+      "signature_genes": [
+        "DKK1",
+        "IRX5",
+        "GLS2",
+        "DAAM2",
+        "PITX3",
+        "CYP17A1",
+        "PLEKHB1",
+        "FAM83A",
+        "INPP5J",
+        "GNMT",
+        "BZRAP1",
+        "GPR98",
+        "ADH4",
+        "ECT2",
+        "LINGO2",
+        "CLEC17A",
+        "PPP1R13B",
+        "VAX1",
+        "ERO1L",
+        "ZFP3"
+      ],
+      "risk_thresholds": [
+        17.45860945505552,
+        30.92045179943092
+      ],
+      "horizons": {
+        "1y": {
+          "q_global": 0.7097979413327595,
+          "local_q": {
+            "0": {
+              "q": 0.1271724047602454,
+              "m_cal": 24
+            },
+            "1": {
+              "q": 0.1540465253491245,
+              "m_cal": 34
+            },
+            "2": {
+              "q": 0.7757680283061592,
+              "m_cal": 40
+            }
+          }
+        },
+        "3y": {
+          "q_global": 0.8042336041294654,
+          "local_q": {
+            "0": {
+              "q": 0.8426188097142847,
+              "m_cal": 10
+            },
+            "1": {
+              "q": 0.7552980399581217,
+              "m_cal": 19
+            },
+            "2": {
+              "q": 0.7128043511162764,
+              "m_cal": 26
+            }
+          }
+        },
+        "5y": {
+          "q_global": 0.6144398098218473,
+          "local_q": {
+            "0": {
+              "q": 0.6483685103520089,
+              "m_cal": 9
+            },
+            "1": {
+              "q": 0.5210929791787281,
+              "m_cal": 19
+            },
+            "2": {
+              "q": 0.6427286733024656,
+              "m_cal": 22
+            }
+          }
+        }
+      }
+    },
+    "LIHC": {
+      "n_total": 358,
+      "n_train": 179,
+      "n_cal": 89,
+      "n_test": 90,
+      "signature_genes": [
+        "CBX2",
+        "SOCS2",
+        "ADAMTS5",
+        "GHR",
+        "SLC7A11",
+        "SEC31B",
+        "LPCAT1",
+        "KIF20A",
+        "SRL",
+        "PDE6A",
+        "ENO1",
+        "MTHFS",
+        "FER1L5",
+        "EPO",
+        "LIMS2",
+        "SPP1",
+        "PSRC1",
+        "RAMP3",
+        "GP1BA",
+        "LCAT"
+      ],
+      "risk_thresholds": [
+        14.300444397254061,
+        33.52869231885282
+      ],
+      "horizons": {
+        "1y": {
+          "q_global": 0.754126667229626,
+          "local_q": {
+            "0": {
+              "q": 0.10746886916271932,
+              "m_cal": 26
+            },
+            "1": {
+              "q": 0.8373447877481127,
+              "m_cal": 33
+            },
+            "2": {
+              "q": 0.749655118891919,
+              "m_cal": 18
+            }
+          }
+        },
+        "3y": {
+          "q_global": 0.8106291559113827,
+          "local_q": {
+            "0": {
+              "q": 0.883167955190966,
+              "m_cal": 17
+            },
+            "1": {
+              "q": 0.568504483620848,
+              "m_cal": 19
+            },
+            "2": {
+              "q": 0.8607186755587248,
+              "m_cal": 10
+            }
+          }
+        },
+        "5y": {
+          "q_global": 0.7201064053488199,
+          "local_q": {
+            "0": {
+              "q": 0.7809218154442366,
+              "m_cal": 12
+            },
+            "1": {
+              "q": 0.5909265767051202,
+              "m_cal": 16
+            },
+            "2": {
+              "q": 0.2777443606653728,
+              "m_cal": 8
+            }
+          }
+        }
+      }
+    },
+    "KIRC": {
+      "n_total": 311,
+      "n_train": 155,
+      "n_cal": 77,
+      "n_test": 79,
+      "signature_genes": [
+        "FOXA1",
+        "LCTL",
+        "HOXA2",
+        "CILP",
+        "PDK4",
+        "CYP3A7",
+        "PEX5L",
+        "MPV17L",
+        "DONSON",
+        "CYP3A4",
+        "FOXA2",
+        "OTX1",
+        "AMH",
+        "SHOX2",
+        "CHAC1",
+        "ADAM22",
+        "LPPR3",
+        "DNASE1L3",
+        "SEC61A2",
+        "ANKRD30B"
+      ],
+      "risk_thresholds": [
+        5.943891302458086,
+        18.521585216665205
+      ],
+      "horizons": {
+        "1y": {
+          "q_global": 0.6459465342745883,
+          "local_q": {
+            "0": {
+              "q": 0.026607054183338863,
+              "m_cal": 8
+            },
+            "1": {
+              "q": 0.11238816463101303,
+              "m_cal": 34
+            },
+            "2": {
+              "q": 0.8072591604142563,
+              "m_cal": 27
+            }
+          }
+        },
+        "3y": {
+          "q_global": 0.6407780262513508,
+          "local_q": {
+            "0": {
+              "q": 0.6407780262513508,
+              "m_cal": 55
+            },
+            "1": {
+              "q": 0.8007308857359628,
+              "m_cal": 22
+            },
+            "2": {
+              "q": 0.6401359519912198,
+              "m_cal": 26
+            }
+          }
+        },
+        "5y": {
+          "q_global": 0.674800182497623,
+          "local_q": {
+            "0": {
+              "q": 0.674800182497623,
+              "m_cal": 41
+            },
+            "1": {
+              "q": 0.7896210345311714,
+              "m_cal": 15
+            },
+            "2": {
+              "q": 0.5996378624917664,
+              "m_cal": 22
+            }
+          }
+        }
+      }
+    },
+    "COAD": {
+      "n_total": 270,
+      "n_train": 135,
+      "n_cal": 67,
+      "n_test": 68,
+      "signature_genes": [
+        "TAS2R20",
+        "LRRC69",
+        "GPR156",
+        "PRR4",
+        "ANKRD24",
+        "KRT4",
+        "PANX2",
+        "PPFIA4",
+        "NKAIN4",
+        "KNDC1",
+        "MBL1P",
+        "C1orf61",
+        "KCNMB3",
+        "CRHR1",
+        "TIGD1",
+        "GABRD",
+        "PPARGC1A",
+        "CCDC114",
+        "HMX2",
+        "HIST2H2BE"
+      ],
+      "risk_thresholds": [
+        4.137043500483496,
+        9.617334263334225
+      ],
+      "horizons": {
+        "1y": {
+          "q_global": 0.7411014294356469,
+          "local_q": {
+            "0": {
+              "q": 0.05171340223830423,
+              "m_cal": 10
+            },
+            "1": {
+              "q": 0.8579241753721687,
+              "m_cal": 30
+            },
+            "2": {
+              "q": 0.7680411426205285,
+              "m_cal": 23
+            }
+          }
+        },
+        "3y": {
+          "q_global": 0.756707022447533,
+          "local_q": {
+            "0": {
+              "q": 0.756707022447533,
+              "m_cal": 30
+            },
+            "1": {
+              "q": 0.7751602503231757,
+              "m_cal": 13
+            },
+            "2": {
+              "q": 0.5675803438219489,
+              "m_cal": 13
+            }
+          }
+        },
+        "5y": {
+          "q_global": 0.690924327699476,
+          "local_q": {
+            "0": {
+              "q": 0.690924327699476,
+              "m_cal": 24
+            },
+            "1": {
+              "q": 0.7103355240724727,
+              "m_cal": 11
+            },
+            "2": {
+              "q": 0.6900803626397805,
+              "m_cal": 12
+            }
+          }
+        }
+      }
+    },
+    "STAD": {
+      "n_total": 362,
+      "n_train": 181,
+      "n_cal": 90,
+      "n_test": 91,
+      "signature_genes": [
+        "APOH",
+        "PCDHB5",
+        "SERPINE1",
+        "APOD",
+        "CD82",
+        "PRR15L",
+        "NT5E",
+        "RAB11FIP4",
+        "MKNK2",
+        "MATN3",
+        "SYN2",
+        "TF",
+        "PACS1",
+        "CPNE8",
+        "TNFAIP2",
+        "ANKRD1",
+        "FAAH",
+        "EPHB3",
+        "LANCL2",
+        "ZBTB7B"
+      ],
+      "risk_thresholds": [
+        16.505991162200736,
+        32.268188663183885
+      ],
+      "horizons": {
+        "1y": {
+          "q_global": 0.8175564046589466,
+          "local_q": {
+            "0": {
+              "q": 0.894042066934969,
+              "m_cal": 13
+            },
+            "1": {
+              "q": 0.8314575248738258,
+              "m_cal": 43
+            },
+            "2": {
+              "q": 0.7469045172891924,
+              "m_cal": 20
+            }
+          }
+        },
+        "3y": {
+          "q_global": 0.6163443200178625,
+          "local_q": {
+            "0": {
+              "q": 0.6163443200178625,
+              "m_cal": 42
+            },
+            "1": {
+              "q": 0.5570078034696814,
+              "m_cal": 20
+            },
+            "2": {
+              "q": 0.6373203225417268,
+              "m_cal": 15
+            }
+          }
+        },
+        "5y": {
+          "q_global": 0.5705173880349296,
+          "local_q": {
+            "0": {
+              "q": 0.5705173880349296,
+              "m_cal": 36
+            },
+            "1": {
+              "q": 0.5204565180027907,
+              "m_cal": 15
+            },
+            "2": {
+              "q": 0.690752628201377,
+              "m_cal": 15
+            }
+          }
+        }
+      }
+    },
+    "HNSC": {
+      "n_total": 513,
+      "n_train": 256,
+      "n_cal": 128,
+      "n_test": 129,
+      "signature_genes": [
+        "MASP1",
+        "CELSR3",
+        "EFNB2",
+        "FRMD5",
+        "DKK1",
+        "IGJ",
+        "KIAA0125",
+        "KLK3",
+        "FAM162B",
+        "FGD3",
+        "ZNF763",
+        "CD19",
+        "LCNL1",
+        "SLC35E2",
+        "TCP11",
+        "FAM65C",
+        "OLR1",
+        "MEIS1",
+        "BLK",
+        "FLT3"
+      ],
+      "risk_thresholds": [
+        23.75843697931291,
+        51.34607668620308
+      ],
+      "horizons": {
+        "1y": {
+          "q_global": 0.7072258253585219,
+          "local_q": {
+            "0": {
+              "q": 0.15275070938743457,
+              "m_cal": 20
+            },
+            "1": {
+              "q": 0.8458459942713322,
+              "m_cal": 62
+            },
+            "2": {
+              "q": 0.7126204112565107,
+              "m_cal": 37
+            }
+          }
+        },
+        "3y": {
+          "q_global": 0.6699772458646375,
+          "local_q": {
+            "0": {
+              "q": 0.8673784484648855,
+              "m_cal": 8
+            },
+            "1": {
+              "q": 0.6455650769357947,
+              "m_cal": 39
+            },
+            "2": {
+              "q": 0.6732382234952154,
+              "m_cal": 28
+            }
+          }
+        },
+        "5y": {
+          "q_global": 0.615444168330585,
+          "local_q": {
+            "0": {
+              "q": 0.615444168330585,
+              "m_cal": 59
+            },
+            "1": {
+              "q": 0.599615225227209,
+              "m_cal": 31
+            },
+            "2": {
+              "q": 0.6915044791107252,
+              "m_cal": 24
+            }
+          }
+        }
+      }
+    }
+  }
+}
