@@ -1,0 +1,8 @@
+Cancer,External cohort,Role,Expression platform,Analyzed n,OS events,Median follow-up days,Endpoint,Preprocessing and transfer protocol
+LUAD,GSE31210,Primary external validation,Affymetrix expression microarray,226,35,1756.0,Overall survival,Probe-to-gene mapping; duplicate probes collapsed; cohort-wise outcome-free standardization; frozen TCGA signature/direction/score
+LIHC,GSE14520,Primary external validation,Affymetrix GPL3921/GPL571 expression microarray,221,85,1592.0,Overall survival,Probe-to-gene mapping; duplicate probes collapsed; cohort-wise outcome-free standardization; frozen TCGA signature/direction/score
+KIRC,GSE29609,Platform-mismatched stress test,Agilent expression microarray,39,17,1217.6,Overall survival,Probe-to-gene mapping; duplicate probes collapsed; cohort-wise outcome-free standardization; frozen TCGA signature/direction/score
+COAD,GSE39582,Primary external validation,Affymetrix GPL570 expression microarray,573,190,1613.3,Overall survival,Probe-to-gene mapping; duplicate probes collapsed; cohort-wise outcome-free standardization; frozen TCGA signature/direction/score
+STAD,GSE84437,Primary external validation,Affymetrix GPL570 expression microarray,431,207,2130.8,Overall survival,Probe-to-gene mapping; duplicate probes collapsed; cohort-wise outcome-free standardization; frozen TCGA signature/direction/score
+HNSC,GSE65858,Primary external validation,Illumina HumanHT-12 expression microarray,270,94,840.0,Overall survival,Probe-to-gene mapping; duplicate probes collapsed; cohort-wise outcome-free standardization; frozen TCGA signature/direction/score
+
