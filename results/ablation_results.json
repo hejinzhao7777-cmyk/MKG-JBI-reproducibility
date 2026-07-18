@@ -1,0 +1,44 @@
+{
+  "LUAD": {
+    "single_coexpr": 0.5935,
+    "equal": 0.6153,
+    "stability_only": 0.6153,
+    "joint": 0.6153
+  },
+  "LIHC": {
+    "single_coexpr": 0.674,
+    "equal": 0.6764,
+    "stability_only": 0.6764,
+    "joint": 0.6764
+  },
+  "KIRC": {
+    "single_coexpr": 0.2802,
+    "equal": 0.2629,
+    "stability_only": 0.2866,
+    "joint": 0.2802
+  },
+  "COAD": {
+    "single_coexpr": 0.5251,
+    "equal": 0.5235,
+    "stability_only": 0.5235,
+    "joint": 0.5367
+  },
+  "STAD": {
+    "single_coexpr": 0.544,
+    "equal": 0.5504,
+    "stability_only": 0.544,
+    "joint": 0.544
+  },
+  "HNSC": {
+    "single_coexpr": 0.5403,
+    "equal": 0.5446,
+    "stability_only": 0.5342,
+    "joint": 0.5342
+  },
+  "_mean_exclKIRC": {
+    "single_coexpr": 0.5754,
+    "equal": 0.582,
+    "stability_only": 0.5787,
+    "joint": 0.5813
+  }
+}
