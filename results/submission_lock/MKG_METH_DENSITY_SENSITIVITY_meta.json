@@ -1,0 +1,23 @@
+{
+  "cancers": [
+    "COAD",
+    "HNSC"
+  ],
+  "variants": [
+    "current",
+    "top200",
+    "top50"
+  ],
+  "seed": 6200,
+  "bootstrap_B": 3,
+  "stage1_rf_trees": 50,
+  "rf_jobs": 4,
+  "pgd_max_iter": 80,
+  "pgd_power_iter": 4,
+  "sparsification": "current graph or row-wise top-k absolute methylation edges, symmetrized by maximum",
+  "laplacian_normalization": "row-sum upper-bound scaling, applied uniformly to coexpression, CNV, and all methylation-density variants for this sensitivity audit",
+  "outputs": {
+    "raw": "GR\u7b2c\u4e8c\u9879\u5de5\u4f5c_\u6574\u7406\\09_JBI_SUBMISSION_LOCK\\MKG_METH_DENSITY_SENSITIVITY.csv",
+    "summary": "GR\u7b2c\u4e8c\u9879\u5de5\u4f5c_\u6574\u7406\\09_JBI_SUBMISSION_LOCK\\MKG_METH_DENSITY_SENSITIVITY_summary.csv"
+  }
+}
