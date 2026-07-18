@@ -1,0 +1,4 @@
+cancer,route_modes,mean_pairwise_rbo,mean_pairwise_jaccard,external_cindex_min,external_cindex_max,external_cindex_range
+HNSC,no_relation / coexpr / cnv,0.75748208501094,0.6480862133036046,0.510530182441533,0.5549161258724133,0.044385943430880315
+STAD,coexpr / no_relation / meth,0.6055958840782664,0.40012516356602373,0.5493945785485509,0.5557534567611905,0.006358878212639585
+
