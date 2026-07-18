@@ -1,0 +1,9 @@
+Cancer,n,Test n,Bootstrap B,Train-only C-index,Full-weight C-index,Full-minus-train-only,Train-fold routing,Full-cohort routing
+LUAD,440,132,3,0.5357,0.5440,0.0083,dual-driven,reject-all-graphs
+LIHC,358,108,3,0.6900,0.6845,-0.0055,dual-driven,dual-driven
+KIRC,311,94,3,0.6512,0.6489,-0.0023,dual-driven,dual-driven
+COAD,270,81,3,0.6045,0.5959,-0.0086,dual-driven,reject-all-graphs
+STAD,362,109,3,0.5731,0.5582,-0.0149,dual-driven,reject-all-graphs
+HNSC,513,154,3,0.6175,0.6099,-0.0076,dual-driven,dual-driven
+Mean,,,,0.6120,0.6069,-0.0051,,
+
