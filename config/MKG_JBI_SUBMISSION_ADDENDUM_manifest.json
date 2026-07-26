@@ -1,0 +1,54 @@
+{
+  "manifest_version": "1.0",
+  "generated_at": "2026-07-26T16:00:00+08:00",
+  "purpose": "JBI pre-submission addendum: confidence intervals, full train-only graph audit, and final manuscript lock",
+  "external_cindex_audit": {
+    "patient_level_bootstrap_replicates": 1000,
+    "cancer_level_bootstrap_replicates": 50000,
+    "confidence_level": 0.95,
+    "primary_external_cancers": ["LUAD", "LIHC", "COAD", "STAD", "HNSC"],
+    "stress_test_cancer": "KIRC"
+  },
+  "full_train_only_graph_audit": {
+    "cancers": ["LUAD", "COAD", "LIHC"],
+    "split": "stratified 70/30",
+    "random_seed": 42,
+    "bootstrap_replicates": 10,
+    "stage1_random_forest_trees": 100,
+    "projected_gradient_max_iterations": 150,
+    "training_only_steps": [
+      "expression scaling",
+      "Null-Cox residual estimation",
+      "coexpression graph construction",
+      "methylation-expression graph construction",
+      "CNV graph construction",
+      "relation routing",
+      "Top-20 selection",
+      "reduced ridge-Cox fitting"
+    ],
+    "mean_fixed_minus_reconstructed_cindex": -0.0024938018,
+    "interpretation": "No consistent optimism was observed in these three prespecified one-split audits; this is not repeated nested cross-validation."
+  },
+  "jbi_format_checks": {
+    "document_class": "cas-dc",
+    "main_text_words_texcount": 5728,
+    "abstract_words": 242,
+    "main_figures_and_tables": 8,
+    "main_pdf_pages": 12,
+    "supplement_pdf_pages": 9,
+    "undefined_citations_or_references": 0,
+    "float_too_large_errors": 0
+  },
+  "sha256": {
+    "submission_ci_audit.py": "1e2b9c67a8a3a4414f0198edeb5faeb85668ef057fc20b3141c1da1c5af5fe6e",
+    "full_train_only_graph_audit.py": "b9a05fcd74c566c2a318f5a88ddeff55bb0b4972b4a15a597be090247fda3b82",
+    "MKG_LOCKED_EXTERNAL_CINDEX_BOOTSTRAP_CI.csv": "066e74435d8c8c04cb68b62b3626b234096115a13169b5d6b2999f16bfc8e718",
+    "MKG_SUBMISSION_CONFIDENCE_INTERVALS.json": "119b5b225544def9054f07ce205aff291c99e300ac04adb27129d0b503ccc0c8",
+    "MKG_FULL_TRAIN_ONLY_GRAPH_AUDIT.csv": "fe587c96c306dc65dc158245b6a1d6ce71aa2acef32e3799a47908c3272845c8",
+    "MKG_FULL_TRAIN_ONLY_GRAPH_AUDIT.json": "5ac8fda0e205385b8dcb7cad34803c8b7df087cfa9baa4c39b2e3b92f79f6a3c",
+    "mkg.tex": "1df3c6b14c75cd645a58543ca062b32441f993b851761152a6ac9d8d2c4f301e",
+    "mkg.pdf": "0978f1be1a54de0d75ac16ce11effa21a6efd382b57411eecf40f1d63678cf0d",
+    "MKG_JBI_Supplementary_Methods_CAS_DC_20260707.tex": "7187ff0e77405704418dc0e8c0f7e9221776b8c122e8c56a7c2af23510557225",
+    "MKG_JBI_Supplementary_Methods_CAS_DC_20260707.pdf": "d0cda887a3e658b61a78b0687907fd114b7b059edb4d61288cf34dcede65d242"
+  }
+}
