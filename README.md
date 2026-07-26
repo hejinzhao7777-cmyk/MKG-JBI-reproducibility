@@ -32,13 +32,27 @@ set MKG_OUTPUT_ROOT=D:\\path\\to\\mkg_outputs
 python code/final_config_comparison.py LUAD LIHC KIRC COAD STAD HNSC
 ```
 
+The submission-level uncertainty audit reconstructs every frozen external score and obtains patient-bootstrap C-index intervals; it does not refit signatures:
+
+```bash
+python code/submission_ci_audit.py
+```
+
+The representative leakage audit rebuilds the co-expression, methylation--expression, and CNV graphs inside the training split for LUAD, COAD, and LIHC before routing and Top-20 selection:
+
+```bash
+python code/full_train_only_graph_audit.py
+```
+
+The latter is computationally intensive. Its bootstrap, random-forest, and PGD settings can be controlled with `FULL_GRAPH_AUDIT_BOOTSTRAP`, `FULL_GRAPH_AUDIT_RF_TREES`, and `FULL_GRAPH_AUDIT_PGD_ITER`; the manuscript-reported run settings are stored with the result JSON.
+
 ## Locked configuration
 
 The submission lock uses `lambda1=0.2`, `lambda2=50`, `gamma=10`, Top-20 signatures, 30 bootstrap resamples, normalized truncated RBO@20 (`p=0.9`), and a zero-Laplacian no-relation baseline. Full provenance, output hashes, and step exit codes are recorded in `config/MKG_JBI_SUBMISSION_LOCK_manifest.json`.
 
 ## Data and code availability
 
-The manuscript-ready availability wording is in `data/AVAILABILITY_STATEMENT.md`. Replace the GitHub URL and the future DOI placeholder after release. Do not claim that a DOI exists until a DOI-minting archive has actually been created.
+The manuscript-ready availability wording is in `data/AVAILABILITY_STATEMENT.md`. Do not claim that an archival DOI exists until a DOI-minting release has actually been created.
 
 ## Citation
 
