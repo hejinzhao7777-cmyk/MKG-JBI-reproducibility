@@ -12,3 +12,8 @@ The remaining scripts preserve the locked submission workflow and its specific a
 
 `results/` contains the locked outputs used by the manuscript, so numerical claims can be inspected without rerunning the compute-intensive workflow.
 
+Submission-facing audits:
+
+- `submission_ci_audit.py` reconstructs locked external molecular scores and estimates patient- and cancer-bootstrap confidence intervals.
+- `full_train_only_graph_audit.py` reconstructs all three graph layers within representative training splits before routing, selection, and held-out evaluation.
+
