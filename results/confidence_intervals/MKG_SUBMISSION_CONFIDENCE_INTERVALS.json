@@ -1,0 +1,129 @@
+{
+  "seed": 20260726,
+  "patient_bootstrap_replicates": 1000,
+  "cancer_bootstrap_replicates": 50000,
+  "primary_external_cohorts": {
+    "LUAD": "GSE31210",
+    "LIHC": "GSE14520",
+    "KIRC": "GSE29609",
+    "COAD": "GSE39582",
+    "STAD": "GSE84437",
+    "HNSC": "GSE65858"
+  },
+  "external_summary": {
+    "MKG": {
+      "mean_external_c_index": 0.5816674675807953,
+      "cancer_bootstrap_95_ci": [
+        0.5312831925999678,
+        0.6325293979442587
+      ],
+      "n_primary_cohorts": 5
+    },
+    "Uni-Cox": {
+      "mean_external_c_index": 0.5748348378728323,
+      "cancer_bootstrap_95_ci": [
+        0.5287466233794287,
+        0.6276381004856045
+      ],
+      "n_primary_cohorts": 5
+    },
+    "Cox-Lasso": {
+      "mean_external_c_index": 0.5159345406839881,
+      "cancer_bootstrap_95_ci": [
+        0.4803807371109996,
+        0.5585306086829753
+      ],
+      "n_primary_cohorts": 5
+    },
+    "Cox-EN": {
+      "mean_external_c_index": 0.5131854724173645,
+      "cancer_bootstrap_95_ci": [
+        0.4859998341413185,
+        0.5557919626112062
+      ],
+      "n_primary_cohorts": 5
+    },
+    "RSF": {
+      "mean_external_c_index": 0.4956111565123894,
+      "cancer_bootstrap_95_ci": [
+        0.47144309332278034,
+        0.5181598358837246
+      ],
+      "n_primary_cohorts": 5
+    },
+    "DeepSurv": {
+      "mean_external_c_index": 0.5253650664191457,
+      "cancer_bootstrap_95_ci": [
+        0.5034050754898811,
+        0.5551776839041128
+      ],
+      "n_primary_cohorts": 5
+    },
+    "paired_MKG_minus_Uni_Cox": [
+      {
+        "cancer": "LUAD",
+        "MKG_minus_Uni_Cox": -0.019595245743655565,
+        "patient_bootstrap_95_ci": [
+          -0.06397382074820987,
+          0.025789501324768576
+        ]
+      },
+      {
+        "cancer": "LIHC",
+        "MKG_minus_Uni_Cox": 0.04986990459670426,
+        "patient_bootstrap_95_ci": [
+          0.019120043900580357,
+          0.08293251529885196
+        ]
+      },
+      {
+        "cancer": "COAD",
+        "MKG_minus_Uni_Cox": -0.0037561517265960465,
+        "patient_bootstrap_95_ci": [
+          -0.03546614276589899,
+          0.028073445389994192
+        ]
+      },
+      {
+        "cancer": "STAD",
+        "MKG_minus_Uni_Cox": -0.004905866729161823,
+        "patient_bootstrap_95_ci": [
+          -0.032018427617331605,
+          0.02128841720380722
+        ]
+      },
+      {
+        "cancer": "HNSC",
+        "MKG_minus_Uni_Cox": 0.012550508142524786,
+        "patient_bootstrap_95_ci": [
+          -0.020333543149278755,
+          0.04426950349197197
+        ]
+      }
+    ]
+  },
+  "stability_summary": {
+    "analysis_unit": "cancer",
+    "n_cancers": 6,
+    "mean_MKG_normalized_RBO20": 0.28783333333333333,
+    "mean_Cox_Lasso_normalized_RBO20": 0.13866666666666666,
+    "mean_paired_difference": 0.14916666666666667,
+    "mean_paired_difference_cancer_bootstrap_95_ci": [
+      0.09083333333333334,
+      0.211
+    ],
+    "mean_ratio": 2.170584948622917,
+    "mean_ratio_cancer_bootstrap_95_ci": [
+      1.6433535102889942,
+      2.893227452271231
+    ],
+    "per_cancer_difference": {
+      "LUAD": 0.218,
+      "LIHC": 0.136,
+      "KIRC": 0.128,
+      "COAD": 0.07500000000000001,
+      "STAD": 0.059000000000000025,
+      "HNSC": 0.279
+    }
+  }
+}
