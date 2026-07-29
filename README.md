@@ -1,6 +1,9 @@
-# MKG: reproducibility package for the JBI submission
+# MKG: reproducibility package
 
-This repository accompanies the manuscript, "MKG: stability-utility gated graph routing for reliable multi-omics survival signatures". It provides the locked analysis configuration, the source code used for the principal analyses, the manuscript-level source tables, and the resulting audit files.
+This repository accompanies the manuscript, "MKG: Reliability-gated
+multi-omics graph routing for reproducible prognostic signature discovery".
+It provides the locked analysis configuration, core source code used for the
+principal analyses, manuscript-level source tables, and audit outputs.
 
 Repository URL: <https://github.com/hejinzhao7777-cmyk/MKG-JBI-reproducibility>
 
@@ -10,7 +13,7 @@ The study evaluates six TCGA cancer types (LUAD, LIHC, KIRC, COAD, STAD, and HNS
 
 ## Repository layout
 
-- `code/`: analysis and audit scripts used for the locked JBI configuration.
+- `code/`: core analysis and audit scripts used for the locked configuration.
 - `config/`: locked hyperparameters and dataset manifest.
 - `results/`: submission-lock tables, audit outputs, and result JSON files underlying the manuscript.
 - `data/`: public-data source index and instructions for placing locally processed inputs.
@@ -20,7 +23,7 @@ The study evaluates six TCGA cancer types (LUAD, LIHC, KIRC, COAD, STAD, and HNS
 
 ```bash
 conda env create -f environment.yml
-conda activate mkg-jbi
+conda activate mkg
 python code/final_config_comparison.py LUAD
 ```
 
@@ -32,7 +35,8 @@ set MKG_OUTPUT_ROOT=D:\\path\\to\\mkg_outputs
 python code/final_config_comparison.py LUAD LIHC KIRC COAD STAD HNSC
 ```
 
-The submission-level uncertainty audit reconstructs every frozen external score and obtains patient-bootstrap C-index intervals; it does not refit signatures:
+The uncertainty audit reconstructs every frozen external score and obtains
+patient-bootstrap C-index intervals; it does not refit signatures:
 
 ```bash
 python code/submission_ci_audit.py
@@ -48,7 +52,12 @@ The latter is computationally intensive. Its bootstrap, random-forest, and PGD s
 
 ## Locked configuration
 
-The submission lock uses `lambda1=0.2`, `lambda2=50`, `gamma=10`, Top-20 signatures, 30 bootstrap resamples, normalized truncated RBO@20 (`p=0.9`), and a zero-Laplacian no-relation baseline. Full provenance, output hashes, and step exit codes are recorded in `config/MKG_JBI_SUBMISSION_LOCK_manifest.json`.
+The submission lock uses `lambda1=0.2`, `lambda2=50`, `gamma=10`, Top-20
+signatures, 30 bootstrap resamples, normalized truncated RBO@20 (`p=0.9`),
+and a zero-Laplacian no-relation baseline. Full provenance, output hashes,
+and step exit codes are recorded in the locked manifest. Historical
+filenames containing `JBI` identify the original computational lock and do
+not indicate a journal-specific algorithm.
 
 ## Data and code availability
 
@@ -61,4 +70,3 @@ Please cite the associated manuscript after publication. Repository release and 
 ## License
 
 Code is released under the MIT License. Reused public datasets remain subject to the terms of their original repositories.
-
