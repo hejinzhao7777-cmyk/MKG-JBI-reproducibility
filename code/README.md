@@ -16,4 +16,14 @@ Submission-facing audits:
 
 - `submission_ci_audit.py` reconstructs locked external molecular scores and estimates patient- and cancer-bootstrap confidence intervals.
 - `full_train_only_graph_audit.py` reconstructs all three graph layers within representative training splits before routing, selection, and held-out evaluation.
+- `cmpb_five_arm_ablation.py` runs the locked no-graph, equal-weight,
+  stability-only, utility-only, and joint-routing comparison. It accepts one
+  or more cancer codes as command-line arguments and saves each cancer
+  incrementally.
+- `cmpb_synthetic_component_ablation.py` evaluates the same five routing arms
+  under controlled reliable, complementary, adversarial, harmful, and
+  unstable-relation scenarios using an untouched test split.
 
+Figure-generation scripts are intentionally excluded from this public code
+folder. The repository contains the numerical source tables needed to
+reproduce manuscript plots with any standard plotting package.
