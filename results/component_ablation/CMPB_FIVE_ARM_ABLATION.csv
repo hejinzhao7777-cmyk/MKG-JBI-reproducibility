@@ -1,0 +1,36 @@
+Cancer,External cohort,Scheme,w_no_relation,w_coexpr,w_meth,w_cnv,Internal OOF C-index,Training frozen-score C-index,External frozen-score C-index,Matched genes,Signature source
+LUAD,GSE31210,no_graph,1.0,0.0,0.0,0.0,,0.7027034340919547,0.607773851590106,14.0,recomputed under no_graph routing
+LUAD,GSE31210,equal,0.0,0.3333333333333333,0.3333333333333333,0.3333333333333333,,0.7030281709198171,0.647928043687761,14.0,existing submission-lock signature
+LUAD,GSE31210,stability_only,0.0,0.3865583818953858,0.382939350369779,0.23050226773483523,,,0.647928043687761,14.0,existing submission-lock stability-only signature result
+LUAD,GSE31210,utility_only,0.0,0.0,0.0,1.0,,0.7029740481151733,0.6480886604561517,14.0,identical routing weights to locked joint signature
+LUAD,GSE31210,joint,0.0,0.0,0.0,1.0,,0.7029740481151733,0.6480886604561517,14.0,existing submission-lock signature
+LIHC,GSE14520,no_graph,1.0,0.0,0.0,0.0,,0.7611534687098965,0.6584272911246025,16.0,recomputed under no_graph routing
+LIHC,GSE14520,equal,0.0,0.3333333333333333,0.3333333333333333,0.3333333333333333,,0.7527364686344078,0.6579213645562301,17.0,existing submission-lock signature
+LIHC,GSE14520,stability_only,0.0,0.3183112079125805,0.3225883603331779,0.35910043175424167,,,0.6579213645562301,17.0,existing submission-lock stability-only signature result
+LIHC,GSE14520,utility_only,0.0,1.0,0.0,0.0,,0.7611912131048539,0.6584995663486557,16.0,identical routing weights to locked joint signature
+LIHC,GSE14520,joint,0.0,1.0,0.0,0.0,,0.7611912131048539,0.6584995663486557,16.0,existing submission-lock signature
+KIRC,GSE29609,no_graph,1.0,0.0,0.0,0.0,,0.7904468412942989,0.2823275862068966,19.0,recomputed under no_graph routing
+KIRC,GSE29609,equal,0.0,0.3333333333333333,0.3333333333333333,0.3333333333333333,,0.7889573703133025,0.28663793103448276,18.0,existing submission-lock signature
+KIRC,GSE29609,stability_only,0.0,0.2823312882572362,0.25142032370082057,0.46624838804194313,,,0.2801724137931034,18.0,existing submission-lock stability-only signature result
+KIRC,GSE29609,utility_only,0.0,1.0,0.0,0.0,,0.8039034411915768,0.2823275862068966,18.0,identical routing weights to locked joint signature
+KIRC,GSE29609,joint,0.0,1.0,0.0,0.0,,0.8039034411915768,0.2823275862068966,18.0,existing submission-lock signature
+COAD,GSE39582,no_graph,1.0,0.0,0.0,0.0,,0.7757729445040475,0.5156346388473824,17.0,recomputed under no_graph routing
+COAD,GSE39582,equal,0.0,0.3333333333333333,0.3333333333333333,0.3333333333333333,,0.7757729445040475,0.5155523873497196,17.0,existing submission-lock signature
+COAD,GSE39582,stability_only,0.0,0.3565271468881021,0.3449356910197008,0.2985371620921972,,,0.5155523873497196,17.0,existing submission-lock stability-only signature result
+COAD,GSE39582,utility_only,0.0,0.0,0.8132029578352622,0.1867970421647378,,0.7756754120745147,0.5156072216814948,17.0,recomputed under utility-only routing
+COAD,GSE39582,joint,0.0,0.0,0.8341627447072119,0.1658372552927882,,0.7756754120745147,0.5156072216814948,17.0,existing submission-lock signature
+STAD,GSE84437,no_graph,1.0,0.0,0.0,0.0,,0.7071585650047593,0.5470822591985001,19.0,recomputed under no_graph routing
+STAD,GSE84437,equal,0.0,0.3333333333333333,0.3333333333333333,0.3333333333333333,,0.703679390816293,0.5463166940082806,19.0,existing submission-lock signature
+STAD,GSE84437,stability_only,0.0,0.3277902885397542,0.30910198023666424,0.3631077312235815,,,0.5463323177876729,19.0,existing submission-lock stability-only signature result
+STAD,GSE84437,utility_only,1.0,0.0,0.0,0.0,,0.7071585650047593,0.5470822591985001,19.0,identical routing weights to locked joint signature
+STAD,GSE84437,joint,1.0,0.0,0.0,0.0,,0.7071585650047593,0.5470822591985001,19.0,existing submission-lock signature
+HNSC,GSE65858,no_graph,1.0,0.0,0.0,0.0,,0.6993143109931431,0.5388147422554181,20.0,recomputed under no_graph routing
+HNSC,GSE65858,equal,0.0,0.3333333333333333,0.3333333333333333,0.3333333333333333,,0.6936665929366659,0.5406514019835925,20.0,existing submission-lock signature
+HNSC,GSE65858,stability_only,0.0,0.36913308149208873,0.32978517644430744,0.3010817420636037,,,0.5406514019835925,20.0,existing submission-lock stability-only signature result
+HNSC,GSE65858,utility_only,0.0,0.0,1.0,0.0,,0.6991668509916685,0.5390596302191747,20.0,identical routing weights to locked joint signature
+HNSC,GSE65858,joint,0.0,0.0,1.0,0.0,,0.6991668509916685,0.5390596302191747,20.0,existing submission-lock signature
+Mean excl. KIRC,-,no_graph,,,,,,0.7292205446607603,0.5735465566032019,,mean over five primary external cohorts
+Mean excl. KIRC,-,equal,,,,,,0.7257767135622463,0.5816739783171168,,mean over five primary external cohorts
+Mean excl. KIRC,-,stability_only,,,,,,,0.5816771030729952,,mean over five primary external cohorts
+Mean excl. KIRC,-,utility_only,,,,,,0.729233217858194,0.5816674675807953,,mean over five primary external cohorts
+Mean excl. KIRC,-,joint,,,,,,0.729233217858194,0.5816674675807953,,mean over five primary external cohorts
