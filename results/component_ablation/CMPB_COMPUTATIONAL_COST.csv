@@ -1,0 +1,8 @@
+Cancer,Scheme,n,p,signature_fit_seconds,peak_process_RSS_GB,CPU,Python
+LUAD,no_graph,440,8207,654.0896781999995,0.4767417907714844,"Intel64 Family 6 Model 141 Stepping 1, GenuineIntel",3.13.5
+LIHC,no_graph,358,8286,539.6525122000003,0.5252609252929688,"Intel64 Family 6 Model 141 Stepping 1, GenuineIntel",3.13.5
+KIRC,no_graph,311,8235,460.6200329000003,0.5076904296875,"Intel64 Family 6 Model 141 Stepping 1, GenuineIntel",3.13.5
+COAD,no_graph,270,8203,396.3630059000002,0.6305923461914062,"Intel64 Family 6 Model 141 Stepping 1, GenuineIntel",3.13.5
+COAD,utility_only,270,8203,461.8488196999997,0.99871826171875,"Intel64 Family 6 Model 141 Stepping 1, GenuineIntel",3.13.5
+STAD,no_graph,362,8056,553.6078801000003,0.5932083129882812,"Intel64 Family 6 Model 141 Stepping 1, GenuineIntel",3.13.5
+HNSC,no_graph,513,8254,767.8831202999995,0.5632057189941406,"Intel64 Family 6 Model 141 Stepping 1, GenuineIntel",3.13.5
