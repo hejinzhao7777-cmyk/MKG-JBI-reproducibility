@@ -1,8 +1,7 @@
 # Reproducibility contract
 
-This repository distinguishes three evidence layers so that manuscript claims
-can be audited without conflating reruns, locked outputs, and independent
-validation.
+This repository distinguishes evidence layers so that manuscript claims can be
+audited without conflating reruns, locked outputs, and independent validation.
 
 ## 1. Locked manuscript outputs
 
@@ -41,16 +40,39 @@ python code/assemble_repeated_train_only_graph_audit.py ^
 ```
 
 The aggregate confidence interval resamples six cancer-specific split means.
-It does not treat the 18 cancer-by-split rows as independent cohorts.
-Each strict run uses 10 stability resamples, 100 stage-1 random-forest trees,
-and an explicit 300-iteration proximal-gradient cap.
+It does not treat the 18 cancer-by-split rows as independent cohorts. Each
+strict run uses 10 stability resamples, 100 stage-1 random-forest trees, and
+an explicit 300-iteration proximal-gradient cap.
 
 All 18 prespecified runs are supplied under
 `results/repeated_train_only_graph_audit/runs/`. At the primary zero margin,
 the mean fixed-minus-reconstructed held-out C-index was -0.001505
-(cancer-clustered 95% interval -0.009619 to 0.005814), mean Top-20 Jaccard
-was 0.841259, and route modes agreed in 13/18 audits. The small mean contrast
-does not erase the five split-specific routing changes.
+(cancer-clustered 95% interval -0.009619 to 0.005814), mean Top-20 Jaccard was
+0.841259, and route modes agreed in 13/18 audits. The small mean contrast does
+not erase the five split-specific routing changes.
+
+## 4. Independent METABRIC complete-stack audit
+
+The preparation script aligns public METABRIC expression, promoter
+methylation, copy-number, survival, and clinical profiles without
+outcome-driven feature filtering. The portability script rebuilds all three
+graphs, routing, Top-20 selection, and the reduced Cox model inside each of
+five prespecified training partitions:
+
+```bash
+python code/prepare_metabric_multiomics.py --help
+python code/metabric_multiomics_portability_audit.py --help
+```
+
+The final audit contained 1,416 patients, 830 deaths, and 2,230 aligned genes.
+Four of five splits rejected all graph layers. Mean held-out MKG-minus-zero
+C-index was 0.0021. This evidence supports operational abstention on another
+complete multi-omics stack, not a general performance advantage or
+same-cancer frozen-signature replication.
+
+Participant-level METABRIC matrices are not redistributed. The public package
+contains preparation hashes, split-level aggregate outputs, and the full
+cohort-screening record.
 
 ## Controlled gate sensitivity
 
@@ -81,10 +103,10 @@ superiority over Uni-Cox.
 
 ## Data boundary
 
-Participant-level matrices are not redistributed here. Obtain TCGA and GEO
-data from the repositories listed in `data/DATA_SOURCES.md`, comply with their
-terms, and place processed inputs under `MKG_DATA_ROOT`. External outcomes must
-remain isolated until the frozen molecular score is evaluated.
+Participant-level matrices are not redistributed here. Obtain TCGA, GEO, and
+METABRIC data from the repositories listed in `data/DATA_SOURCES.md`, comply
+with their terms, and place processed inputs under a local data root. External
+outcomes must remain isolated until the frozen molecular score is evaluated.
 
 ## Interpretation boundary
 
