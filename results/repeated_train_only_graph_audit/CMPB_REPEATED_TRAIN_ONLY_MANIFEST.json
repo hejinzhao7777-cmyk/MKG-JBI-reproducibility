@@ -1,0 +1,75 @@
+{
+  "source_root": "batch_three_seeds",
+  "source_json_sha256": {
+    "COAD_seed2025/CMPB_REPEATED_TRAIN_ONLY_GRAPH_AUDIT.json": "289bbb93551c955389b04b23b49939b42b01c33d1180509247f688de88144ac1",
+    "COAD_seed42/CMPB_REPEATED_TRAIN_ONLY_GRAPH_AUDIT.json": "1366346f9858acb284a616feb325eec089627062408ff8e5aaaf280467e518b0",
+    "COAD_seed7301/CMPB_REPEATED_TRAIN_ONLY_GRAPH_AUDIT.json": "20ca218e8db3b9d48e66eae74334c1ea3650f3ecd53ada903e8d0eb2f0313f2d",
+    "HNSC_seed2025/CMPB_REPEATED_TRAIN_ONLY_GRAPH_AUDIT.json": "e677d169313d99b8b4fdbeb6ab2fe13bd8ed00597cdc49ae6d3890eed02b0048",
+    "HNSC_seed42/CMPB_REPEATED_TRAIN_ONLY_GRAPH_AUDIT.json": "34f7b27bc260cd99b49c219b42a96ff0f3c76686bae282d490acfa549b0b46af",
+    "HNSC_seed7301/CMPB_REPEATED_TRAIN_ONLY_GRAPH_AUDIT.json": "9bdce394e90f5744a1782f72759da9f15f73b0fe73d4b5cf5009e16578b12bf8",
+    "KIRC_seed2025/CMPB_REPEATED_TRAIN_ONLY_GRAPH_AUDIT.json": "71b0dd22a0eeb254197d0a2847e56d4f7df29bb7fb79ec5426fcaf616a9f7e43",
+    "KIRC_seed42/CMPB_REPEATED_TRAIN_ONLY_GRAPH_AUDIT.json": "e97ab03d1a50baf571724fdc21b93246e171d51f4108e8c547e4777c058ffc2b",
+    "KIRC_seed7301/CMPB_REPEATED_TRAIN_ONLY_GRAPH_AUDIT.json": "909aae65f85d09c42635c526700aa91b1edf06d027e953909c76e869c244b8a9",
+    "LIHC_seed2025/CMPB_REPEATED_TRAIN_ONLY_GRAPH_AUDIT.json": "778d48b940bd04dbc5bfc20e63916b42d93566d98111a9842787de893ce13fdd",
+    "LIHC_seed42/CMPB_REPEATED_TRAIN_ONLY_GRAPH_AUDIT.json": "22580ef81899aaa72edd29f72e1c1ae0e5ec0ce35e194df40a38e974892137d6",
+    "LIHC_seed7301/CMPB_REPEATED_TRAIN_ONLY_GRAPH_AUDIT.json": "998c17be3b1a445598d57aed1f13a633b6e59777926e6f317fed23a6dca7a94a",
+    "LUAD_seed2025/CMPB_REPEATED_TRAIN_ONLY_GRAPH_AUDIT.json": "02757d2d12a81543ca93cca584ba661aa6b088dfefab8689c0e34a163056d2b6",
+    "LUAD_seed42/CMPB_REPEATED_TRAIN_ONLY_GRAPH_AUDIT.json": "68bf3dc521d3856a532a04536023b5c32f1d219b44e9b8bff477f7e965011eaa",
+    "LUAD_seed7301/CMPB_REPEATED_TRAIN_ONLY_GRAPH_AUDIT.json": "76cdc5ce50799a9a0e641913ea46fa93a71815005cf781be533d23cb4e8366d9",
+    "STAD_seed2025/CMPB_REPEATED_TRAIN_ONLY_GRAPH_AUDIT.json": "e9b08ee3d67e0c659c41425ecaa5f8f78b4f37a85f9b69475de5f09c2d93517a",
+    "STAD_seed42/CMPB_REPEATED_TRAIN_ONLY_GRAPH_AUDIT.json": "dcf7dbfe19b2629e5a8ddee47b3a0186a22b2573176298c1ece251df247db3ed",
+    "STAD_seed7301/CMPB_REPEATED_TRAIN_ONLY_GRAPH_AUDIT.json": "d09dc87863f61d734470589ebcddf4cee27e9484eff232b77f019724f99696b4"
+  },
+  "cancers_expected": [
+    "LUAD",
+    "LIHC",
+    "KIRC",
+    "COAD",
+    "STAD",
+    "HNSC"
+  ],
+  "split_seeds": [
+    42,
+    2025,
+    7301
+  ],
+  "gate_margins": [
+    0.0,
+    0.005,
+    0.01
+  ],
+  "n_unique_cancer_seed_pairs": 18,
+  "intervals": {
+    "0.000": {
+      "estimand": "mean of six cancer-specific split means",
+      "bootstrap_unit": "cancer",
+      "bootstrap_repetitions": 50000,
+      "seed": 20260730,
+      "ci": [
+        -0.009619007396378812,
+        0.0058141322200941856
+      ]
+    },
+    "0.005": {
+      "estimand": "mean of six cancer-specific split means",
+      "bootstrap_unit": "cancer",
+      "bootstrap_repetitions": 50000,
+      "seed": 20260730,
+      "ci": [
+        -0.005322293401836104,
+        0.004071501697152788
+      ]
+    },
+    "0.010": {
+      "estimand": "mean of six cancer-specific split means",
+      "bootstrap_unit": "cancer",
+      "bootstrap_repetitions": 50000,
+      "seed": 20260730,
+      "ci": [
+        -0.006249337817985719,
+        0.0054762910396841
+      ]
+    }
+  },
+  "interpretation": "A sensitivity audit across prespecified data splits, not repeated nested cross-validation or independent cohort replication."
+}

@@ -50,6 +50,35 @@ python code/full_train_only_graph_audit.py
 
 The latter is computationally intensive. Its bootstrap, random-forest, and PGD settings can be controlled with `FULL_GRAPH_AUDIT_BOOTSTRAP`, `FULL_GRAPH_AUDIT_RF_TREES`, and `FULL_GRAPH_AUDIT_PGD_ITER`; the manuscript-reported run settings are stored with the result JSON.
 
+The repeated strict audit uses three prespecified train/test splits per cancer
+and reconstructs all relation graphs within each training split:
+
+```bash
+python code/cmpb_repeated_train_only_graph_audit.py --cancer LUAD --split-seed 42
+```
+
+The right-censored gate-margin sensitivity can be rerun independently:
+
+```bash
+python code/cmpb_conservative_gate_sensitivity.py
+```
+
+The complete six-method stability figure and paired MKG--Uni-Cox audit are
+generated from the supplied cancer-level source table:
+
+```bash
+python code/cmpb_full_stability_baseline_figure.py \
+  --input results/source_tables/TableS_expanded_stability_baselines_jbi.csv \
+  --outdir results/full_stability_baseline
+```
+
+See `REPRODUCIBILITY.md` for the evidence layers, exact aggregation command,
+and interpretation boundaries.
+
+The completed repeated audit is stored in
+`results/repeated_train_only_graph_audit/`, including all 18 run records,
+SHA-256 hashes, cancer-clustered summaries, and the submission figure.
+
 ## Locked configuration
 
 The submission lock uses `lambda1=0.2`, `lambda2=50`, `gamma=10`, Top-20

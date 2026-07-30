@@ -29,13 +29,16 @@ from scipy.stats import rankdata, t as student_t
 from sklearn.model_selection import train_test_split
 from sksurv.util import Surv
 
+# graph_lasso_pgd binds its default iteration cap when the core module is
+# imported, so propagate the audit setting before that import.
+os.environ.setdefault(
+    "FINAL_PGD_MAX_ITER",
+    os.environ.get("FULL_GRAPH_AUDIT_PGD_ITER", "300"),
+)
 import final_config_comparison as F
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / "03_鏁版嵁涓庣粨鏋? / "processed_data"
-OUT = ROOT / "09_JBI_SUBMISSION_LOCK" / "full_train_only_graph_audit"
-TABLES = ROOT / "07_璁烘枃鍒濈" / "tables"
 
 # Public-package paths can be overridden without editing source.
 DATA = Path(os.environ.get("MKG_DATA_ROOT", ROOT / "data" / "processed_data"))
@@ -57,7 +60,7 @@ TEST_SIZE = float(os.environ.get("FULL_GRAPH_AUDIT_TEST_SIZE", "0.30"))
 BLOCK = int(os.environ.get("FULL_GRAPH_AUDIT_BLOCK", "512"))
 F.N_BOOTSTRAP = int(os.environ.get("FULL_GRAPH_AUDIT_BOOTSTRAP", "10"))
 F.STAGE1_RF_TREES = int(os.environ.get("FULL_GRAPH_AUDIT_RF_TREES", "100"))
-F.PGD_MAX_ITER = int(os.environ.get("FULL_GRAPH_AUDIT_PGD_ITER", "150"))
+F.PGD_MAX_ITER = int(os.environ.get("FULL_GRAPH_AUDIT_PGD_ITER", "300"))
 F.RF_JOBS = int(os.environ.get("FULL_GRAPH_AUDIT_JOBS", str(F.RF_JOBS)))
 
 COEXPR_TAU = 0.30

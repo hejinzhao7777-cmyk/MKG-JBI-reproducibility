@@ -1,4 +1,4 @@
-"""Bootstrap confidence intervals for the locked JBI submission results.
+"""Bootstrap confidence intervals for the locked manuscript results.
 
 This script never refits a signature. It reconstructs each frozen molecular
 score from the submission-lock signature and the prespecified external cohort,
@@ -18,10 +18,6 @@ from sksurv.metrics import concordance_index_censored
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / "03_鏁版嵁涓庣粨鏋? / "processed_data"
-LOCK = ROOT / "09_JBI_SUBMISSION_LOCK" / "final_config_comparison_ALL_LOCKED.json"
-TABLES = ROOT / "07_璁烘枃鍒濈" / "tables"
-OUT = ROOT / "09_JBI_SUBMISSION_LOCK" / "confidence_intervals"
 
 # Public-package paths can be overridden without editing source.
 DATA = Path(os.environ.get("MKG_DATA_ROOT", ROOT / "data" / "processed_data"))

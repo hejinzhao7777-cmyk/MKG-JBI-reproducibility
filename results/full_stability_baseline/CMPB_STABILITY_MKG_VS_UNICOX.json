@@ -1,0 +1,46 @@
+{
+  "normalized_RBO20": {
+    "label": "Normalized RBO@20",
+    "contrast": "MKG - Uni-Cox",
+    "n_cancers": 6,
+    "mean_difference": 0.024699799998608257,
+    "median_difference": 0.007244303358003024,
+    "exact_cancer_cluster_bootstrap_95pct_ci": [
+      -0.01676658755036442,
+      0.06948017691997264
+    ],
+    "mkg_higher_cancers": 3,
+    "mkg_lower_cancers": 3,
+    "wilcoxon_exact_two_sided_p": 0.5625,
+    "per_cancer_differences": {
+      "LUAD": 0.10590038416275349,
+      "LIHC": -0.0073210487038972705,
+      "KIRC": -0.007983621510314176,
+      "COAD": 0.021809655419903318,
+      "STAD": -0.04956044449878211,
+      "HNSC": 0.08535387512198628
+    }
+  },
+  "Jaccard": {
+    "label": "Top-20 Jaccard",
+    "contrast": "MKG - Uni-Cox",
+    "n_cancers": 6,
+    "mean_difference": -0.01134868436606086,
+    "median_difference": -0.01354159623177656,
+    "exact_cancer_cluster_bootstrap_95pct_ci": [
+      -0.03057709435273906,
+      0.008289179799323925
+    ],
+    "mkg_higher_cancers": 2,
+    "mkg_lower_cancers": 4,
+    "wilcoxon_exact_two_sided_p": 0.4375,
+    "per_cancer_differences": {
+      "LUAD": 0.023608267743824796,
+      "LIHC": -0.032579558991859825,
+      "KIRC": -0.02339853844971651,
+      "COAD": -0.003684654013836608,
+      "STAD": 0.013572505349803782,
+      "HNSC": -0.045610127834580794
+    }
+  }
+}

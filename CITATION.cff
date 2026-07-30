@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this software or its locked audit outputs, please cite the associated manuscript and this repository."
+title: "MKG reproducibility package"
+type: software
+authors:
+  - family-names: He
+    given-names: Jinzhao
+  - family-names: Guan
+    given-names: Jing
+version: 0.2.0
+date-released: 2026-07-30
+repository-code: "https://github.com/hejinzhao7777-cmyk/MKG-JBI-reproducibility"
+license: MIT
+keywords:
+  - multi-omics
+  - survival analysis
+  - graph regularization
+  - feature stability
+  - reproducibility

@@ -23,7 +23,24 @@ Submission-facing audits:
 - `cmpb_synthetic_component_ablation.py` evaluates the same five routing arms
   under controlled reliable, complementary, adversarial, harmful, and
   unstable-relation scenarios using an untouched test split.
+- `cmpb_conservative_gate_sensitivity.py` varies the minimum validation
+  C-index gain required for graph eligibility in the right-censored stress
+  test.
+- `cmpb_repeated_train_only_graph_audit.py` rebuilds every graph inside one
+  prespecified training split for one cancer and records fixed-versus-
+  reconstructed contrasts at three gate margins.
+- `assemble_repeated_train_only_graph_audit.py` combines completed
+  cancer-by-split audits and computes cancer-clustered intervals.
+- `cmpb_full_stability_baseline_figure.py` regenerates the complete
+  six-method cancer-level stability comparison and its exact paired
+  MKG--Uni-Cox cancer-cluster bootstrap intervals.
+- `cmpb_merge_and_plot.py` merges the completed five-arm workers, recomputes
+  cancer-bootstrap summaries, and renders the submission figure with every
+  cancer displayed directly.
+- `make_cmpb_graphical_abstract.py` regenerates the simplified four-stage
+  vector graphical abstract and its PDF, SVG, PNG, and TIFF exports.
 
-Figure-generation scripts are intentionally excluded from this public code
-folder. The repository contains the numerical source tables needed to
-reproduce manuscript plots with any standard plotting package.
+The sensitivity, repeated-audit, complete-stability, and five-arm scripts
+generate their own source tables or figures. Numerical source tables are
+supplied for historical plots whose original figure-generation scripts
+remain outside the public release.

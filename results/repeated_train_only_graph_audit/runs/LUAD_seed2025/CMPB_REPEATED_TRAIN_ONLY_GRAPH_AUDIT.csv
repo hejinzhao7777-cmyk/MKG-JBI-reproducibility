@@ -1,0 +1,4 @@
+Cancer,Split seed,Train n,Test n,Test events,Gate margin,No-graph test C-index,Reconstructed C-index,Fixed C-index,Fixed minus reconstructed,Top-20 overlap,Top-20 Jaccard,Reconstructed mode,Fixed mode,Reconstructed weights,Fixed weights
+LUAD,2025,308,132,47,0.0,0.5423625873064075,0.5654418463407227,0.5605830549650774,-0.004858791375645266,18,0.8181818181818182,dual_driven,dual_driven,"{""cnv"": 0.0, ""coexpr"": 1.0, ""meth"": 0.0}","{""cnv"": 0.0, ""coexpr"": 1.0, ""meth"": 0.0}"
+LUAD,2025,308,132,47,0.005,0.5423625873064075,0.5654418463407227,0.5605830549650774,-0.004858791375645266,18,0.8181818181818182,dual_driven,dual_driven,"{""cnv"": 0.0, ""coexpr"": 1.0, ""meth"": 0.0}","{""cnv"": 0.0, ""coexpr"": 1.0, ""meth"": 0.0}"
+LUAD,2025,308,132,47,0.01,0.5423625873064075,0.5423625873064075,0.5423625873064075,0.0,20,1.0,reject_all_graphs,reject_all_graphs,"{""cnv"": 0.0, ""coexpr"": 0.0, ""meth"": 0.0}","{""cnv"": 0.0, ""coexpr"": 0.0, ""meth"": 0.0}"

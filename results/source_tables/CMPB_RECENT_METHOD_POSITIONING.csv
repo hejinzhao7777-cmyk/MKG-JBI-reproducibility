@@ -1,0 +1,8 @@
+method,year,journal,doi,primary_task,graph_or_modal_input,principal_output,matched_top20_comparator
+GGNN,2023,Computers in Biology and Medicine,10.1016/j.compbiomed.2023.107117,survival prediction,multi-omics plus PPI/pathway gene network,native neural survival risk,no; different native predictor and fixed prior contract
+MMGCN,2024,Computer Methods and Programs in Biomedicine,10.1016/j.cmpb.2024.108400,prognosis classification,omics and clinical patient-similarity views,class prediction,no; patient-graph classifier rather than sparse gene selector
+Prior knowledge-guided multilevel GNN,2024,Briefings in Bioinformatics,10.1093/bib/bbae184,survival-risk prediction,multi-omics plus regulatory and pathway hierarchy,native neural risk and interpretation,no; end-to-end hierarchical predictor
+CPathomic,2025,Computer Methods and Programs in Biomedicine,10.1016/j.cmpb.2025.108633,survival prediction,pathology images plus genomics,native multimodal survival risk,no; requires an unavailable pathology modality and returns native risk
+MGDMCL,2025,Computer Methods and Programs in Biomedicine,10.1016/j.cmpb.2025.109024,disease classification,dynamically learned omics-specific patient graphs,class prediction,no; classification rather than censored survival signature selection
+Uncertainty-aware dynamic decision framework,2026,Computer Methods and Programs in Biomedicine,10.1016/j.cmpb.2025.109179,disease classification,progressively acquired multi-omics views,class prediction and acquisition decision,no; uncertainty-guided modality acquisition rather than gene-relation eligibility
+MKG,2026,manuscript under submission,,survival signature prioritization,three sample-derived gene-relation layers,frozen Top-20 molecular ranking and score,reference contract

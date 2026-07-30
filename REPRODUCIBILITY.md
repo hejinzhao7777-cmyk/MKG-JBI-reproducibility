@@ -1,0 +1,94 @@
+# Reproducibility contract
+
+This repository distinguishes three evidence layers so that manuscript claims
+can be audited without conflating reruns, locked outputs, and independent
+validation.
+
+## 1. Locked manuscript outputs
+
+`results/submission_lock/` and `results/source_tables/` contain the numerical
+outputs used by the manuscript. Historical filenames containing `JBI` are
+immutable provenance identifiers from the first computational lock. They do
+not identify the current target journal.
+
+## 2. Mechanism and sensitivity audits
+
+`results/component_ablation/` contains the five-arm real-data and controlled
+component experiments. `results/conservative_gate_sensitivity/` tests fixed
+minimum validation-gain margins under right-censored simulation. The latter is
+a boundary analysis: stricter margins increased no-graph activation but did
+not eliminate finite-sample false admission in the all-harmful scenario.
+
+## 3. Leakage audits
+
+The strict audit reconstructs expression scaling and all three relation graphs
+inside a training split before routing, Top-20 selection, and held-out
+evaluation. Run one cancer and one split at a time:
+
+```bash
+set MKG_DATA_ROOT=D:\path\to\processed_data
+set MKG_OUTPUT_ROOT=D:\path\to\mkg_outputs
+python code/cmpb_repeated_train_only_graph_audit.py --cancer LUAD --split-seed 42
+```
+
+The manuscript audit uses split seeds 42, 2025, and 7301 for each of LUAD,
+LIHC, KIRC, COAD, STAD, and HNSC. Aggregate completed runs with:
+
+```bash
+python code/assemble_repeated_train_only_graph_audit.py ^
+  --root D:\path\to\mkg_outputs\repeated_train_only_graph_audit ^
+  --outdir D:\path\to\mkg_outputs\repeated_train_only_graph_audit\summary
+```
+
+The aggregate confidence interval resamples six cancer-specific split means.
+It does not treat the 18 cancer-by-split rows as independent cohorts.
+Each strict run uses 10 stability resamples, 100 stage-1 random-forest trees,
+and an explicit 300-iteration proximal-gradient cap.
+
+All 18 prespecified runs are supplied under
+`results/repeated_train_only_graph_audit/runs/`. At the primary zero margin,
+the mean fixed-minus-reconstructed held-out C-index was -0.001505
+(cancer-clustered 95% interval -0.009619 to 0.005814), mean Top-20 Jaccard
+was 0.841259, and route modes agreed in 13/18 audits. The small mean contrast
+does not erase the five split-specific routing changes.
+
+## Controlled gate sensitivity
+
+```bash
+set MKG_OUTPUT_ROOT=D:\path\to\mkg_outputs
+python code/cmpb_conservative_gate_sensitivity.py
+```
+
+The script writes row-level results before summaries and figures. Hidden signal
+support is recorded only for diagnostic evaluation and is never used by the
+routing rule.
+
+## Complete stability comparator audit
+
+The full cancer-level comparator table, rather than a selected Cox-Lasso
+contrast, is the source for the main stability figure:
+
+```bash
+python code/cmpb_full_stability_baseline_figure.py \
+  --input results/source_tables/TableS_expanded_stability_baselines_jbi.csv \
+  --outdir results/full_stability_baseline
+```
+
+Every one of the six cancer values is displayed. The paired MKG--Uni-Cox
+interval exhaustively enumerates all \(6^6\) empirical cancer-cluster
+bootstrap resamples. The result supports competitive stability, not uniform
+superiority over Uni-Cox.
+
+## Data boundary
+
+Participant-level matrices are not redistributed here. Obtain TCGA and GEO
+data from the repositories listed in `data/DATA_SOURCES.md`, comply with their
+terms, and place processed inputs under `MKG_DATA_ROOT`. External outcomes must
+remain isolated until the frozen molecular score is evaluated.
+
+## Interpretation boundary
+
+MKG is evaluated as a compact signature-selection and frozen-score workflow.
+Attribution-derived RSF and DeepSurv rows are not native retrained predictors.
+Selection stability, external discrimination, and graph-route reproducibility
+are separate endpoints.
