@@ -7,8 +7,8 @@ authors:
     given-names: Jinzhao
   - family-names: Guan
     given-names: Jing
-version: 0.2.0
-date-released: 2026-07-30
+version: 0.3.0
+date-released: 2026-07-31
 repository-code: "https://github.com/hejinzhao7777-cmyk/MKG-JBI-reproducibility"
 license: MIT
 keywords:
