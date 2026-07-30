@@ -20,7 +20,32 @@ Training data were obtained from the public TCGA program through the NCI Genomic
 
 An additional LUAD cohort (GSE50081), LIHC cohort (GSE76427), and KIRC cohort (E-MTAB-1980) were used where described in the analytical code and manuscript.
 
+## Independent complete-stack audit
+
+METABRIC breast cancer molecular and clinical profiles were obtained from the
+public cBioPortal Datahub study `brca_metabric`. The audit used the Illumina
+HT-12 v3 log-intensity expression profile, promoter RRBS beta values, discrete
+copy-number calls, and overall survival.
+
+- Study files: <https://github.com/cBioPortal/datahub/tree/master/public/brca_metabric>
+- Original cohort: Curtis et al., Nature 2012, DOI
+  <https://doi.org/10.1038/nature10983>
+- Molecular landscape: Pereira et al., Nature Communications 2016, DOI
+  <https://doi.org/10.1038/ncomms11479>
+- Long-term follow-up: Rueda et al., Nature 2019, DOI
+  <https://doi.org/10.1038/s41586-019-1007-8>
+- Datahub database license: Open Data Commons Open Database License.
+
+The source-file and processed-file SHA-256 values used by the audit are stored
+in `results/metabric_multiomics_portability/METABRIC_PREPARATION_MANIFEST.json`.
+
 ## Local input layout
 
-Do not upload the downloaded or processed patient-level matrices to this GitHub repository. Set `MKG_DATA_ROOT` to a local directory containing the study's processed input layout. The original analysis used cancer-specific folders under `processed_data/`. A DOI-minting data archive should contain the exact processed matrices and preprocessing manifest after the authors have verified that redistribution complies with each source repository's terms.
-
+Do not upload downloaded or processed participant-level matrices to this
+GitHub repository. Set `MKG_DATA_ROOT` to a local directory containing the
+study's processed input layout. The original analysis used cancer-specific
+folders under `processed_data/`. METABRIC preparation additionally accepts a
+local raw-file cache and writes its own processed directory. Any future
+participant-level archive requires a separate redistribution review under all
+originating terms; the present repository distributes scripts, hashes, and
+aggregate analysis outputs only.
