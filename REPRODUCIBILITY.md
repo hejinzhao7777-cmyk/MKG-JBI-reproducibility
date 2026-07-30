@@ -1,3 +1,4 @@
+
 # Reproducibility contract
 
 This repository distinguishes evidence layers so that manuscript claims can be
@@ -69,6 +70,12 @@ Four of five splits rejected all graph layers. Mean held-out MKG-minus-zero
 C-index was 0.0021. This evidence supports operational abstention on another
 complete multi-omics stack, not a general performance advantage or
 same-cancer frozen-signature replication.
+
+At the manuscript's 300-tree stage-1 budget, representative seed 42 remained
+reject-all. Boundary seed 71 admitted methylation and CNA and had a held-out
+MKG-minus-zero difference of -0.0169. This computation-budget sensitivity is
+reported as a finite-sample harmful admission: positive OOF eligibility is a
+safeguard, not a guarantee.
 
 Participant-level METABRIC matrices are not redistributed. The public package
 contains preparation hashes, split-level aggregate outputs, and the full
