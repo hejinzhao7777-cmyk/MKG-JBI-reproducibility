@@ -1,0 +1,84 @@
+{
+  "study": "brca_metabric",
+  "design_role": "independent end-to-end multi-omics portability audit",
+  "selection_rule": "intersection of the six locked TCGA expression universes and genes available in all three METABRIC assays; no outcome-driven filtering",
+  "source": {
+    "cBioPortal_api": "https://www.cbioportal.org/api/studies/brca_metabric",
+    "cBioPortal_datahub": "https://github.com/cBioPortal/datahub/tree/master/public/brca_metabric"
+  },
+  "raw_cache_sha256": {
+    "data_mrna_illumina_microarray.txt": "4470069455a4ed38ffed5d12513e468bbf5b9a57d66fa1162e7bd9a64889ab7a",
+    "data_methylation_promoters_rrbs.txt": "da392afb80a296ed0571ca186d12b9080ec11334d164a57b03d375f56a61c484",
+    "data_cna.txt": "45c9bb67a8ec460de599e88b6c4a9a3014e0c43e443f6c94848cfe2fc4c99a0e"
+  },
+  "locked_six_cancer_gene_intersection": 4095,
+  "assay_sample_overlap_before_survival_filter": 1417,
+  "analysis_samples": 1416,
+  "events": 830,
+  "censored": 586,
+  "clinical_covariates": {
+    "age_nonmissing": 1416,
+    "gender_nonmissing": 1416,
+    "stage": "not available in the public patient-level study table"
+  },
+  "analysis_genes": 2230,
+  "matrix_metadata": {
+    "expression": {
+      "url": "https://media.githubusercontent.com/media/cBioPortal/datahub/master/public/brca_metabric/data_mrna_illumina_microarray.txt",
+      "local_cache": "<cache-dir>/data_mrna_illumina_microarray.txt",
+      "remote_rows_scanned": 20603,
+      "selected_rows_before_duplicate_collapse": 3864,
+      "selected_genes": 3846,
+      "selected_samples": 1416,
+      "duplicate_gene_symbols_collapsed_by_mean": 15,
+      "missing_fraction": 3.672463282712099e-07
+    },
+    "methylation": {
+      "url": "https://media.githubusercontent.com/media/cBioPortal/datahub/master/public/brca_metabric/data_methylation_promoters_rrbs.txt",
+      "local_cache": "<cache-dir>/data_methylation_promoters_rrbs.txt",
+      "remote_rows_scanned": 13188,
+      "selected_rows_before_duplicate_collapse": 2356,
+      "selected_genes": 2355,
+      "selected_samples": 1416,
+      "duplicate_gene_symbols_collapsed_by_mean": 1,
+      "missing_fraction": 0.03171848573176437
+    },
+    "copy_number": {
+      "url": "https://media.githubusercontent.com/media/cBioPortal/datahub/master/public/brca_metabric/data_cna.txt",
+      "local_cache": "<cache-dir>/data_cna.txt",
+      "remote_rows_scanned": 22544,
+      "selected_rows_before_duplicate_collapse": 4024,
+      "selected_genes": 4023,
+      "selected_samples": 1416,
+      "duplicate_gene_symbols_collapsed_by_mean": 1,
+      "missing_fraction": 6.846227412715867e-06
+    }
+  },
+  "files": {
+    "expression": {
+      "filename": "expr_final.tsv",
+      "bytes": 29786830,
+      "sha256": "fc662c79b09e31f3ef70457a789785f235da74c359e0df07bae126af91433cde"
+    },
+    "methylation": {
+      "filename": "meth_gene_level.tsv",
+      "bytes": 31396290,
+      "sha256": "9a98435dcc92348e0d29c9441df7543f9ef5c9f9d137b0a21bcbca581100fc58"
+    },
+    "copy_number": {
+      "filename": "cnv_aligned.tsv",
+      "bytes": 13152249,
+      "sha256": "89feb7f7a72e2a610327b04a1f05306d7140f0e3febcd6699ad2b664d0e90112"
+    },
+    "survival": {
+      "filename": "deviance_residuals.tsv",
+      "bytes": 37513,
+      "sha256": "3144e17ed5b7cc8964eeb37dd85b89d6e9f0ce1f02475b09eb99700d3ae708d8"
+    },
+    "clinical": {
+      "filename": "clinical_covariates.tsv",
+      "bytes": 31037,
+      "sha256": "23806520bebc0c9d2aa6010fbb52db6428da352cd3e09907ac4b48d3a76c64f5"
+    }
+  }
+}
