@@ -1,3 +1,4 @@
+
 name: mkg
 channels:
   - conda-forge
@@ -8,6 +9,7 @@ dependencies:
   - scipy
   - scikit-learn
   - matplotlib
+  - requests
   - lifelines
   - scikit-survival
   - pytorch
