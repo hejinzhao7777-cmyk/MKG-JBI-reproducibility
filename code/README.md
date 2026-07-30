@@ -23,6 +23,15 @@ Submission-facing audits:
 - `cmpb_synthetic_component_ablation.py` evaluates the same five routing arms
   under controlled reliable, complementary, adversarial, harmful, and
   unstable-relation scenarios using an untouched test split.
+- `prepare_metabric_multiomics.py` aligns public METABRIC expression,
+  promoter-methylation, copy-number, clinical, and survival profiles to the
+  outcome-free locked gene universe and writes a SHA-256 preparation manifest.
+- `metabric_multiomics_portability_audit.py` performs five prespecified
+  train-only complete-stack reconstructions and writes split-level routing,
+  signature-stability, and untouched-test results. Use `--data` to point to
+  the locally prepared METABRIC directory; run `--help` for the full
+  interface. The preparation script accepts `--data-root`, `--output`, and an
+  optional `--cache-dir`.
 - `cmpb_conservative_gate_sensitivity.py` varies the minimum validation
   C-index gain required for graph eligibility in the right-censored stress
   test.
