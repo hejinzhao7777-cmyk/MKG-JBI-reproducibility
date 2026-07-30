@@ -9,7 +9,7 @@ Repository URL: <https://github.com/hejinzhao7777-cmyk/MKG-JBI-reproducibility>
 
 ## Scope
 
-The study evaluates six TCGA cancer types (LUAD, LIHC, KIRC, COAD, STAD, and HNSC) with independent external cohorts. The public package contains no participant-level data. TCGA and GEO are reused public datasets and must be downloaded under their respective terms of use.
+The study evaluates six TCGA cancer types (LUAD, LIHC, KIRC, COAD, STAD, and HNSC), independent expression cohorts, and a separate end-to-end METABRIC complete-stack audit. The public package contains no participant-level data. TCGA, GEO, and METABRIC are reused public datasets and must be downloaded under their respective terms of use.
 
 ## Repository layout
 
@@ -49,6 +49,19 @@ python code/full_train_only_graph_audit.py
 ```
 
 The latter is computationally intensive. Its bootstrap, random-forest, and PGD settings can be controlled with `FULL_GRAPH_AUDIT_BOOTSTRAP`, `FULL_GRAPH_AUDIT_RF_TREES`, and `FULL_GRAPH_AUDIT_PGD_ITER`; the manuscript-reported run settings are stored with the result JSON.
+
+The METABRIC audit prepares patient-matched expression, promoter methylation,
+copy-number, and survival inputs, then reconstructs every graph and selector
+inside five prespecified training partitions:
+
+```bash
+python code/prepare_metabric_multiomics.py --help
+python code/metabric_multiomics_portability_audit.py --help
+```
+
+The public result files include input hashes, split-level routing utilities,
+selected weights, Top-20 signatures, and untouched-test C-indices. The
+participant-level processed matrices remain local and are not included.
 
 The repeated strict audit uses three prespecified train/test splits per cancer
 and reconstructs all relation graphs within each training split:
