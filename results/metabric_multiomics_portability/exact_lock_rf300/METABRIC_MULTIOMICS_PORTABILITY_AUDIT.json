@@ -1,0 +1,344 @@
+
+{
+  "configuration": {
+    "test_size": 0.25,
+    "bootstrap": 30,
+    "rf_trees": 300,
+    "pgd_iterations": 300,
+    "jobs": 8,
+    "thresholds": {
+      "coexpression_tau": 0.3,
+      "coexpression_power": 6,
+      "methylation_tau": 0.15,
+      "methylation_fdr": 0.05,
+      "copy_number_tau": 0.25,
+      "copy_number_power": 4
+    }
+  },
+  "splits": [
+    {
+      "seed": 42,
+      "n_train": 1062,
+      "n_test": 354,
+      "events_train": 623,
+      "events_test": 207,
+      "route_mode": "reject_all_graphs",
+      "weights": {
+        "coexpr": 0.0,
+        "meth": 0.0,
+        "cnv": 0.0
+      },
+      "stability": {
+        "coexpr": 0.4363909819726384,
+        "meth": 0.560446102458839,
+        "cnv": 0.5299985678825243
+      },
+      "routing_oof_delta": {
+        "coexpr": -0.009904756905925849,
+        "meth": -0.005956845052733417,
+        "cnv": -0.005989966679930792
+      },
+      "zero_graph_oof_cindex": 0.671196447922427,
+      "test_cindex_mkg": 0.6004786891282334,
+      "test_cindex_zero_graph": 0.6004786891282334,
+      "test_delta_mkg_minus_zero": 0.0,
+      "mkg_top20": [
+        "TROAP",
+        "PKMYT1",
+        "SMOC2",
+        "IGFALS",
+        "F2RL1",
+        "BCL2",
+        "UBE2S",
+        "F2RL3",
+        "FGD3",
+        "BIRC5",
+        "SUSD3",
+        "PTHLH",
+        "ESPL1",
+        "TRIB3",
+        "CLIC6",
+        "CKAP2L",
+        "FAM83D",
+        "SLC7A2",
+        "MMP25",
+        "HES2"
+      ],
+      "mkg_top20_scores": [
+        0.9999999999999999,
+        0.9993196591804228,
+        0.9991185291727869,
+        0.9982216681862397,
+        0.9979743677006019,
+        0.9977732376929662,
+        0.996876376706419,
+        0.9957783857122361,
+        0.9957476053935682,
+        0.994139623268776,
+        0.9935372911821632,
+        0.9930108519559251,
+        0.9929185109999217,
+        0.990475228525918,
+        0.9859919815294775,
+        0.5155212652138678,
+        0.5150574445612603,
+        0.5148255342349566,
+        0.5145936239086528,
+        0.5143617135823491
+      ],
+      "zero_top20": [
+        "TROAP",
+        "PKMYT1",
+        "SMOC2",
+        "IGFALS",
+        "F2RL1",
+        "BCL2",
+        "UBE2S",
+        "F2RL3",
+        "FGD3",
+        "BIRC5",
+        "SUSD3",
+        "PTHLH",
+        "ESPL1",
+        "TRIB3",
+        "CLIC6",
+        "CKAP2L",
+        "FAM83D",
+        "SLC7A2",
+        "MMP25",
+        "HES2"
+      ],
+      "zero_top20_scores": [
+        0.9999999999999999,
+        0.9993196591804228,
+        0.9991185291727869,
+        0.9982216681862397,
+        0.9979743677006019,
+        0.9977732376929662,
+        0.996876376706419,
+        0.9957783857122361,
+        0.9957476053935682,
+        0.994139623268776,
+        0.9935372911821632,
+        0.9930108519559251,
+        0.9929185109999217,
+        0.990475228525918,
+        0.9859919815294775,
+        0.5155212652138678,
+        0.5150574445612603,
+        0.5148255342349566,
+        0.5145936239086528,
+        0.5143617135823491
+      ],
+      "graph_metadata": {
+        "coexpr": {
+          "n_samples": 1062,
+          "n_genes": 2230,
+          "undirected_edges": 115894,
+          "density": 0.046631138257015654,
+          "tau": 0.3,
+          "power": 6
+        },
+        "meth": {
+          "n_samples": 1062,
+          "n_genes": 2230,
+          "undirected_edges": 168534,
+          "density": 0.06781138156425592,
+          "tau": 0.15,
+          "fdr": 0.05,
+          "bh_p_cutoff": 9.091439210351382e-07,
+          "directional_convention": "upper-index meth_i versus expr_j, then mirrored"
+        },
+        "cnv": {
+          "n_samples": 1062,
+          "n_genes": 2230,
+          "undirected_edges": 106563,
+          "density": 0.04287671480907,
+          "tau": 0.25,
+          "power": 4
+        }
+      }
+    },
+    {
+      "seed": 71,
+      "n_train": 1062,
+      "n_test": 354,
+      "events_train": 622,
+      "events_test": 208,
+      "route_mode": "dual_driven",
+      "weights": {
+        "coexpr": 0.0,
+        "meth": 0.2993547550470251,
+        "cnv": 0.700645244952975
+      },
+      "stability": {
+        "coexpr": 0.373888117421177,
+        "meth": 0.40502220948044376,
+        "cnv": 0.3469273768068304
+      },
+      "routing_oof_delta": {
+        "coexpr": -0.001357434169164784,
+        "meth": 0.0019952416457160727,
+        "cnv": 0.005451898792853793
+      },
+      "zero_graph_oof_cindex": 0.657516014623627,
+      "test_cindex_mkg": 0.5829767223136609,
+      "test_cindex_zero_graph": 0.5998824359275805,
+      "test_delta_mkg_minus_zero": -0.01690571361391957,
+      "mkg_top20": [
+        "TROAP",
+        "BCL2",
+        "UBE2S",
+        "PHLDA2",
+        "ONECUT2",
+        "TRIB2",
+        "ALDOC",
+        "SMOC2",
+        "FGD3",
+        "DBN1",
+        "WNT7B",
+        "DDIT4",
+        "TRIB3",
+        "FGFR4",
+        "A2M",
+        "PRR7",
+        "CLIC6",
+        "PTHLH",
+        "PDLIM7",
+        "SUSD3"
+      ],
+      "mkg_top20_scores": [
+        0.9995380626742857,
+        0.9986276948552979,
+        0.9980293366938118,
+        0.9968204660497627,
+        0.9965206107133378,
+        0.9964395697186932,
+        0.9958141978923254,
+        0.9956386090705953,
+        0.9953927810639336,
+        0.9953252469017297,
+        0.9938854075948237,
+        0.9910867699756563,
+        0.9903249773135168,
+        0.9896860986547085,
+        0.9893065548350027,
+        0.987839701863215,
+        0.9854894947373211,
+        0.9829745005994099,
+        0.9804608589728627,
+        0.9796734051572058
+      ],
+      "zero_top20": [
+        "TROAP",
+        "UBE2S",
+        "BCL2",
+        "ONECUT2",
+        "PHLDA2",
+        "ALDOC",
+        "TRIB2",
+        "WNT7B",
+        "SMOC2",
+        "A2M",
+        "PRR7",
+        "CLIC6",
+        "PKMYT1",
+        "FGD3",
+        "KCNK1",
+        "DBN1",
+        "IL27RA",
+        "VSTM2L",
+        "PBX1",
+        "PDZRN4"
+      ],
+      "zero_top20_scores": [
+        0.9995383751456868,
+        0.9986810972422593,
+        0.9986283197980996,
+        0.9982590554710654,
+        0.9972566395961993,
+        0.9966829515640881,
+        0.9960037086436577,
+        0.994974904046712,
+        0.9945528622755182,
+        0.9899630024544637,
+        0.9878461075269336,
+        0.983975073709429,
+        0.9631095947380458,
+        0.5142368933441129,
+        0.5133136436354861,
+        0.5130828312083293,
+        0.5128520187811727,
+        0.5123903939268593,
+        0.5121595814997025,
+        0.5119287690725459
+      ],
+      "graph_metadata": {
+        "coexpr": {
+          "n_samples": 1062,
+          "n_genes": 2230,
+          "undirected_edges": 116134,
+          "density": 0.04672770471586325,
+          "tau": 0.3,
+          "power": 6
+        },
+        "meth": {
+          "n_samples": 1062,
+          "n_genes": 2230,
+          "undirected_edges": 173283,
+          "density": 0.06972219036870281,
+          "tau": 0.15,
+          "fdr": 0.05,
+          "bh_p_cutoff": 9.093656103686953e-07,
+          "directional_convention": "upper-index meth_i versus expr_j, then mirrored"
+        },
+        "cnv": {
+          "n_samples": 1062,
+          "n_genes": 2230,
+          "undirected_edges": 104211,
+          "density": 0.041930363512363525,
+          "tau": 0.25,
+          "power": 4
+        }
+      }
+    }
+  ],
+  "input_manifest": {
+    "path": "METABRIC_PREPARATION_MANIFEST.json",
+    "sha256": "dbb342ea0dc3b101f943fc2936ae1c48baa58b8db756175e59d0b0468449d4c5"
+  },
+  "summary": {
+    "cohort": "METABRIC",
+    "role": "independent end-to-end multi-omics portability audit",
+    "n": 1416,
+    "events": 830,
+    "genes": 2230,
+    "prespecified_seeds": [
+      42,
+      71
+    ],
+    "test_fraction": 0.25,
+    "test_cindex_mkg_mean": 0.5917277057209471,
+    "test_cindex_mkg_range": [
+      0.5829767223136609,
+      0.6004786891282334
+    ],
+    "test_cindex_zero_graph_mean": 0.600180562527907,
+    "test_cindex_zero_graph_range": [
+      0.5998824359275805,
+      0.6004786891282334
+    ],
+    "paired_delta_mean": -0.008452856806959785,
+    "paired_delta_range": [
+      -0.01690571361391957,
+      0.0
+    ],
+    "mkg_better_split_count": 0,
+    "mean_pairwise_top20_rbo": 0.46446854047003044,
+    "mean_pairwise_top20_jaccard": 0.2903225806451613,
+    "dominant_route_counts": {
+      "cnv": 1,
+      "none": 1
+    }
+  }
+}
