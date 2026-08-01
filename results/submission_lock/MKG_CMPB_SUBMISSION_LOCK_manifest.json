@@ -1,0 +1,56 @@
+{
+  "manifest_version": "2.0",
+  "lock_name": "MKG_CMPB_SUBMISSION_LOCK",
+  "analysis_lock_created_at": "2026-07-05T18:59:22",
+  "cmpb_release_updated_at": "2026-08-01T19:20:00+08:00",
+  "release_note": "Repository paths and public identifiers were migrated to the CMPB naming scheme; numerical outputs and locked hyperparameters were not changed.",
+  "cancers": [
+    "LUAD",
+    "LIHC",
+    "KIRC",
+    "COAD",
+    "STAD",
+    "HNSC"
+  ],
+  "primary_external": {
+    "LUAD": "GSE31210",
+    "LIHC": "GSE14520",
+    "KIRC": "GSE29609",
+    "COAD": "GSE39582",
+    "STAD": "GSE84437",
+    "HNSC": "GSE65858"
+  },
+  "final_config": {
+    "lambda1": 0.2,
+    "lambda2": 50.0,
+    "gamma": 10.0,
+    "top_k": 20,
+    "bootstrap_B": 30,
+    "stage1_rf_trees": 300,
+    "rsf_trees": 100,
+    "deepsurv_epochs": 50,
+    "pgd_max_iter": 300,
+    "pgd_power_iter": 8,
+    "rbo": "normalized truncated RBO@20, p=0.9",
+    "no_relation_baseline": "zero Laplacian L0=0",
+    "negative_gain_rule": "reject all graph layers and use no-relation selector"
+  },
+  "outputs": {
+    "combined_final_config": "results/submission_lock/final_config_comparison_ALL_LOCKED.json",
+    "weights": "results/submission_lock/Table_CMPB_LOCK_weights.csv",
+    "training_cindex": "results/submission_lock/Table_CMPB_LOCK_training_cindex.csv",
+    "external_cindex": "results/submission_lock/Table_CMPB_LOCK_external_cindex.csv",
+    "top20": "results/submission_lock/Table_CMPB_LOCK_top20.csv"
+  },
+  "sha256": {
+    "code/final_config_comparison.py": "0be7b3a329923e6c60da1f32796fff875112f44fc3afcfd0fa7727a474ac96d0",
+    "code/nested_deleakage.py": "3ae97d7e6ec275db9d3920697e2e6c839f62ddb1d276c1ea2f4a3f8603f7c03e",
+    "code/routing_reliability_simulation.py": "0a19ffa3f46be97f38048bf72bda733e8aebddc175634439d307b9b70c9efc29",
+    "code/run_cmpb_lock_pipeline.py": "b7fee7b43bee1df80b46e3f3ff095f7e9112eb0b07420ee7ef6599ab9e89796b",
+    "results/submission_lock/final_config_comparison_ALL_LOCKED.json": "d665414d253a5bd5634c0cf6e0425d6d4d65afd9ee80308a13984840368dd258",
+    "results/submission_lock/Table_CMPB_LOCK_weights.csv": "52b633130f6a7f856c21317d1c5d2a0400158eb5fac7637ba15884b841ae643f",
+    "results/submission_lock/Table_CMPB_LOCK_training_cindex.csv": "b4e7c683125c2e006b82a71c3d4257e78d1d8702dcebcc606c91f0683ca3438e",
+    "results/submission_lock/Table_CMPB_LOCK_external_cindex.csv": "b4094d6fd188b3c64b3d4f9826638f826da8bcbc8b912c6ef4971f6ef1587dec",
+    "results/submission_lock/Table_CMPB_LOCK_top20.csv": "7ddcab9d1f3ae98820db971d593fd7f14f20c89337997878a0891c103008939e"
+  }
+}

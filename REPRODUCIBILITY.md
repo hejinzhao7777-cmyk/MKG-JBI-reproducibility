@@ -7,9 +7,9 @@ audited without conflating reruns, locked outputs, and independent validation.
 ## 1. Locked manuscript outputs
 
 `results/submission_lock/` and `results/source_tables/` contain the numerical
-outputs used by the manuscript. Historical filenames containing `JBI` are
-immutable provenance identifiers from the first computational lock. They do
-not identify the current target journal.
+outputs used by the CMPB manuscript. Filenames and internal references follow
+one CMPB naming scheme. The naming migration did not change any numeric table,
+model output, cohort definition, or locked hyperparameter.
 
 ## 2. Mechanism and sensitivity audits
 
@@ -99,7 +99,7 @@ contrast, is the source for the main stability figure:
 
 ```bash
 python code/cmpb_full_stability_baseline_figure.py \
-  --input results/source_tables/TableS_expanded_stability_baselines_jbi.csv \
+  --input results/source_tables/TableS_expanded_stability_baselines_cmpb.csv \
   --outdir results/full_stability_baseline
 ```
 

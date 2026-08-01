@@ -1,11 +1,12 @@
-# MKG: reproducibility package
+# MKG: CMPB reproducibility package
 
-This repository accompanies the manuscript, "MKG: Reliability-gated
+This repository is the reproducibility release for the CMPB manuscript,
+"MKG: Reliability-gated
 multi-omics graph routing for auditable prognostic signature discovery".
 It provides the locked analysis configuration, core source code used for the
 principal analyses, manuscript-level source tables, and audit outputs.
 
-Repository URL: <https://github.com/hejinzhao7777-cmyk/MKG-JBI-reproducibility>
+Repository URL: <https://github.com/hejinzhao7777-cmyk/MKG-CMPB-reproducibility>
 
 ## Scope
 
@@ -82,7 +83,7 @@ cancer-level source table:
 
 ```bash
 python code/cmpb_full_stability_baseline_figure.py \
-  --input results/source_tables/TableS_expanded_stability_baselines_jbi.csv \
+  --input results/source_tables/TableS_expanded_stability_baselines_cmpb.csv \
   --outdir results/full_stability_baseline
 ```
 
@@ -113,9 +114,9 @@ SHA-256 hashes, cancer-clustered summaries, and the submission figure.
 The submission lock uses `lambda1=0.2`, `lambda2=50`, `gamma=10`, Top-20
 signatures, 30 independent 80% subsamples without replacement, normalized truncated RBO@20 (`p=0.9`),
 and a zero-Laplacian no-relation baseline. Full provenance, output hashes,
-and step exit codes are recorded in the locked manifest. Historical
-filenames containing `JBI` identify the original computational lock and do
-not indicate a journal-specific algorithm.
+and step exit codes are recorded in the locked manifest. All public-facing
+repository files, scripts, figures, tables, and manifests use the CMPB naming
+scheme; the underlying numerical lock is unchanged.
 
 ## Data and code availability
 

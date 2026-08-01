@@ -296,7 +296,7 @@ def run():
         handlelength=1.6,
     )
     fig.subplots_adjust(left=0.09, right=0.985, top=0.90, bottom=0.30, wspace=0.33)
-    stem = FIG / "FigJBI_routing_reliability_simulation"
+    stem = FIG / "Fig_CMPB_routing_reliability_simulation"
     kwargs = {"bbox_inches": "tight", "pad_inches": 0.04}
     fig.savefig(stem.with_suffix(".pdf"), **kwargs)
     fig.savefig(stem.with_suffix(".svg"), **kwargs)

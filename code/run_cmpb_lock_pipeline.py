@@ -1,20 +1,24 @@
 """
-JBI lock pipeline for MKG.
+CMPB lock pipeline for MKG.
 
-This script creates a single reproducible result version for the JBI manuscript:
+This script creates a single reproducible result version for the CMPB manuscript:
   1. run final_config_comparison.py for the locked six-cancer panel;
   2. consolidate weights, Top-20 signatures, training C-index, and external C-index;
-  3. regenerate JBI-specific audit figures;
+  3. regenerate CMPB-specific audit figures;
   4. optionally run the fast train-only graph nested audit;
   5. compile the manuscript and write a manifest with hashes and timestamps.
 
 Usage:
-  python run_jbi_lock_pipeline.py
-  python run_jbi_lock_pipeline.py --skip-final-config
-  python run_jbi_lock_pipeline.py --final-bootstrap 10
-  python run_jbi_lock_pipeline.py --nested-cancers LUAD,COAD,LIHC
-  python run_jbi_lock_pipeline.py --lock-name MKG_FAST_AUDIT_LOCK --lock-dir 08_FAST_AUDIT_LOCK
-  python run_jbi_lock_pipeline.py --lock-name MKG_JBI_SUBMISSION_LOCK --lock-dir 09_JBI_SUBMISSION_LOCK
+  python run_cmpb_lock_pipeline.py
+  python run_cmpb_lock_pipeline.py --skip-final-config
+  python run_cmpb_lock_pipeline.py --final-bootstrap 10
+  python run_cmpb_lock_pipeline.py --nested-cancers LUAD,COAD,LIHC
+  python run_cmpb_lock_pipeline.py --lock-name MKG_FAST_AUDIT_LOCK --lock-dir 08_FAST_AUDIT_LOCK
+  python run_cmpb_lock_pipeline.py --lock-name MKG_CMPB_SUBMISSION_LOCK --lock-dir results/submission_lock
+
+Set MKG_DATA_ROOT and MKG_OUTPUT_ROOT for analysis inputs and outputs. Optional
+MKG_MANUSCRIPT_DIR, MKG_TABLE_DIR, MKG_FIGURE_DIR, and MKG_LOCK_DIR variables
+override the corresponding release locations.
 """
 from __future__ import annotations
 
@@ -32,11 +36,12 @@ import pandas as pd
 
 
 HERE = Path(__file__).resolve().parent
-ROOT = HERE.parent
-MANUSCRIPT = ROOT / "07_论文初稿"
-TABLES = MANUSCRIPT / "tables"
-FIGURES = MANUSCRIPT / "figures"
-LOCK_DIR = ROOT / "08_JBI_lock"
+ROOT = Path(os.environ.get("MKG_PROJECT_ROOT", HERE.parent)).resolve()
+RESULTS = Path(os.environ.get("MKG_OUTPUT_ROOT", ROOT / "outputs")).resolve()
+MANUSCRIPT = Path(os.environ.get("MKG_MANUSCRIPT_DIR", ROOT / "manuscript")).resolve()
+TABLES = Path(os.environ.get("MKG_TABLE_DIR", ROOT / "results" / "source_tables")).resolve()
+FIGURES = Path(os.environ.get("MKG_FIGURE_DIR", ROOT / "results" / "generated_figures")).resolve()
+LOCK_DIR = Path(os.environ.get("MKG_LOCK_DIR", ROOT / "results" / "submission_lock")).resolve()
 LOCK_TABLES = LOCK_DIR / "tables"
 LOCK_LOGS = LOCK_DIR / "logs"
 
@@ -100,7 +105,7 @@ def load_final_results() -> dict:
     results = {}
     missing = []
     for cancer in CANCERS:
-        path = HERE / f"final_config_comparison_{cancer}.json"
+        path = RESULTS / f"final_config_comparison_{cancer}.json"
         if not path.exists():
             missing.append(str(path))
             continue
@@ -179,11 +184,11 @@ def consolidate_final_config(results: dict) -> dict[str, str]:
                     "Gene": gene,
                 })
 
-    outputs["weights"] = str(write_csv(pd.DataFrame(weight_rows), "Table_JBI_LOCK_weights.csv"))
-    outputs["training_cindex"] = str(write_csv(pd.DataFrame(train_rows), "Table_JBI_LOCK_training_cindex.csv"))
-    outputs["external_cindex"] = str(write_csv(pd.DataFrame(external_rows), "Table_JBI_LOCK_external_cindex.csv"))
-    outputs["top20"] = str(write_csv(pd.DataFrame(top_rows), "Table_JBI_LOCK_top20.csv"))
-    nested_table = LOCK_TABLES / "Table_JBI_LOCK_nested_train_only_audit.csv"
+    outputs["weights"] = str(write_csv(pd.DataFrame(weight_rows), "Table_CMPB_LOCK_weights.csv"))
+    outputs["training_cindex"] = str(write_csv(pd.DataFrame(train_rows), "Table_CMPB_LOCK_training_cindex.csv"))
+    outputs["external_cindex"] = str(write_csv(pd.DataFrame(external_rows), "Table_CMPB_LOCK_external_cindex.csv"))
+    outputs["top20"] = str(write_csv(pd.DataFrame(top_rows), "Table_CMPB_LOCK_top20.csv"))
+    nested_table = LOCK_TABLES / "Table_CMPB_LOCK_nested_train_only_audit.csv"
     if nested_table.exists():
         outputs["nested_train_only_audit"] = str(nested_table)
     return outputs
@@ -194,25 +199,20 @@ def write_manifest(outputs: dict, step_codes: dict, args: argparse.Namespace) ->
         HERE / "final_config_comparison.py",
         HERE / "nested_deleakage.py",
         HERE / "routing_reliability_simulation.py",
-        HERE / "run_jbi_lock_pipeline.py",
+        HERE / "run_cmpb_lock_pipeline.py",
         HERE / "redraw_fig2_submission_weights.py",
         HERE / "redraw_fig3_submission_generalization.py",
         HERE / "submission_delta_audit.py",
-        MANUSCRIPT / "MKG_JBI.tex",
-        MANUSCRIPT / "MKG_JBI.pdf",
-        MANUSCRIPT / "MKG_JBI_LOCK.pdf",
-        MANUSCRIPT / "MKG_JBI_Supplementary_Methods.tex",
-        MANUSCRIPT / "MKG_JBI_Supplementary_Methods.pdf",
-        MANUSCRIPT / "MKG_JBI_elsarticle.tex",
-        MANUSCRIPT / "MKG_JBI_elsarticle.pdf",
-        MANUSCRIPT / "make_elsarticle_jbi.py",
-        LOCK_DIR / "JBI_reproducibility_checklist.md",
-        LOCK_TABLES / "Table_JBI_LOCK_nested_train_only_audit.csv",
-        FIGURES / "Fig1_MKG_complete_framework.pdf",
-        FIGURES / "Fig2_omics_weights.pdf",
+        MANUSCRIPT / "mkg_cmpb.tex",
+        MANUSCRIPT / "mkg_cmpb.pdf",
+        MANUSCRIPT / "mkg_cmpb_supplement.tex",
+        MANUSCRIPT / "mkg_cmpb_supplement.pdf",
+        LOCK_DIR / "CMPB_reproducibility_checklist.md",
+        LOCK_TABLES / "Table_CMPB_LOCK_nested_train_only_audit.csv",
+        FIGURES / "Fig1_MKG_final.pdf",
+        FIGURES / "Fig_CMPB_five_arm_ablation.pdf",
         FIGURES / "Fig3_generalization.pdf",
-        FIGURES / "FigJBI_routing_reliability_simulation.pdf",
-        FIGURES / "FigJBI_expanded_stability_baselines.pdf",
+        FIGURES / "Fig_CMPB_routing_reliability_simulation.pdf",
         FIGURES / "Fig4_stability.pdf",
     ]
     for cancer in CANCERS:
@@ -249,10 +249,11 @@ def write_manifest(outputs: dict, step_codes: dict, args: argparse.Namespace) ->
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--lock-name", default="MKG_JBI_LOCK")
-    ap.add_argument("--lock-dir", default="08_JBI_lock")
+    ap.add_argument("--lock-name", default="MKG_CMPB_SUBMISSION_LOCK")
+    ap.add_argument("--lock-dir", default="results/submission_lock")
     ap.add_argument("--skip-final-config", action="store_true")
     ap.add_argument("--skip-nested", action="store_true")
+    ap.add_argument("--skip-figures", action="store_true")
     ap.add_argument("--final-bootstrap", default="30")
     ap.add_argument("--final-rf-jobs", default="8")
     ap.add_argument("--final-stage1-rf-trees", default="300")
@@ -262,10 +263,11 @@ def main() -> int:
     ap.add_argument("--final-pgd-power-iter", default="8")
     ap.add_argument("--nested-cancers", default="LUAD,COAD,LIHC")
     ap.add_argument("--nested-bootstrap", default="10")
-    ap.add_argument("--compile", action="store_true", default=True)
+    ap.add_argument("--compile", action="store_true")
     args = ap.parse_args()
 
-    configure_lock(ROOT / args.lock_dir)
+    requested_lock = Path(args.lock_dir)
+    configure_lock((requested_lock if requested_lock.is_absolute() else ROOT / requested_lock).resolve())
     LOCK_DIR.mkdir(parents=True, exist_ok=True)
     step_codes = {}
 
@@ -291,16 +293,12 @@ def main() -> int:
     results = load_final_results()
     outputs = consolidate_final_config(results)
 
-    env_lock = os.environ.copy()
-    env_lock["MKG_LOCK_DIR"] = str(LOCK_DIR)
-    for script in [
-        "redraw_fig2_submission_weights.py",
-        "redraw_fig3_submission_generalization.py",
-        "routing_reliability_simulation.py",
-        "expanded_stability_baselines_jbi.py",
-        "redraw_fig4_stability_normalized.py",
-        "generate_fig1_jbi_framework.py",
-    ]:
+    if not args.skip_figures:
+        env_lock = os.environ.copy()
+        env_lock["MKG_LOCK_DIR"] = str(LOCK_DIR)
+        env_lock["MKG_ROUTING_SIM_OUT"] = str(LOCK_DIR)
+        env_lock["MKG_ROUTING_SIM_FIG_DIR"] = str(FIGURES)
+        script = "routing_reliability_simulation.py"
         code = run_step([sys.executable, script], f"{Path(script).stem}.log", env=env_lock)
         step_codes[Path(script).stem] = code
         if code != 0:
@@ -317,10 +315,11 @@ def main() -> int:
             raise SystemExit(code)
 
     pdflatex = shutil.which("pdflatex")
-    if args.compile and pdflatex:
+    manuscript_source = MANUSCRIPT / "mkg_cmpb.tex"
+    if args.compile and pdflatex and manuscript_source.exists():
         for i in range(3):
             code = run_step(
-                [pdflatex, "-interaction=nonstopmode", "-jobname=MKG_JBI_LOCK", "MKG_JBI.tex"],
+                [pdflatex, "-interaction=nonstopmode", "mkg_cmpb.tex"],
                 f"pdflatex_{i+1}.log",
                 cwd=MANUSCRIPT,
             )
@@ -328,7 +327,7 @@ def main() -> int:
             if code != 0:
                 raise SystemExit(code)
     elif args.compile:
-        step_codes["pdflatex"] = "not_found"
+        step_codes["pdflatex"] = "source_or_executable_not_found"
 
     manifest = write_manifest(outputs, step_codes, args)
     print(f"LOCK MANIFEST: {manifest}", flush=True)

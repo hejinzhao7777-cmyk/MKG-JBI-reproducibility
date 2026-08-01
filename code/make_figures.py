@@ -11,13 +11,14 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from pathlib import Path
 
+PROJECT = Path(__file__).resolve().parents[1]
 R = Path(os.environ.get(
     "MKG_RESULTS_DIR",
-    r"F:\Claude\MKG\GR第二项工作_整理\06_新实验结果",
+    PROJECT / "outputs",
 ))
 FIG = Path(os.environ.get(
     "MKG_FIGURE_DIR",
-    r"F:\Claude\MKG\GR第二项工作_整理\07_论文初稿\figures",
+    PROJECT / "results" / "generated_figures",
 ))
 FIG.mkdir(parents=True, exist_ok=True)
 CANCERS = ["LUAD", "LIHC", "KIRC", "COAD", "STAD", "HNSC"]

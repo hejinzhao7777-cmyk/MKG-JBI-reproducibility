@@ -1,0 +1,60 @@
+{
+  "manifest_version": "2.0",
+  "generated_at": "2026-08-01T19:20:00+08:00",
+  "purpose": "CMPB pre-submission addendum: confidence intervals, train-only graph reconstruction, and final submission-format checks",
+  "external_cindex_audit": {
+    "patient_level_bootstrap_replicates": 1000,
+    "cancer_level_bootstrap_replicates": 50000,
+    "confidence_level": 0.95,
+    "primary_external_cancers": [
+      "LUAD",
+      "LIHC",
+      "COAD",
+      "STAD",
+      "HNSC"
+    ],
+    "stress_test_cancer": "KIRC"
+  },
+  "full_train_only_graph_audit": {
+    "cancers": [
+      "LUAD",
+      "COAD",
+      "LIHC"
+    ],
+    "split": "stratified 70/30",
+    "random_seed": 42,
+    "bootstrap_replicates": 10,
+    "stage1_random_forest_trees": 100,
+    "projected_gradient_max_iterations": 150,
+    "training_only_steps": [
+      "expression scaling",
+      "Null-Cox residual estimation",
+      "coexpression graph construction",
+      "methylation-expression graph construction",
+      "CNV graph construction",
+      "relation routing",
+      "Top-20 selection",
+      "reduced ridge-Cox fitting"
+    ],
+    "mean_fixed_minus_reconstructed_cindex": -0.0024938018,
+    "interpretation": "No consistent optimism was observed in these three prespecified one-split audits; this is not repeated nested cross-validation."
+  },
+  "cmpb_format_checks": {
+    "document_class": "elsarticle",
+    "main_text_words": 3417,
+    "abstract_words": 247,
+    "main_figures": 5,
+    "main_pdf_pages": 31,
+    "supplement_pdf_pages": 32,
+    "undefined_citations_or_references": 0,
+    "overfull_boxes": 0
+  },
+  "sha256": {
+    "code/submission_ci_audit.py": "fe3b203ea4217530e10a8a52179dbce3699a718f74c430b9cf19d1ff0d23dc0e",
+    "code/full_train_only_graph_audit.py": "981583b0384dd1c9fadf4d1d2b5aabbbb6a2689172a7a94f357070eb7d26b521",
+    "results/confidence_intervals/MKG_LOCKED_EXTERNAL_CINDEX_BOOTSTRAP_CI.csv": "14d370df1f7820a12f7b3e1a9779d2569f40c890290ad4e2b57aa98d0c9539a6",
+    "results/confidence_intervals/MKG_SUBMISSION_CONFIDENCE_INTERVALS.json": "160fe8e25f7ca48f61ffe81f5ff56f0efdc66f2ad10addafe8e1904e39d98797",
+    "results/full_train_only_graph_audit/MKG_FULL_TRAIN_ONLY_GRAPH_AUDIT.csv": "fe587c96c306dc65dc158245b6a1d6ce71aa2acef32e3799a47908c3272845c8",
+    "results/full_train_only_graph_audit/MKG_FULL_TRAIN_ONLY_GRAPH_AUDIT.json": "6894f65bdb8d5a740209fe17ea6b7b28ed37aa861a134d177b98fa275425e31f"
+  }
+}

@@ -14,6 +14,9 @@ The remaining scripts preserve the locked submission workflow and its specific a
 
 Submission-facing audits:
 
+- `run_cmpb_lock_pipeline.py` is the CMPB-named orchestration entry point for
+  consolidating the six-cancer lock and writing its manifest in the original
+  analysis layout.
 - `submission_ci_audit.py` reconstructs locked external molecular scores and estimates patient- and cancer-bootstrap confidence intervals.
 - `full_train_only_graph_audit.py` reconstructs all three graph layers within representative training splits before routing, selection, and held-out evaluation.
 - `cmpb_five_arm_ablation.py` runs the locked no-graph, equal-weight,
@@ -71,6 +74,8 @@ Submission-facing audits:
 - `cmpb_merge_and_plot.py` merges the completed five-arm workers, recomputes
   cancer-bootstrap summaries, and renders the submission figure with every
   cancer displayed directly.
+- `conformal_ipcw_cmpb.py` runs the censoring-aware conformal calibration
+  audit and writes CMPB-named JSON, CSV, and figure outputs.
 - `routing_reliability_simulation.py` regenerates the two-panel routing
   reliability stress-test figure and its aggregate CSV/JSON outputs.
 - `make_figures.py` contains the source-table-based legacy figure builders;
@@ -82,6 +87,8 @@ Submission-facing audits:
   vector graphical abstract and its PDF, SVG, PNG, and TIFF exports.
 - `cmpb_final_submission_qa.py` checks word limits, citations, referenced
   figures, highlights, stale terminology, and final LaTeX logs.
+- `verify_cmpb_release.py` scans every tracked filename and supported text,
+  JSON, CSV, PDF, PNG, and SVG file for naming residue and structural damage.
 
 The sensitivity, decision-curve, routing-simulation, repeated-audit,
 complete-stability, and five-arm scripts generate their own source tables or

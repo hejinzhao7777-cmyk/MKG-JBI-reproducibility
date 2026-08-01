@@ -1,5 +1,5 @@
 """
-JBI-priority conformal audit: IPCW risk-stratified survival calibration.
+CMPB-priority conformal audit: IPCW risk-stratified survival calibration.
 
 This script keeps the original held-out train/cal/test design, but adds a
 censoring-aware weighted quantile and subgroup miscoverage diagnostics. It is
@@ -8,9 +8,9 @@ subsetting analysis, not as a drop-in replacement for all survival conformal
 theory.
 
 Outputs:
-  - conformal_ipcw_jbi_results.json
-  - conformal_ipcw_jbi_table.csv
-  - figures/FigJBI_conformal_ipcw_ccd.{png,pdf}
+  - conformal_ipcw_cmpb_results.json
+  - conformal_ipcw_cmpb_table.csv
+  - figures/Fig_CMPB_conformal_ipcw_ccd.{png,pdf}
 """
 
 from __future__ import annotations
@@ -429,8 +429,8 @@ def plot_results(df: pd.DataFrame):
     axes[2].set_title("(C) Conditional coverage disparity")
 
     fig.tight_layout()
-    fig.savefig(FIG / "FigJBI_conformal_ipcw_ccd.png", dpi=300, bbox_inches="tight")
-    fig.savefig(FIG / "FigJBI_conformal_ipcw_ccd.pdf", bbox_inches="tight")
+    fig.savefig(FIG / "Fig_CMPB_conformal_ipcw_ccd.png", dpi=300, bbox_inches="tight")
+    fig.savefig(FIG / "Fig_CMPB_conformal_ipcw_ccd.pdf", bbox_inches="tight")
     plt.close(fig)
 
 
@@ -446,8 +446,8 @@ def main():
 
     df = pd.DataFrame(all_rows)
     flat = df.drop(columns=["group_metrics"]).copy()
-    flat.to_csv(OUT / "conformal_ipcw_jbi_table.csv", index=False)
-    with open(OUT / "conformal_ipcw_jbi_results.json", "w", encoding="utf-8") as f:
+    flat.to_csv(OUT / "conformal_ipcw_cmpb_table.csv", index=False)
+    with open(OUT / "conformal_ipcw_cmpb_results.json", "w", encoding="utf-8") as f:
         json.dump(
             {
                 "alpha": ALPHA,
@@ -470,8 +470,8 @@ def main():
         ["cancer", "horizon", "method", "m_test_usable", "coverage", "width", "ccd_abs"]
     ]
     print(view.to_string(index=False))
-    print("saved conformal_ipcw_jbi_results.json, conformal_ipcw_jbi_table.csv")
-    print("saved FigJBI_conformal_ipcw_ccd.{png,pdf}")
+    print("saved conformal_ipcw_cmpb_results.json, conformal_ipcw_cmpb_table.csv")
+    print("saved Fig_CMPB_conformal_ipcw_ccd.{png,pdf}")
 
 
 if __name__ == "__main__":

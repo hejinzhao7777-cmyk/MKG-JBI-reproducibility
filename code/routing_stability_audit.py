@@ -1,5 +1,5 @@
 """
-Repeated routing-stability audit for the JBI submission lock.
+Repeated routing-stability audit for the CMPB submission lock.
 
 This script repeats only the graph-layer routing step under different CV/random
 seeds. It does not rerun external validation or all prediction baselines. The
@@ -134,7 +134,7 @@ def main():
     parser.add_argument("--rf-jobs", type=int, default=int(os.environ.get("FINAL_RF_JOBS", "8")))
     parser.add_argument("--pgd-max-iter", type=int, default=int(os.environ.get("FINAL_PGD_MAX_ITER", "300")))
     parser.add_argument("--pgd-power-iter", type=int, default=int(os.environ.get("FINAL_PGD_POWER_ITER", "8")))
-    parser.add_argument("--outdir", default=str(F.OUT.parent / "09_JBI_SUBMISSION_LOCK"))
+    parser.add_argument("--outdir", default=str(F.OUT.parent / "10_CMPB_SUBMISSION_LOCK"))
     parser.add_argument("--resume", action="store_true")
     args = parser.parse_args()
     configure_from_args(args)

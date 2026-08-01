@@ -11,7 +11,7 @@ The experiment isolates the two routing signals under one protocol:
 All signatures are selected from the TCGA cohort. External cohorts are used
 only after the genes, directions, and scores have been frozen. Results are
 saved incrementally so a long run can be resumed without overwriting the
-previous JBI submission lock.
+previous CMPB submission lock.
 """
 from __future__ import annotations
 
@@ -59,11 +59,11 @@ STABILITY_TABLE_PATH = OUTDIR / f"CMPB_FIVE_ARM_STABILITY{RUN_SUFFIX}.csv"
 RESOURCE_PATH = OUTDIR / f"CMPB_COMPUTATIONAL_COST{RUN_SUFFIX}.csv"
 LEGACY_STABILITY_PATH = (
     F.OUT.parent
-    / "09_JBI_SUBMISSION_LOCK"
+    / "10_CMPB_SUBMISSION_LOCK"
     / "MKG_SUBMISSION_LOCK_ABLATION_STABILITY_RAW.json"
 )
 LEGACY_ABLATION_PATH = (
-    F.OUT.parent / "09_JBI_SUBMISSION_LOCK" / "MKG_SUBMISSION_LOCK_ABLATION.csv"
+    F.OUT.parent / "10_CMPB_SUBMISSION_LOCK" / "MKG_SUBMISSION_LOCK_ABLATION.csv"
 )
 COMPUTE_INTERNAL_OOF = os.environ.get("CMPB_INTERNAL_OOF", "0") == "1"
 
