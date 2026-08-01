@@ -1,0 +1,11 @@
+{
+  "FISTA": {
+    "minimum_top20_overlap": 18,
+    "maximum_absolute_primary_cindex_change": 0.006465517241379337,
+    "route_label_changes": 1
+  },
+  "directional_methylation": {
+    "minimum_top20_overlap": 17,
+    "maximum_absolute_primary_cindex_change": 0.007709604882749743
+  }
+}

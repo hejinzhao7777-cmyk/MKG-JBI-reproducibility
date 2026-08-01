@@ -30,7 +30,7 @@ METHOD_MAP = {
     "equal": "v2_equal",
     "joint": "GR-SAFS_v2",
 }
-OUTDIR = F.OUT.parent / "09_JBI_SUBMISSION_LOCK"
+OUTDIR = F.OUT.parent / "10_CMPB_SUBMISSION_LOCK"
 
 
 def load_cancer_expression(cancer):

@@ -1,15 +1,16 @@
-# MKG: reproducibility package
+# MKG: CMPB reproducibility package
 
-This repository accompanies the manuscript, "MKG: Reliability-gated
-multi-omics graph routing for reproducible prognostic signature discovery".
+This repository is the reproducibility release for the CMPB manuscript,
+"MKG: Reliability-gated
+multi-omics graph routing for auditable prognostic signature discovery".
 It provides the locked analysis configuration, core source code used for the
 principal analyses, manuscript-level source tables, and audit outputs.
 
-Repository URL: <https://github.com/hejinzhao7777-cmyk/MKG-JBI-reproducibility>
+Repository URL: <https://github.com/hejinzhao7777-cmyk/MKG-CMPB-reproducibility>
 
 ## Scope
 
-The study evaluates six TCGA cancer types (LUAD, LIHC, KIRC, COAD, STAD, and HNSC), independent expression cohorts, and a separate end-to-end METABRIC complete-stack audit. The public package contains no participant-level data. TCGA, GEO, and METABRIC are reused public datasets and must be downloaded under their respective terms of use.
+The study evaluates six TCGA cancer types (LUAD, LIHC, KIRC, COAD, STAD, and HNSC), eight locked external expression cohorts, and a separate end-to-end METABRIC complete-stack audit. When two expression cohorts were available for one cancer, the larger processed cohort defined its cancer-level primary value and the smaller cohort was reported separately. The public package contains no participant-level data. TCGA, GEO, and METABRIC are reused public datasets and must be downloaded under their respective terms of use.
 
 ## Repository layout
 
@@ -76,17 +77,33 @@ The right-censored gate-margin sensitivity can be rerun independently:
 python code/cmpb_conservative_gate_sensitivity.py
 ```
 
-The complete six-method stability figure and paired MKG--Uni-Cox audit are
-generated from the supplied cancer-level source table:
+The complete six-method stability figure and paired audits against Uni-Cox
+and cross-validated Cox elastic net are generated from the supplied
+cancer-level source table:
 
 ```bash
 python code/cmpb_full_stability_baseline_figure.py \
-  --input results/source_tables/TableS_expanded_stability_baselines_jbi.csv \
+  --input results/source_tables/TableS_expanded_stability_baselines_cmpb.csv \
   --outdir results/full_stability_baseline
 ```
 
 See `REPRODUCIBILITY.md` for the evidence layers, exact aggregation command,
 and interpretation boundaries.
+
+The manuscript-facing comparison sources are
+`results/source_tables/Table1_stability.csv` (the final conditional six-method
+stability estimand) and `results/source_tables/Table2_external_cindex.csv`
+(all eight external cohorts, including development-CV-tuned sparse-Cox
+comparators). Files carrying `SUBMISSION_LOCK` in their names remain available
+as immutable algorithmic provenance and are not the final comparator tables.
+
+The final audit layer also contains: (i) cross-validated sparse-Cox baselines
+and patient-bootstrap uncertainty, (ii) conditional fused-ranking stability
+with every method refitted on identical 80% subsamples, (iii) an outer
+held-out gate-versus-zero comparison, (iv) an order-invariant
+directional-maximum methylation-graph rerun, and (v) proximal-gradient
+diagnostics against a converged accelerated reference. These are sensitivity
+analyses; the immutable submission lock remains the primary configuration.
 
 The completed repeated audit is stored in
 `results/repeated_train_only_graph_audit/`, including all 18 run records,
@@ -95,11 +112,11 @@ SHA-256 hashes, cancer-clustered summaries, and the submission figure.
 ## Locked configuration
 
 The submission lock uses `lambda1=0.2`, `lambda2=50`, `gamma=10`, Top-20
-signatures, 30 bootstrap resamples, normalized truncated RBO@20 (`p=0.9`),
+signatures, 30 independent 80% subsamples without replacement, normalized truncated RBO@20 (`p=0.9`),
 and a zero-Laplacian no-relation baseline. Full provenance, output hashes,
-and step exit codes are recorded in the locked manifest. Historical
-filenames containing `JBI` identify the original computational lock and do
-not indicate a journal-specific algorithm.
+and step exit codes are recorded in the locked manifest. All public-facing
+repository files, scripts, figures, tables, and manifests use the CMPB naming
+scheme; the underlying numerical lock is unchanged.
 
 ## Data and code availability
 

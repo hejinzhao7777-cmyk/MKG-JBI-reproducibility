@@ -12,6 +12,6 @@ Top-20 selection stability across six TCGA cancers.
   \(6^6\) cancer-cluster bootstrap resamples.
 
 The underlying values are in
-`../source_tables/TableS_expanded_stability_baselines_jbi.csv`. The `jbi`
-suffix is a historical provenance identifier and does not change the
-analysis or target-journal package.
+`../source_tables/TableS_expanded_stability_baselines_cmpb.csv`. The filename
+matches the CMPB release naming convention; its numerical contents are the
+locked stability values used by the manuscript.

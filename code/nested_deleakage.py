@@ -1,5 +1,5 @@
 """
-Nested de-leakage audit for JBI revision.
+Nested de-leakage audit for CMPB revision.
 
 For each cancer, split TCGA into train/test. The nested path learns graph-layer
 weights, performs selection, and refits the ridge-Cox model using only train.

@@ -26,7 +26,7 @@
   "matrix_metadata": {
     "expression": {
       "url": "https://media.githubusercontent.com/media/cBioPortal/datahub/master/public/brca_metabric/data_mrna_illumina_microarray.txt",
-      "local_cache": "F:\\Claude\\MKG\\tmp\\cohort_search\\brca_metabric\\data_mrna_illumina_microarray.txt",
+      "local_cache": "not redistributed; retrieve from the recorded URL",
       "remote_rows_scanned": 20603,
       "selected_rows_before_duplicate_collapse": 3864,
       "selected_genes": 3846,
@@ -36,7 +36,7 @@
     },
     "methylation": {
       "url": "https://media.githubusercontent.com/media/cBioPortal/datahub/master/public/brca_metabric/data_methylation_promoters_rrbs.txt",
-      "local_cache": "F:\\Claude\\MKG\\tmp\\cohort_search\\brca_metabric\\data_methylation_promoters_rrbs.txt",
+      "local_cache": "not redistributed; retrieve from the recorded URL",
       "remote_rows_scanned": 13188,
       "selected_rows_before_duplicate_collapse": 2356,
       "selected_genes": 2355,
@@ -46,7 +46,7 @@
     },
     "copy_number": {
       "url": "https://media.githubusercontent.com/media/cBioPortal/datahub/master/public/brca_metabric/data_cna.txt",
-      "local_cache": "F:\\Claude\\MKG\\tmp\\cohort_search\\brca_metabric\\data_cna.txt",
+      "local_cache": "not redistributed; retrieve from the recorded URL",
       "remote_rows_scanned": 22544,
       "selected_rows_before_duplicate_collapse": 4024,
       "selected_genes": 4023,

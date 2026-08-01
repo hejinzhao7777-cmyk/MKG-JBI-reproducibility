@@ -1,15 +1,15 @@
 cff-version: 1.2.0
 message: "If you use this software or its locked audit outputs, please cite the associated manuscript and this repository."
-title: "MKG reproducibility package"
+title: "MKG CMPB reproducibility package"
 type: software
 authors:
   - family-names: He
     given-names: Jinzhao
   - family-names: Guan
     given-names: Jing
-version: 0.3.0
-date-released: 2026-07-31
-repository-code: "https://github.com/hejinzhao7777-cmyk/MKG-JBI-reproducibility"
+version: 0.4.0
+date-released: 2026-08-01
+repository-code: "https://github.com/hejinzhao7777-cmyk/MKG-CMPB-reproducibility"
 license: MIT
 keywords:
   - multi-omics

@@ -1,0 +1,49 @@
+Cancer,Cohort,Analysis role,Method,C-index,Matched genes,Signature size,Matched fraction
+LUAD,GSE31210,primary five-cohort summary,MKG,0.6480886604561517,14,20,0.7
+LUAD,GSE31210,primary five-cohort summary,MKG equal-weight,0.647928043687761,14,20,0.7
+LUAD,GSE31210,primary five-cohort summary,Single-graph backend,0.6178927079987151,15,20,0.75
+LUAD,GSE31210,primary five-cohort summary,Cox-Lasso,0.5971731448763251,17,20,0.85
+LUAD,GSE31210,primary five-cohort summary,Cox-EN,0.596370061034372,18,20,0.9
+LUAD,GSE31210,primary five-cohort summary,Uni-Cox,0.6676839061998072,17,20,0.85
+LUAD,GSE31210,primary five-cohort summary,RSF,0.46016704143912623,18,20,0.9
+LUAD,GSE31210,primary five-cohort summary,DeepSurv,0.5170253774494057,16,20,0.8
+LIHC,GSE14520,primary five-cohort summary,MKG,0.6584995663486557,16,20,0.8
+LIHC,GSE14520,primary five-cohort summary,MKG equal-weight,0.6579213645562301,17,20,0.85
+LIHC,GSE14520,primary five-cohort summary,Single-graph backend,0.6584995663486557,16,20,0.8
+LIHC,GSE14520,primary five-cohort summary,Cox-Lasso,0.4827984966753397,10,20,0.5
+LIHC,GSE14520,primary five-cohort summary,Cox-EN,0.47940156114483956,10,20,0.5
+LIHC,GSE14520,primary five-cohort summary,Uni-Cox,0.6086296617519514,18,20,0.9
+LIHC,GSE14520,primary five-cohort summary,RSF,0.5042642382191385,13,20,0.65
+LIHC,GSE14520,primary five-cohort summary,DeepSurv,0.5830442324371206,13,20,0.65
+KIRC,GSE29609,small platform-mismatch sensitivity,MKG,0.2823275862068966,18,20,0.9
+KIRC,GSE29609,small platform-mismatch sensitivity,MKG equal-weight,0.28663793103448276,18,20,0.9
+KIRC,GSE29609,small platform-mismatch sensitivity,Single-graph backend,0.2823275862068966,18,20,0.9
+KIRC,GSE29609,small platform-mismatch sensitivity,Cox-Lasso,0.5323275862068966,17,20,0.85
+KIRC,GSE29609,small platform-mismatch sensitivity,Cox-EN,0.5883620689655172,17,20,0.85
+KIRC,GSE29609,small platform-mismatch sensitivity,Uni-Cox,0.3728448275862069,14,20,0.7
+KIRC,GSE29609,small platform-mismatch sensitivity,RSF,0.375,17,20,0.85
+KIRC,GSE29609,small platform-mismatch sensitivity,DeepSurv,0.4849137931034483,14,20,0.7
+COAD,GSE39582,primary five-cohort summary,MKG,0.5156072216814948,17,20,0.85
+COAD,GSE39582,primary five-cohort summary,MKG equal-weight,0.5155523873497196,17,20,0.85
+COAD,GSE39582,primary five-cohort summary,Single-graph backend,0.5169506628099854,17,20,0.85
+COAD,GSE39582,primary five-cohort summary,Cox-Lasso,0.4985674530823749,17,20,0.85
+COAD,GSE39582,primary five-cohort summary,Cox-EN,0.5022002275624768,17,20,0.85
+COAD,GSE39582,primary five-cohort summary,Uni-Cox,0.5193633734080908,18,20,0.9
+COAD,GSE39582,primary five-cohort summary,RSF,0.5031461197855978,19,20,0.95
+COAD,GSE39582,primary five-cohort summary,DeepSurv,0.5,17,20,0.85
+STAD,GSE84437,primary five-cohort summary,MKG,0.5470822591985001,19,20,0.95
+STAD,GSE84437,primary five-cohort summary,MKG equal-weight,0.5463166940082806,19,20,0.95
+STAD,GSE84437,primary five-cohort summary,Single-graph backend,0.5428482149832045,19,20,0.95
+STAD,GSE84437,primary five-cohort summary,Cox-Lasso,0.4688696195609718,19,20,0.95
+STAD,GSE84437,primary five-cohort summary,Cox-EN,0.48764940239043825,19,20,0.95
+STAD,GSE84437,primary five-cohort summary,Uni-Cox,0.5519881259276619,19,20,0.95
+STAD,GSE84437,primary five-cohort summary,RSF,0.5380360909303961,19,20,0.95
+STAD,GSE84437,primary five-cohort summary,DeepSurv,0.5267557222092024,20,20,1.0
+HNSC,GSE65858,primary five-cohort summary,MKG,0.5390596302191747,20,20,1.0
+HNSC,GSE65858,primary five-cohort summary,MKG equal-weight,0.5406514019835925,20,20,1.0
+HNSC,GSE65858,primary five-cohort summary,Single-graph backend,0.5407738459654708,20,20,1.0
+HNSC,GSE65858,primary five-cohort summary,Cox-Lasso,0.5322639892249296,16,20,0.8
+HNSC,GSE65858,primary five-cohort summary,Cox-EN,0.5003061099546957,17,20,0.85
+HNSC,GSE65858,primary five-cohort summary,Uni-Cox,0.5265091220766499,19,20,0.95
+HNSC,GSE65858,primary five-cohort summary,RSF,0.4724501040773846,16,20,0.8
+HNSC,GSE65858,primary five-cohort summary,DeepSurv,0.5,13,20,0.65

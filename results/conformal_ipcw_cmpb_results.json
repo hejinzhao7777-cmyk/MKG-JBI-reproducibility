@@ -1,0 +1,3920 @@
+{
+  "alpha": 0.1,
+  "note": "IPCW quantiles are used as a censoring-aware empirical calibration upgrade. Reported test coverage is empirical on horizon-usable subjects; weighted_coverage uses inverse censoring weights on the same subjects.",
+  "rows": [
+    {
+      "cancer": "LUAD",
+      "horizon": "1y",
+      "method": "naive_global",
+      "n_total": 440,
+      "n_train": 220,
+      "n_cal": 110,
+      "n_test": 110,
+      "m_cal_global": 98,
+      "ess_cal_global": NaN,
+      "m_test_usable": 96,
+      "coverage": 0.9375,
+      "weighted_coverage": 0.9399341451145187,
+      "width": 0.8373852938031886,
+      "ccd_abs": 0.06428571428571428,
+      "ccd_range": 0.050000000000000044,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 35,
+          "coverage": 0.9142857142857143,
+          "weighted_coverage": 0.9184027361463389,
+          "width": 0.7632636419047519,
+          "group": 0,
+          "q": 0.7097979413327595
+        },
+        {
+          "n": 28,
+          "coverage": 0.9642857142857143,
+          "weighted_coverage": 0.965227548358967,
+          "width": 0.8079534814328582,
+          "group": 1,
+          "q": 0.7097979413327595
+        },
+        {
+          "n": 33,
+          "coverage": 0.9393939393939394,
+          "weighted_coverage": 0.9412325930020722,
+          "width": 0.9409716138884774,
+          "group": 2,
+          "q": 0.7097979413327595
+        }
+      ]
+    },
+    {
+      "cancer": "LUAD",
+      "horizon": "1y",
+      "method": "naive_risk_stratified",
+      "n_total": 440,
+      "n_train": 220,
+      "n_cal": 110,
+      "n_test": 110,
+      "m_cal_global": 98,
+      "ess_cal_global": NaN,
+      "m_test_usable": 96,
+      "coverage": 0.9479166666666666,
+      "weighted_coverage": 0.9511889889231876,
+      "width": 0.47727142863305033,
+      "ccd_abs": 0.0696969696969697,
+      "ccd_range": 0.05541125541125547,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 35,
+          "coverage": 0.9142857142857143,
+          "weighted_coverage": 0.9184027361463389,
+          "width": 0.18063810533223787,
+          "group": 0,
+          "q": 0.1271724047602454
+        },
+        {
+          "n": 28,
+          "coverage": 0.9642857142857143,
+          "weighted_coverage": 0.965227548358967,
+          "width": 0.25220206544922297,
+          "group": 1,
+          "q": 0.1540465253491245
+        },
+        {
+          "n": 33,
+          "coverage": 0.9696969696969697,
+          "weighted_coverage": 0.969936682264257,
+          "width": 0.9828504736232201,
+          "group": 2,
+          "q": 0.7757680283061592
+        }
+      ]
+    },
+    {
+      "cancer": "LUAD",
+      "horizon": "1y",
+      "method": "ipcw_global",
+      "n_total": 440,
+      "n_train": 220,
+      "n_cal": 110,
+      "n_test": 110,
+      "m_cal_global": 98,
+      "ess_cal_global": 97.96338561327337,
+      "m_test_usable": 96,
+      "coverage": 0.9166666666666666,
+      "weighted_coverage": 0.9195521560956789,
+      "width": 0.7294634077159339,
+      "ccd_abs": 0.06428571428571428,
+      "ccd_range": 0.08549783549783552,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 35,
+          "coverage": 0.9142857142857143,
+          "weighted_coverage": 0.9184027361463389,
+          "width": 0.6482496051616519,
+          "group": 0,
+          "q": 0.5947839045896595
+        },
+        {
+          "n": 28,
+          "coverage": 0.9642857142857143,
+          "weighted_coverage": 0.965227548358967,
+          "width": 0.6929394446897579,
+          "group": 1,
+          "q": 0.5947839045896595
+        },
+        {
+          "n": 33,
+          "coverage": 0.8787878787878788,
+          "weighted_coverage": 0.8819152457161551,
+          "width": 0.8465892881442006,
+          "group": 2,
+          "q": 0.5947839045896595
+        }
+      ]
+    },
+    {
+      "cancer": "LUAD",
+      "horizon": "1y",
+      "method": "ipcw_risk_stratified",
+      "n_total": 440,
+      "n_train": 220,
+      "n_cal": 110,
+      "n_test": 110,
+      "m_cal_global": 98,
+      "ess_cal_global": 97.96338561327337,
+      "m_test_usable": 96,
+      "coverage": 0.8958333333333334,
+      "weighted_coverage": 0.8963050955431955,
+      "width": 0.45408501115988537,
+      "ccd_abs": 0.04285714285714293,
+      "ccd_range": 0.08225108225108235,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 35,
+          "coverage": 0.8857142857142857,
+          "weighted_coverage": 0.8897026506417659,
+          "width": 0.12714393381236294,
+          "group": 0,
+          "q": 0.07389928164728332
+        },
+        {
+          "n": 28,
+          "coverage": 0.8571428571428571,
+          "weighted_coverage": 0.8579800429857485,
+          "width": 0.24400995337477557,
+          "group": 1,
+          "q": 0.1463545038705013
+        },
+        {
+          "n": 33,
+          "coverage": 0.9393939393939394,
+          "weighted_coverage": 0.9412325930020722,
+          "width": 0.9790862028309871,
+          "group": 2,
+          "q": 0.768522801157429
+        }
+      ]
+    },
+    {
+      "cancer": "LUAD",
+      "horizon": "3y",
+      "method": "naive_global",
+      "n_total": 440,
+      "n_train": 220,
+      "n_cal": 110,
+      "n_test": 110,
+      "m_cal_global": 55,
+      "ess_cal_global": NaN,
+      "m_test_usable": 57,
+      "coverage": 0.9122807017543859,
+      "weighted_coverage": 0.9289914334286855,
+      "width": 0.9882083100088681,
+      "ccd_abs": 0.16666666666666674,
+      "ccd_range": 0.2666666666666667,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 15,
+          "coverage": 0.7333333333333333,
+          "weighted_coverage": 0.8308928060786633,
+          "width": 0.9605104503203331,
+          "group": 0,
+          "q": 0.8042336041294654
+        },
+        {
+          "n": 16,
+          "coverage": 0.9375,
+          "weighted_coverage": 0.9300234891856528,
+          "width": 0.9987204028146907,
+          "group": 1,
+          "q": 0.8042336041294654
+        },
+        {
+          "n": 26,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.997718864256363,
+          "group": 2,
+          "q": 0.8042336041294654
+        }
+      ]
+    },
+    {
+      "cancer": "LUAD",
+      "horizon": "3y",
+      "method": "naive_risk_stratified",
+      "n_total": 440,
+      "n_train": 220,
+      "n_cal": 110,
+      "n_test": 110,
+      "m_cal_global": 55,
+      "ess_cal_global": NaN,
+      "m_test_usable": 57,
+      "coverage": 0.8421052631578947,
+      "weighted_coverage": 0.860395512791669,
+      "width": 0.9843753010342794,
+      "ccd_abs": 0.21250000000000002,
+      "ccd_range": 0.27403846153846156,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 15,
+          "coverage": 0.8,
+          "weighted_coverage": 0.8641303214850028,
+          "width": 0.9892147541539021,
+          "group": 0,
+          "q": 0.8426188097142847
+        },
+        {
+          "n": 16,
+          "coverage": 0.6875,
+          "weighted_coverage": 0.7755554267891596,
+          "width": 0.9819429851902622,
+          "group": 1,
+          "q": 0.7552980399581217
+        },
+        {
+          "n": 26,
+          "coverage": 0.9615384615384616,
+          "weighted_coverage": 0.9415007901008448,
+          "width": 0.9830801186000462,
+          "group": 2,
+          "q": 0.7128043511162764
+        }
+      ]
+    },
+    {
+      "cancer": "LUAD",
+      "horizon": "3y",
+      "method": "ipcw_global",
+      "n_total": 440,
+      "n_train": 220,
+      "n_cal": 110,
+      "n_test": 110,
+      "m_cal_global": 55,
+      "ess_cal_global": 49.31488281189237,
+      "m_test_usable": 57,
+      "coverage": 0.8070175438596491,
+      "weighted_coverage": 0.8492790244430091,
+      "width": 0.9685674843225749,
+      "ccd_abs": 0.2333333333333334,
+      "ccd_range": 0.29487179487179493,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 15,
+          "coverage": 0.6666666666666666,
+          "weighted_coverage": 0.7993889856059807,
+          "width": 0.9122958501027509,
+          "group": 0,
+          "q": 0.7544214058261731
+        },
+        {
+          "n": 16,
+          "coverage": 0.6875,
+          "weighted_coverage": 0.7755554267891596,
+          "width": 0.9814498784910411,
+          "group": 1,
+          "q": 0.7544214058261731
+        },
+        {
+          "n": 26,
+          "coverage": 0.9615384615384616,
+          "weighted_coverage": 0.9415007901008448,
+          "width": 0.9931042614995711,
+          "group": 2,
+          "q": 0.7544214058261731
+        }
+      ]
+    },
+    {
+      "cancer": "LUAD",
+      "horizon": "3y",
+      "method": "ipcw_risk_stratified",
+      "n_total": 440,
+      "n_train": 220,
+      "n_cal": 110,
+      "n_test": 110,
+      "m_cal_global": 55,
+      "ess_cal_global": 49.31488281189237,
+      "m_test_usable": 57,
+      "coverage": 0.8245614035087719,
+      "weighted_coverage": 0.849316340989556,
+      "width": 0.9813223457592013,
+      "ccd_abs": 0.21250000000000002,
+      "ccd_range": 0.27403846153846156,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 15,
+          "coverage": 0.7333333333333333,
+          "weighted_coverage": 0.8308928060786633,
+          "width": 0.9811083508936734,
+          "group": 0,
+          "q": 0.8293585989874053
+        },
+        {
+          "n": 16,
+          "coverage": 0.6875,
+          "weighted_coverage": 0.7755554267891596,
+          "width": 0.9805176203238652,
+          "group": 1,
+          "q": 0.7527640579734161
+        },
+        {
+          "n": 26,
+          "coverage": 0.9615384615384616,
+          "weighted_coverage": 0.9415007901008448,
+          "width": 0.981941019987982,
+          "group": 2,
+          "q": 0.7091022806270673
+        }
+      ]
+    },
+    {
+      "cancer": "LUAD",
+      "horizon": "5y",
+      "method": "naive_global",
+      "n_total": 440,
+      "n_train": 220,
+      "n_cal": 110,
+      "n_test": 110,
+      "m_cal_global": 50,
+      "ess_cal_global": NaN,
+      "m_test_usable": 51,
+      "coverage": 0.9607843137254902,
+      "weighted_coverage": 0.9565547507344293,
+      "width": 0.9354817751865885,
+      "ccd_abs": 0.09999999999999998,
+      "ccd_range": 0.07692307692307687,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 13,
+          "coverage": 0.9230769230769231,
+          "weighted_coverage": 0.9721944827739794,
+          "width": 0.9860110149180655,
+          "group": 0,
+          "q": 0.6144398098218473
+        },
+        {
+          "n": 15,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 1.0,
+          "group": 1,
+          "q": 0.6144398098218473
+        },
+        {
+          "n": 23,
+          "coverage": 0.9565217391304348,
+          "weighted_coverage": 0.8957591487218962,
+          "width": 0.8648446669817897,
+          "group": 2,
+          "q": 0.6144398098218473
+        }
+      ]
+    },
+    {
+      "cancer": "LUAD",
+      "horizon": "5y",
+      "method": "naive_risk_stratified",
+      "n_total": 440,
+      "n_train": 220,
+      "n_cal": 110,
+      "n_test": 110,
+      "m_cal_global": 50,
+      "ess_cal_global": NaN,
+      "m_test_usable": 51,
+      "coverage": 0.8823529411764706,
+      "weighted_coverage": 0.9078049198894078,
+      "width": 0.9398129694600618,
+      "ccd_abs": 0.30000000000000004,
+      "ccd_range": 0.4,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 13,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.9947741046944352,
+          "group": 0,
+          "q": 0.6483685103520089
+        },
+        {
+          "n": 15,
+          "coverage": 0.6,
+          "weighted_coverage": 0.7234147596682232,
+          "width": 0.9700327608155661,
+          "group": 1,
+          "q": 0.5210929791787281
+        },
+        {
+          "n": 23,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.889039420400087,
+          "group": 2,
+          "q": 0.6427286733024656
+        }
+      ]
+    },
+    {
+      "cancer": "LUAD",
+      "horizon": "5y",
+      "method": "ipcw_global",
+      "n_total": 440,
+      "n_train": 220,
+      "n_cal": 110,
+      "n_test": 110,
+      "m_cal_global": 50,
+      "ess_cal_global": 39.37187786211782,
+      "m_test_usable": 51,
+      "coverage": 0.9607843137254902,
+      "weighted_coverage": 0.9565547507344293,
+      "width": 0.9402820898320717,
+      "ccd_abs": 0.09999999999999998,
+      "ccd_range": 0.07692307692307687,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 13,
+          "coverage": 0.9230769230769231,
+          "weighted_coverage": 0.9721944827739794,
+          "width": 0.9890275754835426,
+          "group": 0,
+          "q": 0.6242436316596482
+        },
+        {
+          "n": 15,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 1.0,
+          "group": 1,
+          "q": 0.6242436316596482
+        },
+        {
+          "n": 23,
+          "coverage": 0.9565217391304348,
+          "weighted_coverage": 0.8957591487218962,
+          "width": 0.8737838304412868,
+          "group": 2,
+          "q": 0.6242436316596482
+        }
+      ]
+    },
+    {
+      "cancer": "LUAD",
+      "horizon": "5y",
+      "method": "ipcw_risk_stratified",
+      "n_total": 440,
+      "n_train": 220,
+      "n_cal": 110,
+      "n_test": 110,
+      "m_cal_global": 50,
+      "ess_cal_global": 39.37187786211782,
+      "m_test_usable": 51,
+      "coverage": 0.8627450980392157,
+      "weighted_coverage": 0.8747896138177982,
+      "width": 0.9736078181388451,
+      "ccd_abs": 0.3666666666666667,
+      "ccd_range": 0.4666666666666667,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 13,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.9947741046944352,
+          "group": 0,
+          "q": 0.6483685103520089
+        },
+        {
+          "n": 15,
+          "coverage": 0.5333333333333333,
+          "weighted_coverage": 0.6243688414533946,
+          "width": 0.9697439969696761,
+          "group": 1,
+          "q": 0.5207436180090834
+        },
+        {
+          "n": 23,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.9641641482394915,
+          "group": 2,
+          "q": 0.7933247985038367
+        }
+      ]
+    },
+    {
+      "cancer": "LIHC",
+      "horizon": "1y",
+      "method": "naive_global",
+      "n_total": 358,
+      "n_train": 179,
+      "n_cal": 89,
+      "n_test": 90,
+      "m_cal_global": 77,
+      "ess_cal_global": NaN,
+      "m_test_usable": 80,
+      "coverage": 0.95,
+      "weighted_coverage": 0.9547440739946661,
+      "width": 0.8961514679004811,
+      "ccd_abs": 0.09999999999999998,
+      "ccd_range": 0.08333333333333337,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 25,
+          "coverage": 0.92,
+          "weighted_coverage": 0.9290142490829224,
+          "width": 0.7906850947694555,
+          "group": 0,
+          "q": 0.754126667229626
+        },
+        {
+          "n": 24,
+          "coverage": 0.9166666666666666,
+          "weighted_coverage": 0.9243804195123545,
+          "width": 0.8803769965962406,
+          "group": 1,
+          "q": 0.754126667229626
+        },
+        {
+          "n": 31,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.9934174885320104,
+          "group": 2,
+          "q": 0.754126667229626
+        }
+      ]
+    },
+    {
+      "cancer": "LIHC",
+      "horizon": "1y",
+      "method": "naive_risk_stratified",
+      "n_total": 358,
+      "n_train": 179,
+      "n_cal": 89,
+      "n_test": 90,
+      "m_cal_global": 77,
+      "ess_cal_global": NaN,
+      "m_test_usable": 80,
+      "coverage": 0.95,
+      "weighted_coverage": 0.9511315561984256,
+      "width": 0.7170958962785982,
+      "ccd_abs": 0.09999999999999998,
+      "ccd_range": 0.08333333333333337,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 25,
+          "coverage": 0.92,
+          "weighted_coverage": 0.9290142490829224,
+          "width": 0.1440272967025489,
+          "group": 0,
+          "q": 0.10746886916271932
+        },
+        {
+          "n": 24,
+          "coverage": 0.9166666666666666,
+          "weighted_coverage": 0.9243804195123545,
+          "width": 0.9584311657748232,
+          "group": 1,
+          "q": 0.8373447877481128
+        },
+        {
+          "n": 31,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.9924077840686572,
+          "group": 2,
+          "q": 0.749655118891919
+        }
+      ]
+    },
+    {
+      "cancer": "LIHC",
+      "horizon": "1y",
+      "method": "ipcw_global",
+      "n_total": 358,
+      "n_train": 179,
+      "n_cal": 89,
+      "n_test": 90,
+      "m_cal_global": 77,
+      "ess_cal_global": 76.90681062112749,
+      "m_test_usable": 80,
+      "coverage": 0.8625,
+      "weighted_coverage": 0.8724582875447795,
+      "width": 0.7747664114008511,
+      "ccd_abs": 0.12580645161290327,
+      "ccd_range": 0.1458064516129033,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 25,
+          "coverage": 0.92,
+          "weighted_coverage": 0.9290142490829224,
+          "width": 0.6337696078518169,
+          "group": 0,
+          "q": 0.5972111803119874
+        },
+        {
+          "n": 24,
+          "coverage": 0.9166666666666666,
+          "weighted_coverage": 0.9243804195123545,
+          "width": 0.7234615096786019,
+          "group": 1,
+          "q": 0.5972111803119874
+        },
+        {
+          "n": 31,
+          "coverage": 0.7741935483870968,
+          "weighted_coverage": 0.7847220432576385,
+          "width": 0.9281934349511685,
+          "group": 2,
+          "q": 0.5972111803119874
+        }
+      ]
+    },
+    {
+      "cancer": "LIHC",
+      "horizon": "1y",
+      "method": "ipcw_risk_stratified",
+      "n_total": 358,
+      "n_train": 179,
+      "n_cal": 89,
+      "n_test": 90,
+      "m_cal_global": 77,
+      "ess_cal_global": 76.90681062112749,
+      "m_test_usable": 80,
+      "coverage": 0.9125,
+      "weighted_coverage": 0.9202212480518946,
+      "width": 0.6897038352858014,
+      "ccd_abs": 0.020000000000000018,
+      "ccd_range": 0.016774193548387162,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 25,
+          "coverage": 0.92,
+          "weighted_coverage": 0.9290142490829224,
+          "width": 0.10182895565143793,
+          "group": 0,
+          "q": 0.06527052811160838
+        },
+        {
+          "n": 24,
+          "coverage": 0.9166666666666666,
+          "weighted_coverage": 0.9243804195123545,
+          "width": 0.9494854226217507,
+          "group": 1,
+          "q": 0.8264449340966299
+        },
+        {
+          "n": 31,
+          "coverage": 0.9032258064516129,
+          "weighted_coverage": 0.907269075560407,
+          "width": 0.9626752512469723,
+          "group": 2,
+          "q": 0.656695794687472
+        }
+      ]
+    },
+    {
+      "cancer": "LIHC",
+      "horizon": "3y",
+      "method": "naive_global",
+      "n_total": 358,
+      "n_train": 179,
+      "n_cal": 89,
+      "n_test": 90,
+      "m_cal_global": 46,
+      "ess_cal_global": NaN,
+      "m_test_usable": 48,
+      "coverage": 1.0,
+      "weighted_coverage": 1.0,
+      "width": 0.9906153697597008,
+      "ccd_abs": 0.09999999999999998,
+      "ccd_range": 0.0,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 14,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.9782273873324066,
+          "group": 0,
+          "q": 0.8106291559113827
+        },
+        {
+          "n": 11,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 1.0,
+          "group": 1,
+          "q": 0.8106291559113827
+        },
+        {
+          "n": 23,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.9936675793831284,
+          "group": 2,
+          "q": 0.8106291559113827
+        }
+      ]
+    },
+    {
+      "cancer": "LIHC",
+      "horizon": "3y",
+      "method": "naive_risk_stratified",
+      "n_total": 358,
+      "n_train": 179,
+      "n_cal": 89,
+      "n_test": 90,
+      "m_cal_global": 46,
+      "ess_cal_global": NaN,
+      "m_test_usable": 48,
+      "coverage": 0.9791666666666666,
+      "weighted_coverage": 0.9864924819354005,
+      "width": 0.9854006962035986,
+      "ccd_abs": 0.09999999999999998,
+      "ccd_range": 0.09090909090909094,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 14,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 1.0,
+          "group": 0,
+          "q": 0.883167955190966
+        },
+        {
+          "n": 11,
+          "coverage": 0.9090909090909091,
+          "weighted_coverage": 0.9594774458062012,
+          "width": 0.9372733956565519,
+          "group": 1,
+          "q": 0.568504483620848
+        },
+        {
+          "n": 23,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.9995315680674202,
+          "group": 2,
+          "q": 0.8607186755587248
+        }
+      ]
+    },
+    {
+      "cancer": "LIHC",
+      "horizon": "3y",
+      "method": "ipcw_global",
+      "n_total": 358,
+      "n_train": 179,
+      "n_cal": 89,
+      "n_test": 90,
+      "m_cal_global": 46,
+      "ess_cal_global": 41.515095875865434,
+      "m_test_usable": 48,
+      "coverage": 0.9791666666666666,
+      "weighted_coverage": 0.9894090654140283,
+      "width": 0.9860159470125985,
+      "ccd_abs": 0.09999999999999998,
+      "ccd_range": 0.0714285714285714,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 14,
+          "coverage": 0.9285714285714286,
+          "weighted_coverage": 0.9677962547186754,
+          "width": 0.9684011573780261,
+          "group": 0,
+          "q": 0.7911530341048117
+        },
+        {
+          "n": 11,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 1.0,
+          "group": 1,
+          "q": 0.7911530341048117
+        },
+        {
+          "n": 23,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.9900499675353202,
+          "group": 2,
+          "q": 0.7911530341048117
+        }
+      ]
+    },
+    {
+      "cancer": "LIHC",
+      "horizon": "3y",
+      "method": "ipcw_risk_stratified",
+      "n_total": 358,
+      "n_train": 179,
+      "n_cal": 89,
+      "n_test": 90,
+      "m_cal_global": 46,
+      "ess_cal_global": 41.515095875865434,
+      "m_test_usable": 48,
+      "coverage": 0.9791666666666666,
+      "weighted_coverage": 0.9864924819354005,
+      "width": 0.9774428417530396,
+      "ccd_abs": 0.09999999999999998,
+      "ccd_range": 0.09090909090909094,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 14,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.9771401715376246,
+          "group": 0,
+          "q": 0.8080923190568916
+        },
+        {
+          "n": 11,
+          "coverage": 0.9090909090909091,
+          "weighted_coverage": 0.9594774458062012,
+          "width": 0.9316425397334992,
+          "group": 1,
+          "q": 0.5567858395266652
+        },
+        {
+          "n": 23,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.9995315680674202,
+          "group": 2,
+          "q": 0.8607186755587248
+        }
+      ]
+    },
+    {
+      "cancer": "LIHC",
+      "horizon": "5y",
+      "method": "naive_global",
+      "n_total": 358,
+      "n_train": 179,
+      "n_cal": 89,
+      "n_test": 90,
+      "m_cal_global": 36,
+      "ess_cal_global": NaN,
+      "m_test_usable": 37,
+      "coverage": 0.918918918918919,
+      "weighted_coverage": 0.8523551640300897,
+      "width": 0.9403951407005637,
+      "ccd_abs": 0.09999999999999998,
+      "ccd_range": 0.1578947368421053,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 11,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.9901745392389895,
+          "group": 0,
+          "q": 0.7201064053488199
+        },
+        {
+          "n": 7,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 1.0,
+          "group": 1,
+          "q": 0.7201064053488199
+        },
+        {
+          "n": 19,
+          "coverage": 0.8421052631578947,
+          "weighted_coverage": 0.6098172101423871,
+          "width": 0.8896158039101041,
+          "group": 2,
+          "q": 0.7201064053488199
+        }
+      ]
+    },
+    {
+      "cancer": "LIHC",
+      "horizon": "5y",
+      "method": "naive_risk_stratified",
+      "n_total": 358,
+      "n_train": 179,
+      "n_cal": 89,
+      "n_test": 90,
+      "m_cal_global": 36,
+      "ess_cal_global": NaN,
+      "m_test_usable": 37,
+      "coverage": 0.8108108108108109,
+      "weighted_coverage": 0.6483204162280937,
+      "width": 0.7110425114029713,
+      "ccd_abs": 0.3285714285714286,
+      "ccd_range": 0.4285714285714286,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 11,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.999341960821635,
+          "group": 0,
+          "q": 0.7809218154442366
+        },
+        {
+          "n": 7,
+          "coverage": 0.5714285714285714,
+          "weighted_coverage": 0.38280830252131565,
+          "width": 0.9743055945073251,
+          "group": 1,
+          "q": 0.5909265767051202
+        },
+        {
+          "n": 19,
+          "coverage": 0.7894736842105263,
+          "weighted_coverage": 0.5621529461629654,
+          "width": 0.4471406416484565,
+          "group": 2,
+          "q": 0.2777443606653728
+        }
+      ]
+    },
+    {
+      "cancer": "LIHC",
+      "horizon": "5y",
+      "method": "ipcw_global",
+      "n_total": 358,
+      "n_train": 179,
+      "n_cal": 89,
+      "n_test": 90,
+      "m_cal_global": 36,
+      "ess_cal_global": 28.139190143302727,
+      "m_test_usable": 37,
+      "coverage": 0.8918918918918919,
+      "weighted_coverage": 0.8140085191323493,
+      "width": 0.9215135602791564,
+      "ccd_abs": 0.09999999999999998,
+      "ccd_range": 0.1578947368421053,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 11,
+          "coverage": 0.9090909090909091,
+          "weighted_coverage": 0.9008645118941864,
+          "width": 0.9781347620399586,
+          "group": 0,
+          "q": 0.6894380511026013
+        },
+        {
+          "n": 7,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 1.0,
+          "group": 1,
+          "q": 0.6894380511026013
+        },
+        {
+          "n": 19,
+          "coverage": 0.8421052631578947,
+          "weighted_coverage": 0.6098172101423871,
+          "width": 0.8598168077836444,
+          "group": 2,
+          "q": 0.6894380511026013
+        }
+      ]
+    },
+    {
+      "cancer": "LIHC",
+      "horizon": "5y",
+      "method": "ipcw_risk_stratified",
+      "n_total": 358,
+      "n_train": 179,
+      "n_cal": 89,
+      "n_test": 90,
+      "m_cal_global": 36,
+      "ess_cal_global": 28.139190143302727,
+      "m_test_usable": 37,
+      "coverage": 0.8108108108108109,
+      "weighted_coverage": 0.6483204162280937,
+      "width": 0.7080439367261173,
+      "ccd_abs": 0.3285714285714286,
+      "ccd_range": 0.4285714285714286,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 11,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.9920813635409995,
+          "group": 0,
+          "q": 0.7271954525795351
+        },
+        {
+          "n": 7,
+          "coverage": 0.5714285714285714,
+          "weighted_coverage": 0.38280830252131565,
+          "width": 0.9698654955135245,
+          "group": 1,
+          "q": 0.5847104381137993
+        },
+        {
+          "n": 19,
+          "coverage": 0.7894736842105263,
+          "weighted_coverage": 0.5621529461629654,
+          "width": 0.4471406416484565,
+          "group": 2,
+          "q": 0.2777443606653728
+        }
+      ]
+    },
+    {
+      "cancer": "KIRC",
+      "horizon": "1y",
+      "method": "naive_global",
+      "n_total": 311,
+      "n_train": 155,
+      "n_cal": 77,
+      "n_test": 79,
+      "m_cal_global": 69,
+      "ess_cal_global": NaN,
+      "m_test_usable": 67,
+      "coverage": 0.9253731343283582,
+      "weighted_coverage": 0.929050055267938,
+      "width": 0.8040970278850794,
+      "ccd_abs": 0.09999999999999998,
+      "ccd_range": 0.12903225806451613,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 15,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.6680467033646543,
+          "group": 0,
+          "q": 0.6459465342745883
+        },
+        {
+          "n": 21,
+          "coverage": 0.9523809523809523,
+          "weighted_coverage": 0.9545491428633582,
+          "width": 0.7214994263062228,
+          "group": 1,
+          "q": 0.6459465342745883
+        },
+        {
+          "n": 31,
+          "coverage": 0.8709677419354839,
+          "weighted_coverage": 0.8769214785641536,
+          "width": 0.9258810440451556,
+          "group": 2,
+          "q": 0.6459465342745883
+        }
+      ]
+    },
+    {
+      "cancer": "KIRC",
+      "horizon": "1y",
+      "method": "naive_risk_stratified",
+      "n_total": 311,
+      "n_train": 155,
+      "n_cal": 77,
+      "n_test": 79,
+      "m_cal_global": 69,
+      "ess_cal_global": NaN,
+      "m_test_usable": 67,
+      "coverage": 0.8955223880597015,
+      "weighted_coverage": 0.8817221825564308,
+      "width": 0.52915531909947,
+      "ccd_abs": 0.09999999999999998,
+      "ccd_range": 0.13548387096774184,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 15,
+          "coverage": 0.8,
+          "weighted_coverage": 0.8,
+          "width": 0.0476608544005781,
+          "group": 0,
+          "q": 0.026607054183338863
+        },
+        {
+          "n": 21,
+          "coverage": 0.9047619047619048,
+          "weighted_coverage": 0.9068216857201904,
+          "width": 0.1862493572864782,
+          "group": 1,
+          "q": 0.11238816463101324
+        },
+        {
+          "n": 31,
+          "coverage": 0.9354838709677419,
+          "weighted_coverage": 0.9383448619491018,
+          "width": 0.9944276471174122,
+          "group": 2,
+          "q": 0.8072591604142563
+        }
+      ]
+    },
+    {
+      "cancer": "KIRC",
+      "horizon": "1y",
+      "method": "ipcw_global",
+      "n_total": 311,
+      "n_train": 155,
+      "n_cal": 77,
+      "n_test": 79,
+      "m_cal_global": 69,
+      "ess_cal_global": 68.97266114205264,
+      "m_test_usable": 67,
+      "coverage": 0.9253731343283582,
+      "weighted_coverage": 0.929050055267938,
+      "width": 0.7889022808725527,
+      "ccd_abs": 0.09999999999999998,
+      "ccd_range": 0.12903225806451613,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 15,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.6491939617009638,
+          "group": 0,
+          "q": 0.6270937926108978
+        },
+        {
+          "n": 21,
+          "coverage": 0.9523809523809523,
+          "weighted_coverage": 0.9545491428633582,
+          "width": 0.7026466846425324,
+          "group": 1,
+          "q": 0.6270937926108978
+        },
+        {
+          "n": 31,
+          "coverage": 0.8709677419354839,
+          "weighted_coverage": 0.8769214785641536,
+          "width": 0.9149342908210774,
+          "group": 2,
+          "q": 0.6270937926108978
+        }
+      ]
+    },
+    {
+      "cancer": "KIRC",
+      "horizon": "1y",
+      "method": "ipcw_risk_stratified",
+      "n_total": 311,
+      "n_train": 155,
+      "n_cal": 77,
+      "n_test": 79,
+      "m_cal_global": 69,
+      "ess_cal_global": 68.97266114205264,
+      "m_test_usable": 67,
+      "coverage": 0.8955223880597015,
+      "weighted_coverage": 0.8817221825564308,
+      "width": 0.5267931408394283,
+      "ccd_abs": 0.09999999999999998,
+      "ccd_range": 0.13548387096774184,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 15,
+          "coverage": 0.8,
+          "weighted_coverage": 0.8,
+          "width": 0.0476608544005781,
+          "group": 0,
+          "q": 0.026607054183338863
+        },
+        {
+          "n": 21,
+          "coverage": 0.9047619047619048,
+          "weighted_coverage": 0.9068216857201904,
+          "width": 0.18375390043677411,
+          "group": 1,
+          "q": 0.11010970402910947
+        },
+        {
+          "n": 31,
+          "coverage": 0.9354838709677419,
+          "weighted_coverage": 0.9383448619491018,
+          "width": 0.9910127648729279,
+          "group": 2,
+          "q": 0.7917935212560433
+        }
+      ]
+    },
+    {
+      "cancer": "KIRC",
+      "horizon": "3y",
+      "method": "naive_global",
+      "n_total": 311,
+      "n_train": 155,
+      "n_cal": 77,
+      "n_test": 79,
+      "m_cal_global": 55,
+      "ess_cal_global": NaN,
+      "m_test_usable": 53,
+      "coverage": 0.8301886792452831,
+      "weighted_coverage": 0.8438394017310614,
+      "width": 0.8837691948271987,
+      "ccd_abs": 0.16666666666666674,
+      "ccd_range": 0.2666666666666667,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 10,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.7098323941612726,
+          "group": 0,
+          "q": 0.6407780262513508
+        },
+        {
+          "n": 15,
+          "coverage": 0.7333333333333333,
+          "weighted_coverage": 0.7656293475629704,
+          "width": 0.8232084082485229,
+          "group": 1,
+          "q": 0.6407780262513508
+        },
+        {
+          "n": 28,
+          "coverage": 0.8214285714285714,
+          "weighted_coverage": 0.8267944903364652,
+          "width": 0.9783327593036057,
+          "group": 2,
+          "q": 0.6407780262513508
+        }
+      ]
+    },
+    {
+      "cancer": "KIRC",
+      "horizon": "3y",
+      "method": "naive_risk_stratified",
+      "n_total": 311,
+      "n_train": 155,
+      "n_cal": 77,
+      "n_test": 79,
+      "m_cal_global": 55,
+      "ess_cal_global": NaN,
+      "m_test_usable": 53,
+      "coverage": 0.8679245283018868,
+      "weighted_coverage": 0.8996658218482193,
+      "width": 0.9250267758655787,
+      "ccd_abs": 0.09999999999999998,
+      "ccd_range": 0.1785714285714286,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 10,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.7098323941612726,
+          "group": 0,
+          "q": 0.6407780262513508
+        },
+        {
+          "n": 15,
+          "coverage": 0.8666666666666667,
+          "weighted_coverage": 0.8722029752081927,
+          "width": 0.9694560490415616,
+          "group": 1,
+          "q": 0.8007308857359628
+        },
+        {
+          "n": 28,
+          "coverage": 0.8214285714285714,
+          "weighted_coverage": 0.8267944903364652,
+          "width": 0.9780805158442686,
+          "group": 2,
+          "q": 0.6401359519912198
+        }
+      ]
+    },
+    {
+      "cancer": "KIRC",
+      "horizon": "3y",
+      "method": "ipcw_global",
+      "n_total": 311,
+      "n_train": 155,
+      "n_cal": 77,
+      "n_test": 79,
+      "m_cal_global": 55,
+      "ess_cal_global": 54.30086957375471,
+      "m_test_usable": 53,
+      "coverage": 0.7358490566037735,
+      "weighted_coverage": 0.7557621096565629,
+      "width": 0.8314818818804556,
+      "ccd_abs": 0.2571428571428571,
+      "ccd_range": 0.3571428571428571,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 10,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.6448148938938719,
+          "group": 0,
+          "q": 0.5757605259839501
+        },
+        {
+          "n": 15,
+          "coverage": 0.7333333333333333,
+          "weighted_coverage": 0.7656293475629704,
+          "width": 0.7581909079811223,
+          "group": 1,
+          "q": 0.5757605259839501
+        },
+        {
+          "n": 28,
+          "coverage": 0.6428571428571429,
+          "weighted_coverage": 0.6551858462259512,
+          "width": 0.9374116850360215,
+          "group": 2,
+          "q": 0.5757605259839501
+        }
+      ]
+    },
+    {
+      "cancer": "KIRC",
+      "horizon": "3y",
+      "method": "ipcw_risk_stratified",
+      "n_total": 311,
+      "n_train": 155,
+      "n_cal": 77,
+      "n_test": 79,
+      "m_cal_global": 55,
+      "ess_cal_global": 54.30086957375471,
+      "m_test_usable": 53,
+      "coverage": 0.7735849056603774,
+      "weighted_coverage": 0.842462940478048,
+      "width": 0.8896268915915937,
+      "ccd_abs": 0.2571428571428571,
+      "ccd_range": 0.3571428571428571,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 10,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.6448148938938719,
+          "group": 0,
+          "q": 0.5757605259839501
+        },
+        {
+          "n": 15,
+          "coverage": 0.8666666666666667,
+          "weighted_coverage": 0.8722029752081927,
+          "width": 0.9636366089604765,
+          "group": 1,
+          "q": 0.7920017256143352
+        },
+        {
+          "n": 28,
+          "coverage": 0.6428571428571429,
+          "weighted_coverage": 0.6551858462259512,
+          "width": 0.9374116850360215,
+          "group": 2,
+          "q": 0.5757605259839501
+        }
+      ]
+    },
+    {
+      "cancer": "KIRC",
+      "horizon": "5y",
+      "method": "naive_global",
+      "n_total": 311,
+      "n_train": 155,
+      "n_cal": 77,
+      "n_test": 79,
+      "m_cal_global": 41,
+      "ess_cal_global": NaN,
+      "m_test_usable": 40,
+      "coverage": 0.925,
+      "weighted_coverage": 0.9319340894554782,
+      "width": 0.9293101068320961,
+      "ccd_abs": 0.09999999999999998,
+      "ccd_range": 0.18181818181818177,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 7,
+          "coverage": 0.8571428571428571,
+          "weighted_coverage": 0.8742248233142839,
+          "width": 0.8112642969506794,
+          "group": 0,
+          "q": 0.674800182497623
+        },
+        {
+          "n": 11,
+          "coverage": 0.8181818181818182,
+          "weighted_coverage": 0.8520728261121319,
+          "width": 0.9495168783273165,
+          "group": 1,
+          "q": 0.674800182497623
+        },
+        {
+          "n": 22,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.9567667515013003,
+          "group": 2,
+          "q": 0.674800182497623
+        }
+      ]
+    },
+    {
+      "cancer": "KIRC",
+      "horizon": "5y",
+      "method": "naive_risk_stratified",
+      "n_total": 311,
+      "n_train": 155,
+      "n_cal": 77,
+      "n_test": 79,
+      "m_cal_global": 41,
+      "ess_cal_global": NaN,
+      "m_test_usable": 40,
+      "coverage": 0.9,
+      "weighted_coverage": 0.8892608224089642,
+      "width": 0.9226160864810916,
+      "ccd_abs": 0.08181818181818179,
+      "ccd_range": 0.13636363636363635,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 7,
+          "coverage": 0.8571428571428571,
+          "weighted_coverage": 0.8742248233142839,
+          "width": 0.8112642969506794,
+          "group": 0,
+          "q": 0.674800182497623
+        },
+        {
+          "n": 11,
+          "coverage": 0.8181818181818182,
+          "weighted_coverage": 0.8520728261121319,
+          "width": 0.9978906363619029,
+          "group": 1,
+          "q": 0.7896210345311714
+        },
+        {
+          "n": 22,
+          "coverage": 0.9545454545454546,
+          "weighted_coverage": 0.9414848178004768,
+          "width": 0.9204089263912718,
+          "group": 2,
+          "q": 0.5996378624917664
+        }
+      ]
+    },
+    {
+      "cancer": "KIRC",
+      "horizon": "5y",
+      "method": "ipcw_global",
+      "n_total": 311,
+      "n_train": 155,
+      "n_cal": 77,
+      "n_test": 79,
+      "m_cal_global": 41,
+      "ess_cal_global": 38.95535869181192,
+      "m_test_usable": 40,
+      "coverage": 0.9,
+      "weighted_coverage": 0.9134686549293206,
+      "width": 0.9000708409510778,
+      "ccd_abs": 0.17272727272727273,
+      "ccd_range": 0.2727272727272727,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 7,
+          "coverage": 0.8571428571428571,
+          "weighted_coverage": 0.8742248233142839,
+          "width": 0.7653462558309858,
+          "group": 0,
+          "q": 0.6288821413779293
+        },
+        {
+          "n": 11,
+          "coverage": 0.7272727272727273,
+          "weighted_coverage": 0.7875633069268745,
+          "width": 0.9144755139528833,
+          "group": 1,
+          "q": 0.6288821413779293
+        },
+        {
+          "n": 22,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.935735417897477,
+          "group": 2,
+          "q": 0.6288821413779293
+        }
+      ]
+    },
+    {
+      "cancer": "KIRC",
+      "horizon": "5y",
+      "method": "ipcw_risk_stratified",
+      "n_total": 311,
+      "n_train": 155,
+      "n_cal": 77,
+      "n_test": 79,
+      "m_cal_global": 41,
+      "ess_cal_global": 38.95535869181192,
+      "m_test_usable": 40,
+      "coverage": 0.875,
+      "weighted_coverage": 0.8697557616757897,
+      "width": 0.9080002362591453,
+      "ccd_abs": 0.08181818181818179,
+      "ccd_range": 0.09090909090909083,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 7,
+          "coverage": 0.8571428571428571,
+          "weighted_coverage": 0.8742248233142839,
+          "width": 0.7653462558309858,
+          "group": 0,
+          "q": 0.6288821413779293
+        },
+        {
+          "n": 11,
+          "coverage": 0.8181818181818182,
+          "weighted_coverage": 0.8520728261121319,
+          "width": 0.9784325523218503,
+          "group": 1,
+          "q": 0.7314134849833072
+        },
+        {
+          "n": 22,
+          "coverage": 0.9090909090909091,
+          "weighted_coverage": 0.8829696356009537,
+          "width": 0.918173981091298,
+          "group": 2,
+          "q": 0.596074727346416
+        }
+      ]
+    },
+    {
+      "cancer": "COAD",
+      "horizon": "1y",
+      "method": "naive_global",
+      "n_total": 270,
+      "n_train": 135,
+      "n_cal": 67,
+      "n_test": 68,
+      "m_cal_global": 63,
+      "ess_cal_global": NaN,
+      "m_test_usable": 63,
+      "coverage": 0.9365079365079365,
+      "weighted_coverage": 0.9424793376927044,
+      "width": 0.8421891037769701,
+      "ccd_abs": 0.09999999999999998,
+      "ccd_range": 0.1875,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 12,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.7734750669260401,
+          "group": 0,
+          "q": 0.7411014294356469
+        },
+        {
+          "n": 35,
+          "coverage": 0.9714285714285714,
+          "weighted_coverage": 0.9747387248185498,
+          "width": 0.8293939791815751,
+          "group": 1,
+          "q": 0.7411014294356469
+        },
+        {
+          "n": 16,
+          "coverage": 0.8125,
+          "weighted_coverage": 0.826987805208292,
+          "width": 0.9217139664675946,
+          "group": 2,
+          "q": 0.7411014294356469
+        }
+      ]
+    },
+    {
+      "cancer": "COAD",
+      "horizon": "1y",
+      "method": "naive_risk_stratified",
+      "n_total": 270,
+      "n_train": 135,
+      "n_cal": 67,
+      "n_test": 68,
+      "m_cal_global": 63,
+      "ess_cal_global": NaN,
+      "m_test_usable": 63,
+      "coverage": 0.9523809523809523,
+      "weighted_coverage": 0.9443086595189681,
+      "width": 0.7817874791143784,
+      "ccd_abs": 0.0714285714285714,
+      "ccd_range": 0.05476190476190479,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 12,
+          "coverage": 0.9166666666666666,
+          "weighted_coverage": 0.9166666666666666,
+          "width": 0.08392082240258124,
+          "group": 0,
+          "q": 0.05171340223830423
+        },
+        {
+          "n": 35,
+          "coverage": 0.9714285714285714,
+          "weighted_coverage": 0.9747387248185498,
+          "width": 0.9459207516947038,
+          "group": 1,
+          "q": 0.8579241753721687
+        },
+        {
+          "n": 16,
+          "coverage": 0.9375,
+          "weighted_coverage": 0.9415205870716881,
+          "width": 0.9461459378787647,
+          "group": 2,
+          "q": 0.7680411426205285
+        }
+      ]
+    },
+    {
+      "cancer": "COAD",
+      "horizon": "1y",
+      "method": "ipcw_global",
+      "n_total": 270,
+      "n_train": 135,
+      "n_cal": 67,
+      "n_test": 68,
+      "m_cal_global": 63,
+      "ess_cal_global": 62.91091662033604,
+      "m_test_usable": 63,
+      "coverage": 0.9365079365079365,
+      "weighted_coverage": 0.9424793376927044,
+      "width": 0.7788465211484036,
+      "ccd_abs": 0.09999999999999998,
+      "ccd_range": 0.1875,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 12,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.7091402499947387,
+          "group": 0,
+          "q": 0.6767666125043457
+        },
+        {
+          "n": 35,
+          "coverage": 0.9714285714285714,
+          "weighted_coverage": 0.9747387248185498,
+          "width": 0.7650591622502739,
+          "group": 1,
+          "q": 0.6767666125043457
+        },
+        {
+          "n": 16,
+          "coverage": 0.8125,
+          "weighted_coverage": 0.826987805208292,
+          "width": 0.8612860721033115,
+          "group": 2,
+          "q": 0.6767666125043457
+        }
+      ]
+    },
+    {
+      "cancer": "COAD",
+      "horizon": "1y",
+      "method": "ipcw_risk_stratified",
+      "n_total": 270,
+      "n_train": 135,
+      "n_cal": 67,
+      "n_test": 68,
+      "m_cal_global": 63,
+      "ess_cal_global": 62.91091662033604,
+      "m_test_usable": 63,
+      "coverage": 0.8888888888888888,
+      "weighted_coverage": 0.8870185415484529,
+      "width": 0.37695184805956583,
+      "ccd_abs": 0.08750000000000002,
+      "ccd_range": 0.10416666666666663,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 12,
+          "coverage": 0.9166666666666666,
+          "weighted_coverage": 0.9166666666666666,
+          "width": 0.08076391298477383,
+          "group": 0,
+          "q": 0.04879933200648201
+        },
+        {
+          "n": 35,
+          "coverage": 0.9142857142857143,
+          "weighted_coverage": 0.9174011527704,
+          "width": 0.2303601266140253,
+          "group": 1,
+          "q": 0.1423451459257773
+        },
+        {
+          "n": 16,
+          "coverage": 0.8125,
+          "weighted_coverage": 0.826987805208292,
+          "width": 0.9197621900277797,
+          "group": 2,
+          "q": 0.739019534566511
+        }
+      ]
+    },
+    {
+      "cancer": "COAD",
+      "horizon": "3y",
+      "method": "naive_global",
+      "n_total": 270,
+      "n_train": 135,
+      "n_cal": 67,
+      "n_test": 68,
+      "m_cal_global": 30,
+      "ess_cal_global": NaN,
+      "m_test_usable": 32,
+      "coverage": 0.9375,
+      "weighted_coverage": 0.9456243668284326,
+      "width": 0.9758791637704702,
+      "ccd_abs": 0.30000000000000004,
+      "ccd_range": 0.4,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 5,
+          "coverage": 0.6,
+          "weighted_coverage": 0.6731874906822567,
+          "width": 0.8965657317318098,
+          "group": 0,
+          "q": 0.756707022447533
+        },
+        {
+          "n": 15,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.9830203054663997,
+          "group": 1,
+          "q": 0.756707022447533
+        },
+        {
+          "n": 12,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 1.0,
+          "group": 2,
+          "q": 0.756707022447533
+        }
+      ]
+    },
+    {
+      "cancer": "COAD",
+      "horizon": "3y",
+      "method": "naive_risk_stratified",
+      "n_total": 270,
+      "n_train": 135,
+      "n_cal": 67,
+      "n_test": 68,
+      "m_cal_global": 30,
+      "ess_cal_global": NaN,
+      "m_test_usable": 32,
+      "coverage": 0.875,
+      "weighted_coverage": 0.858955187029169,
+      "width": 0.9656843351262282,
+      "ccd_abs": 0.30000000000000004,
+      "ccd_range": 0.4,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 5,
+          "coverage": 0.6,
+          "weighted_coverage": 0.6731874906822567,
+          "width": 0.8965657317318098,
+          "group": 0,
+          "q": 0.756707022447533
+        },
+        {
+          "n": 15,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.9899476828722723,
+          "group": 1,
+          "q": 0.7751602503231757
+        },
+        {
+          "n": 12,
+          "coverage": 0.8333333333333334,
+          "weighted_coverage": 0.9036780704052501,
+          "width": 0.9641545685246807,
+          "group": 2,
+          "q": 0.5675803438219489
+        }
+      ]
+    },
+    {
+      "cancer": "COAD",
+      "horizon": "3y",
+      "method": "ipcw_global",
+      "n_total": 270,
+      "n_train": 135,
+      "n_cal": 67,
+      "n_test": 68,
+      "m_cal_global": 30,
+      "ess_cal_global": 25.858918360972382,
+      "m_test_usable": 32,
+      "coverage": 0.8125,
+      "weighted_coverage": 0.8861415991362387,
+      "width": 0.8575493940002791,
+      "ccd_abs": 0.30000000000000004,
+      "ccd_range": 0.2666666666666667,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 5,
+          "coverage": 0.6,
+          "weighted_coverage": 0.6731874906822567,
+          "width": 0.703512336663233,
+          "group": 0,
+          "q": 0.5636536273789563
+        },
+        {
+          "n": 15,
+          "coverage": 0.8666666666666667,
+          "weighted_coverage": 0.9441652868157224,
+          "width": 0.8257051889293691,
+          "group": 1,
+          "q": 0.5636536273789563
+        },
+        {
+          "n": 12,
+          "coverage": 0.8333333333333334,
+          "weighted_coverage": 0.9036780704052501,
+          "width": 0.9615367575626858,
+          "group": 2,
+          "q": 0.5636536273789563
+        }
+      ]
+    },
+    {
+      "cancer": "COAD",
+      "horizon": "3y",
+      "method": "ipcw_risk_stratified",
+      "n_total": 270,
+      "n_train": 135,
+      "n_cal": 67,
+      "n_test": 68,
+      "m_cal_global": 30,
+      "ess_cal_global": 25.858918360972382,
+      "m_test_usable": 32,
+      "coverage": 0.875,
+      "weighted_coverage": 0.858955187029169,
+      "width": 0.9312792716906477,
+      "ccd_abs": 0.30000000000000004,
+      "ccd_range": 0.4,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 5,
+          "coverage": 0.6,
+          "weighted_coverage": 0.6731874906822567,
+          "width": 0.703512336663233,
+          "group": 0,
+          "q": 0.5636536273789563
+        },
+        {
+          "n": 15,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.9829955946688221,
+          "group": 1,
+          "q": 0.7566452454535889
+        },
+        {
+          "n": 12,
+          "coverage": 0.8333333333333334,
+          "weighted_coverage": 0.9036780704052501,
+          "width": 0.9615367575626858,
+          "group": 2,
+          "q": 0.5636536273789563
+        }
+      ]
+    },
+    {
+      "cancer": "COAD",
+      "horizon": "5y",
+      "method": "naive_global",
+      "n_total": 270,
+      "n_train": 135,
+      "n_cal": 67,
+      "n_test": 68,
+      "m_cal_global": 24,
+      "ess_cal_global": NaN,
+      "m_test_usable": 27,
+      "coverage": 0.8888888888888888,
+      "weighted_coverage": 0.9102621055560309,
+      "width": 0.9692721095200478,
+      "ccd_abs": 0.5,
+      "ccd_range": 0.6,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 5,
+          "coverage": 0.4,
+          "weighted_coverage": 0.533030142139226,
+          "width": 0.9197190505154099,
+          "group": 0,
+          "q": 0.690924327699476
+        },
+        {
+          "n": 11,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.9836201833301701,
+          "group": 1,
+          "q": 0.690924327699476
+        },
+        {
+          "n": 11,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.9774481534393066,
+          "group": 2,
+          "q": 0.690924327699476
+        }
+      ]
+    },
+    {
+      "cancer": "COAD",
+      "horizon": "5y",
+      "method": "naive_risk_stratified",
+      "n_total": 270,
+      "n_train": 135,
+      "n_cal": 67,
+      "n_test": 68,
+      "m_cal_global": 24,
+      "ess_cal_global": NaN,
+      "m_test_usable": 27,
+      "coverage": 0.8888888888888888,
+      "weighted_coverage": 0.8443433807130752,
+      "width": 0.9713663931866997,
+      "ccd_abs": 0.5,
+      "ccd_range": 0.6,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 5,
+          "coverage": 0.4,
+          "weighted_coverage": 0.533030142139226,
+          "width": 0.9197190505154099,
+          "group": 0,
+          "q": 0.690924327699476
+        },
+        {
+          "n": 11,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.988914145977351,
+          "group": 1,
+          "q": 0.7103355240724727
+        },
+        {
+          "n": 11,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.9772947052466346,
+          "group": 2,
+          "q": 0.6900803626397805
+        }
+      ]
+    },
+    {
+      "cancer": "COAD",
+      "horizon": "5y",
+      "method": "ipcw_global",
+      "n_total": 270,
+      "n_train": 135,
+      "n_cal": 67,
+      "n_test": 68,
+      "m_cal_global": 24,
+      "ess_cal_global": 17.69791999978875,
+      "m_test_usable": 27,
+      "coverage": 0.8888888888888888,
+      "weighted_coverage": 0.9102621055560309,
+      "width": 0.9689595298683088,
+      "ccd_abs": 0.5,
+      "ccd_range": 0.6,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 5,
+          "coverage": 0.4,
+          "weighted_coverage": 0.533030142139226,
+          "width": 0.9188750854557144,
+          "group": 0,
+          "q": 0.6900803626397805
+        },
+        {
+          "n": 11,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.9833900110411623,
+          "group": 1,
+          "q": 0.6900803626397805
+        },
+        {
+          "n": 11,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.9772947052466346,
+          "group": 2,
+          "q": 0.6900803626397805
+        }
+      ]
+    },
+    {
+      "cancer": "COAD",
+      "horizon": "5y",
+      "method": "ipcw_risk_stratified",
+      "n_total": 270,
+      "n_train": 135,
+      "n_cal": 67,
+      "n_test": 68,
+      "m_cal_global": 24,
+      "ess_cal_global": 17.69791999978875,
+      "m_test_usable": 27,
+      "coverage": 0.8888888888888888,
+      "weighted_coverage": 0.8443433807130752,
+      "width": 0.9712101033608301,
+      "ccd_abs": 0.5,
+      "ccd_range": 0.6,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 5,
+          "coverage": 0.4,
+          "weighted_coverage": 0.533030142139226,
+          "width": 0.9188750854557144,
+          "group": 0,
+          "q": 0.6900803626397805
+        },
+        {
+          "n": 11,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.988914145977351,
+          "group": 1,
+          "q": 0.7103355240724727
+        },
+        {
+          "n": 11,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.9772947052466346,
+          "group": 2,
+          "q": 0.6900803626397805
+        }
+      ]
+    },
+    {
+      "cancer": "STAD",
+      "horizon": "1y",
+      "method": "naive_global",
+      "n_total": 362,
+      "n_train": 181,
+      "n_cal": 90,
+      "n_test": 91,
+      "m_cal_global": 76,
+      "ess_cal_global": NaN,
+      "m_test_usable": 79,
+      "coverage": 0.9493670886075949,
+      "weighted_coverage": 0.9507385650977764,
+      "width": 0.974480814158077,
+      "ccd_abs": 0.09999999999999998,
+      "ccd_range": 0.08333333333333337,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 12,
+          "coverage": 0.9166666666666666,
+          "weighted_coverage": 0.9166666666666667,
+          "width": 0.9071998924189241,
+          "group": 0,
+          "q": 0.8175564046589466
+        },
+        {
+          "n": 46,
+          "coverage": 0.9347826086956522,
+          "weighted_coverage": 0.9376267370831941,
+          "width": 0.9803822958578475,
+          "group": 1,
+          "q": 0.8175564046589466
+        },
+        {
+          "n": 21,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 1.0,
+          "group": 2,
+          "q": 0.8175564046589466
+        }
+      ]
+    },
+    {
+      "cancer": "STAD",
+      "horizon": "1y",
+      "method": "naive_risk_stratified",
+      "n_total": 362,
+      "n_train": 181,
+      "n_cal": 90,
+      "n_test": 91,
+      "m_cal_global": 76,
+      "ess_cal_global": NaN,
+      "m_test_usable": 79,
+      "coverage": 0.9620253164556962,
+      "weighted_coverage": 0.9504816811530535,
+      "width": 0.9895616811533614,
+      "ccd_abs": 0.07826086956521738,
+      "ccd_range": 0.061594202898550776,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 12,
+          "coverage": 0.9166666666666666,
+          "weighted_coverage": 0.9166666666666667,
+          "width": 0.9831899392356375,
+          "group": 0,
+          "q": 0.894042066934969
+        },
+        {
+          "n": 46,
+          "coverage": 0.9782608695652174,
+          "weighted_coverage": 0.9786080597428399,
+          "width": 0.9875454652240556,
+          "group": 1,
+          "q": 0.8314575248738258
+        },
+        {
+          "n": 21,
+          "coverage": 0.9523809523809523,
+          "weighted_coverage": 0.9561703170496542,
+          "width": 0.997619149522921,
+          "group": 2,
+          "q": 0.7469045172891924
+        }
+      ]
+    },
+    {
+      "cancer": "STAD",
+      "horizon": "1y",
+      "method": "ipcw_global",
+      "n_total": 362,
+      "n_train": 181,
+      "n_cal": 90,
+      "n_test": 91,
+      "m_cal_global": 76,
+      "ess_cal_global": 75.9194418714231,
+      "m_test_usable": 79,
+      "coverage": 0.9113924050632911,
+      "weighted_coverage": 0.9140008287345474,
+      "width": 0.9492555177206888,
+      "ccd_abs": 0.09999999999999998,
+      "ccd_range": 0.13043478260869568,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 12,
+          "coverage": 0.9166666666666666,
+          "weighted_coverage": 0.9166666666666667,
+          "width": 0.862366176745866,
+          "group": 0,
+          "q": 0.7727226889858884
+        },
+        {
+          "n": 46,
+          "coverage": 0.8695652173913043,
+          "weighted_coverage": 0.8747858191438264,
+          "width": 0.9487563430213923,
+          "group": 1,
+          "q": 0.7727226889858884
+        },
+        {
+          "n": 21,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 1.0,
+          "group": 2,
+          "q": 0.7727226889858884
+        }
+      ]
+    },
+    {
+      "cancer": "STAD",
+      "horizon": "1y",
+      "method": "ipcw_risk_stratified",
+      "n_total": 362,
+      "n_train": 181,
+      "n_cal": 90,
+      "n_test": 91,
+      "m_cal_global": 76,
+      "ess_cal_global": 75.9194418714231,
+      "m_test_usable": 79,
+      "coverage": 0.9240506329113924,
+      "weighted_coverage": 0.9212374394610249,
+      "width": 0.8673015235922843,
+      "ccd_abs": 0.034782608695652195,
+      "ccd_range": 0.03002070393374745,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 12,
+          "coverage": 0.9166666666666666,
+          "weighted_coverage": 0.9166666666666667,
+          "width": 0.20628048362225435,
+          "group": 0,
+          "q": 0.11663699586227683
+        },
+        {
+          "n": 46,
+          "coverage": 0.9347826086956522,
+          "weighted_coverage": 0.9376267370831941,
+          "width": 0.9806054766906638,
+          "group": 1,
+          "q": 0.8179512630554677
+        },
+        {
+          "n": 21,
+          "coverage": 0.9047619047619048,
+          "weighted_coverage": 0.9094189146332138,
+          "width": 0.9968382205977557,
+          "group": 2,
+          "q": 0.7418908088812758
+        }
+      ]
+    },
+    {
+      "cancer": "STAD",
+      "horizon": "3y",
+      "method": "naive_global",
+      "n_total": 362,
+      "n_train": 181,
+      "n_cal": 90,
+      "n_test": 91,
+      "m_cal_global": 42,
+      "ess_cal_global": NaN,
+      "m_test_usable": 47,
+      "coverage": 0.9574468085106383,
+      "weighted_coverage": 0.9706608677977542,
+      "width": 0.9772991658644179,
+      "ccd_abs": 0.2333333333333334,
+      "ccd_range": 0.33333333333333337,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 6,
+          "coverage": 0.6666666666666666,
+          "weighted_coverage": 0.8355161759166366,
+          "width": 0.9954503715346315,
+          "group": 0,
+          "q": 0.6163443200178625
+        },
+        {
+          "n": 26,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.9997276392945322,
+          "group": 1,
+          "q": 0.6163443200178625
+        },
+        {
+          "n": 15,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.9311626629841339,
+          "group": 2,
+          "q": 0.6163443200178625
+        }
+      ]
+    },
+    {
+      "cancer": "STAD",
+      "horizon": "3y",
+      "method": "naive_risk_stratified",
+      "n_total": 362,
+      "n_train": 181,
+      "n_cal": 90,
+      "n_test": 91,
+      "m_cal_global": 42,
+      "ess_cal_global": NaN,
+      "m_test_usable": 47,
+      "coverage": 0.9148936170212766,
+      "weighted_coverage": 0.9091505910915565,
+      "width": 0.9740332323291887,
+      "ccd_abs": 0.2333333333333334,
+      "ccd_range": 0.33333333333333337,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 6,
+          "coverage": 0.6666666666666666,
+          "weighted_coverage": 0.8355161759166366,
+          "width": 0.9954503715346315,
+          "group": 0,
+          "q": 0.6163443200178625
+        },
+        {
+          "n": 26,
+          "coverage": 0.9230769230769231,
+          "weighted_coverage": 0.8919355973580327,
+          "width": 0.9844326877776203,
+          "group": 1,
+          "q": 0.5570078034696814
+        },
+        {
+          "n": 15,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.94744065386973,
+          "group": 2,
+          "q": 0.6373203225417268
+        }
+      ]
+    },
+    {
+      "cancer": "STAD",
+      "horizon": "3y",
+      "method": "ipcw_global",
+      "n_total": 362,
+      "n_train": 181,
+      "n_cal": 90,
+      "n_test": 91,
+      "m_cal_global": 42,
+      "ess_cal_global": 30.932519655139295,
+      "m_test_usable": 47,
+      "coverage": 1.0,
+      "weighted_coverage": 1.0,
+      "width": 0.9822796880646432,
+      "ccd_abs": 0.09999999999999998,
+      "ccd_range": 0.0,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 6,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.9999034171563417,
+          "group": 0,
+          "q": 0.6329597501430826
+        },
+        {
+          "n": 26,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 1.0,
+          "group": 1,
+          "q": 0.6329597501430826
+        },
+        {
+          "n": 15,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.9445149890733451,
+          "group": 2,
+          "q": 0.6329597501430826
+        }
+      ]
+    },
+    {
+      "cancer": "STAD",
+      "horizon": "3y",
+      "method": "ipcw_risk_stratified",
+      "n_total": 362,
+      "n_train": 181,
+      "n_cal": 90,
+      "n_test": 91,
+      "m_cal_global": 42,
+      "ess_cal_global": 30.932519655139295,
+      "m_test_usable": 47,
+      "coverage": 0.9361702127659575,
+      "weighted_coverage": 0.9561815799350741,
+      "width": 0.9736974615501794,
+      "ccd_abs": 0.09999999999999998,
+      "ccd_range": 0.11538461538461542,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 6,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.9999034171563417,
+          "group": 0,
+          "q": 0.6329597501430826
+        },
+        {
+          "n": 26,
+          "coverage": 0.8846153846153846,
+          "weighted_coverage": 0.8685447398052225,
+          "width": 0.9827980916105551,
+          "group": 1,
+          "q": 0.5539520978623893
+        },
+        {
+          "n": 15,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.94744065386973,
+          "group": 2,
+          "q": 0.6373203225417268
+        }
+      ]
+    },
+    {
+      "cancer": "STAD",
+      "horizon": "5y",
+      "method": "naive_global",
+      "n_total": 362,
+      "n_train": 181,
+      "n_cal": 90,
+      "n_test": 91,
+      "m_cal_global": 36,
+      "ess_cal_global": NaN,
+      "m_test_usable": 38,
+      "coverage": 1.0,
+      "weighted_coverage": 1.0,
+      "width": 0.9134263425087833,
+      "ccd_abs": 0.09999999999999998,
+      "ccd_range": 0.0,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 5,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 1.0,
+          "group": 0,
+          "q": 0.5705173880349296
+        },
+        {
+          "n": 18,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.9524480468499686,
+          "group": 1,
+          "q": 0.5705173880349296
+        },
+        {
+          "n": 15,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.837742411468955,
+          "group": 2,
+          "q": 0.5705173880349296
+        }
+      ]
+    },
+    {
+      "cancer": "STAD",
+      "horizon": "5y",
+      "method": "naive_risk_stratified",
+      "n_total": 362,
+      "n_train": 181,
+      "n_cal": 90,
+      "n_test": 91,
+      "m_cal_global": 36,
+      "ess_cal_global": NaN,
+      "m_test_usable": 38,
+      "coverage": 1.0,
+      "weighted_coverage": 1.0,
+      "width": 0.9375126282619782,
+      "ccd_abs": 0.09999999999999998,
+      "ccd_range": 0.0,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 5,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 1.0,
+          "group": 0,
+          "q": 0.5705173880349296
+        },
+        {
+          "n": 18,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.9078481280142265,
+          "group": 1,
+          "q": 0.5204565180027907
+        },
+        {
+          "n": 15,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.9522809046466062,
+          "group": 2,
+          "q": 0.690752628201377
+        }
+      ]
+    },
+    {
+      "cancer": "STAD",
+      "horizon": "5y",
+      "method": "ipcw_global",
+      "n_total": 362,
+      "n_train": 181,
+      "n_cal": 90,
+      "n_test": 91,
+      "m_cal_global": 36,
+      "ess_cal_global": 17.031275118281986,
+      "m_test_usable": 38,
+      "coverage": 1.0,
+      "weighted_coverage": 1.0,
+      "width": 0.9369185097536928,
+      "ccd_abs": 0.09999999999999998,
+      "ccd_range": 0.0,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 5,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 1.0,
+          "group": 0,
+          "q": 0.6034080902826197
+        },
+        {
+          "n": 18,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.9746337036050361,
+          "group": 1,
+          "q": 0.6034080902826197
+        },
+        {
+          "n": 15,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.8706331137166453,
+          "group": 2,
+          "q": 0.6034080902826197
+        }
+      ]
+    },
+    {
+      "cancer": "STAD",
+      "horizon": "5y",
+      "method": "ipcw_risk_stratified",
+      "n_total": 362,
+      "n_train": 181,
+      "n_cal": 90,
+      "n_test": 91,
+      "m_cal_global": 36,
+      "ess_cal_global": 17.031275118281986,
+      "m_test_usable": 38,
+      "coverage": 1.0,
+      "weighted_coverage": 1.0,
+      "width": 0.9375126282619782,
+      "ccd_abs": 0.09999999999999998,
+      "ccd_range": 0.0,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 5,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 1.0,
+          "group": 0,
+          "q": 0.6034080902826197
+        },
+        {
+          "n": 18,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.9078481280142265,
+          "group": 1,
+          "q": 0.5204565180027907
+        },
+        {
+          "n": 15,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.9522809046466062,
+          "group": 2,
+          "q": 0.690752628201377
+        }
+      ]
+    },
+    {
+      "cancer": "HNSC",
+      "horizon": "1y",
+      "method": "naive_global",
+      "n_total": 513,
+      "n_train": 256,
+      "n_cal": 128,
+      "n_test": 129,
+      "m_cal_global": 119,
+      "ess_cal_global": NaN,
+      "m_test_usable": 121,
+      "coverage": 0.9090909090909091,
+      "weighted_coverage": 0.9121963219158025,
+      "width": 0.8928968803635071,
+      "ccd_abs": 0.09999999999999998,
+      "ccd_range": 0.11475409836065575,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 17,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.7676330058040615,
+          "group": 0,
+          "q": 0.7072258253585216
+        },
+        {
+          "n": 61,
+          "coverage": 0.8852459016393442,
+          "weighted_coverage": 0.8889966514627291,
+          "width": 0.8659690949077494,
+          "group": 1,
+          "q": 0.7072258253585216
+        },
+        {
+          "n": 43,
+          "coverage": 0.9069767441860465,
+          "weighted_coverage": 0.9102381002530999,
+          "width": 0.9806196892079679,
+          "group": 2,
+          "q": 0.7072258253585216
+        }
+      ]
+    },
+    {
+      "cancer": "HNSC",
+      "horizon": "1y",
+      "method": "naive_risk_stratified",
+      "n_total": 513,
+      "n_train": 256,
+      "n_cal": 128,
+      "n_test": 129,
+      "m_cal_global": 119,
+      "ess_cal_global": NaN,
+      "m_test_usable": 121,
+      "coverage": 0.9586776859504132,
+      "weighted_coverage": 0.9646763152250339,
+      "width": 0.8759294269066595,
+      "ccd_abs": 0.09999999999999998,
+      "ccd_range": 0.09302325581395354,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 17,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.2131578898329744,
+          "group": 0,
+          "q": 0.15275070938743457
+        },
+        {
+          "n": 61,
+          "coverage": 0.9836065573770492,
+          "weighted_coverage": 0.9837908454220019,
+          "width": 0.985156976388294,
+          "group": 1,
+          "q": 0.8458459942713322
+        },
+        {
+          "n": 43,
+          "coverage": 0.9069767441860465,
+          "weighted_coverage": 0.9102381002530999,
+          "width": 0.9830046736944024,
+          "group": 2,
+          "q": 0.7126204112565107
+        }
+      ]
+    },
+    {
+      "cancer": "HNSC",
+      "horizon": "1y",
+      "method": "ipcw_global",
+      "n_total": 513,
+      "n_train": 256,
+      "n_cal": 128,
+      "n_test": 129,
+      "m_cal_global": 119,
+      "ess_cal_global": 118.95432142726419,
+      "m_test_usable": 121,
+      "coverage": 0.9008264462809917,
+      "weighted_coverage": 0.9039313833263689,
+      "width": 0.8844045645664533,
+      "ccd_abs": 0.09999999999999998,
+      "ccd_range": 0.11627906976744184,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 17,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.7574507439697321,
+          "group": 0,
+          "q": 0.6970435635241923
+        },
+        {
+          "n": 61,
+          "coverage": 0.8852459016393442,
+          "weighted_coverage": 0.8889966514627291,
+          "width": 0.85578683307342,
+          "group": 1,
+          "q": 0.6970435635241923
+        },
+        {
+          "n": 43,
+          "coverage": 0.8837209302325582,
+          "weighted_coverage": 0.8868960982645209,
+          "width": 0.9751928569203897,
+          "group": 2,
+          "q": 0.6970435635241923
+        }
+      ]
+    },
+    {
+      "cancer": "HNSC",
+      "horizon": "1y",
+      "method": "ipcw_risk_stratified",
+      "n_total": 513,
+      "n_train": 256,
+      "n_cal": 128,
+      "n_test": 129,
+      "m_cal_global": 119,
+      "ess_cal_global": 118.95432142726419,
+      "m_test_usable": 121,
+      "coverage": 0.9338842975206612,
+      "weighted_coverage": 0.9487637181416811,
+      "width": 0.856623643700961,
+      "ccd_abs": 0.09999999999999998,
+      "ccd_range": 0.09302325581395354,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 17,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.15999610730132532,
+          "group": 0,
+          "q": 0.09958892685578546
+        },
+        {
+          "n": 61,
+          "coverage": 0.9344262295081968,
+          "weighted_coverage": 0.9360530541719432,
+          "width": 0.9634670733191462,
+          "group": 1,
+          "q": 0.8113212136733514
+        },
+        {
+          "n": 43,
+          "coverage": 0.9069767441860465,
+          "weighted_coverage": 0.9102381002530999,
+          "width": 0.9804659439819962,
+          "group": 2,
+          "q": 0.7068952731226826
+        }
+      ]
+    },
+    {
+      "cancer": "HNSC",
+      "horizon": "3y",
+      "method": "naive_global",
+      "n_total": 513,
+      "n_train": 256,
+      "n_cal": 128,
+      "n_test": 129,
+      "m_cal_global": 75,
+      "ess_cal_global": NaN,
+      "m_test_usable": 85,
+      "coverage": 0.9411764705882353,
+      "weighted_coverage": 0.9306678065134596,
+      "width": 0.971019035431644,
+      "ccd_abs": 0.07674418604651156,
+      "ccd_range": 0.10174418604651159,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 8,
+          "coverage": 0.875,
+          "weighted_coverage": 0.875,
+          "width": 0.8549128882373696,
+          "group": 0,
+          "q": 0.6699772458646376
+        },
+        {
+          "n": 43,
+          "coverage": 0.9767441860465116,
+          "weighted_coverage": 0.9807267428377406,
+          "width": 0.9964009658604881,
+          "group": 1,
+          "q": 0.6699772458646376
+        },
+        {
+          "n": 34,
+          "coverage": 0.9117647058823529,
+          "weighted_coverage": 0.8713021880083728,
+          "width": 0.9662374521702882,
+          "group": 2,
+          "q": 0.6699772458646376
+        }
+      ]
+    },
+    {
+      "cancer": "HNSC",
+      "horizon": "3y",
+      "method": "naive_risk_stratified",
+      "n_total": 513,
+      "n_train": 256,
+      "n_cal": 128,
+      "n_test": 129,
+      "m_cal_global": 75,
+      "ess_cal_global": NaN,
+      "m_test_usable": 85,
+      "coverage": 0.9529411764705882,
+      "weighted_coverage": 0.9506763102820378,
+      "width": 0.9819599858707134,
+      "ccd_abs": 0.09999999999999998,
+      "ccd_range": 0.08823529411764708,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 8,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.9895923086029961,
+          "group": 0,
+          "q": 0.8673784484648855
+        },
+        {
+          "n": 43,
+          "coverage": 0.9767441860465116,
+          "weighted_coverage": 0.9807267428377406,
+          "width": 0.9919418856825732,
+          "group": 1,
+          "q": 0.6455650769357947
+        },
+        {
+          "n": 34,
+          "coverage": 0.9117647058823529,
+          "weighted_coverage": 0.8713021880083728,
+          "width": 0.9675399778187064,
+          "group": 2,
+          "q": 0.6732382234952156
+        }
+      ]
+    },
+    {
+      "cancer": "HNSC",
+      "horizon": "3y",
+      "method": "ipcw_global",
+      "n_total": 513,
+      "n_train": 256,
+      "n_cal": 128,
+      "n_test": 129,
+      "m_cal_global": 75,
+      "ess_cal_global": 67.1700256126198,
+      "m_test_usable": 85,
+      "coverage": 0.9176470588235294,
+      "weighted_coverage": 0.9011914308548508,
+      "width": 0.9652451967375082,
+      "ccd_abs": 0.07674418604651156,
+      "ccd_range": 0.12380300957592338,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 8,
+          "coverage": 0.875,
+          "weighted_coverage": 0.875,
+          "width": 0.8395389953317423,
+          "group": 0,
+          "q": 0.6546033529590103
+        },
+        {
+          "n": 43,
+          "coverage": 0.9767441860465116,
+          "weighted_coverage": 0.9807267428377406,
+          "width": 0.9938336178734789,
+          "group": 1,
+          "q": 0.6546033529590103
+        },
+        {
+          "n": 34,
+          "coverage": 0.8529411764705882,
+          "weighted_coverage": 0.7855036466806212,
+          "width": 0.9586671821021956,
+          "group": 2,
+          "q": 0.6546033529590103
+        }
+      ]
+    },
+    {
+      "cancer": "HNSC",
+      "horizon": "3y",
+      "method": "ipcw_risk_stratified",
+      "n_total": 513,
+      "n_train": 256,
+      "n_cal": 128,
+      "n_test": 129,
+      "m_cal_global": 75,
+      "ess_cal_global": 67.1700256126198,
+      "m_test_usable": 85,
+      "coverage": 0.9411764705882353,
+      "weighted_coverage": 0.9446250786757561,
+      "width": 0.9738841139458093,
+      "ccd_abs": 0.09999999999999998,
+      "ccd_range": 0.08823529411764708,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 8,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.9405288315960336,
+          "group": 0,
+          "q": 0.7642748113019544
+        },
+        {
+          "n": 43,
+          "coverage": 0.9534883720930233,
+          "weighted_coverage": 0.9625730480188954,
+          "width": 0.9861839295693844,
+          "group": 1,
+          "q": 0.6257226246028427
+        },
+        {
+          "n": 34,
+          "coverage": 0.9117647058823529,
+          "weighted_coverage": 0.8713021880083728,
+          "width": 0.9661767665041763,
+          "group": 2,
+          "q": 0.6698298663897942
+        }
+      ]
+    },
+    {
+      "cancer": "HNSC",
+      "horizon": "5y",
+      "method": "naive_global",
+      "n_total": 513,
+      "n_train": 256,
+      "n_cal": 128,
+      "n_test": 129,
+      "m_cal_global": 59,
+      "ess_cal_global": NaN,
+      "m_test_usable": 61,
+      "coverage": 0.9344262295081968,
+      "weighted_coverage": 0.8640846443870916,
+      "width": 0.9490690172401811,
+      "ccd_abs": 0.09999999999999998,
+      "ccd_range": 0.11111111111111116,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 3,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.9449068212693641,
+          "group": 0,
+          "q": 0.615444168330585
+        },
+        {
+          "n": 31,
+          "coverage": 0.967741935483871,
+          "weighted_coverage": 0.9454351880930656,
+          "width": 0.9955657235065172,
+          "group": 1,
+          "q": 0.615444168330585
+        },
+        {
+          "n": 27,
+          "coverage": 0.8888888888888888,
+          "weighted_coverage": 0.654248902539848,
+          "width": 0.8961463762644788,
+          "group": 2,
+          "q": 0.615444168330585
+        }
+      ]
+    },
+    {
+      "cancer": "HNSC",
+      "horizon": "5y",
+      "method": "naive_risk_stratified",
+      "n_total": 513,
+      "n_train": 256,
+      "n_cal": 128,
+      "n_test": 129,
+      "m_cal_global": 59,
+      "ess_cal_global": NaN,
+      "m_test_usable": 61,
+      "coverage": 0.9508196721311475,
+      "weighted_coverage": 0.9252066701220268,
+      "width": 0.9728807879811437,
+      "ccd_abs": 0.09999999999999998,
+      "ccd_range": 0.06451612903225812,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 3,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.9449068212693641,
+          "group": 0,
+          "q": 0.615444168330585
+        },
+        {
+          "n": 31,
+          "coverage": 0.9354838709677419,
+          "weighted_coverage": 0.8908703761861313,
+          "width": 0.9931088464444815,
+          "group": 1,
+          "q": 0.599615225227209
+        },
+        {
+          "n": 27,
+          "coverage": 0.9629629629629629,
+          "weighted_coverage": 0.8847496341799495,
+          "width": 0.952764198639361,
+          "group": 2,
+          "q": 0.6915044791107252
+        }
+      ]
+    },
+    {
+      "cancer": "HNSC",
+      "horizon": "5y",
+      "method": "ipcw_global",
+      "n_total": 513,
+      "n_train": 256,
+      "n_cal": 128,
+      "n_test": 129,
+      "m_cal_global": 59,
+      "ess_cal_global": 36.77891957108173,
+      "m_test_usable": 61,
+      "coverage": 0.9836065573770492,
+      "weighted_coverage": 0.9660211610967728,
+      "width": 0.9732860085840027,
+      "ccd_abs": 0.09999999999999998,
+      "ccd_range": 0.03703703703703709,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 3,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.9694381043396558,
+          "group": 0,
+          "q": 0.6753619650027979
+        },
+        {
+          "n": 31,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.9998431759107524,
+          "group": 1,
+          "q": 0.6753619650027979
+        },
+        {
+          "n": 27,
+          "coverage": 0.9629629629629629,
+          "weighted_coverage": 0.8847496341799495,
+          "width": 0.9432219910137731,
+          "group": 2,
+          "q": 0.6753619650027979
+        }
+      ]
+    },
+    {
+      "cancer": "HNSC",
+      "horizon": "5y",
+      "method": "ipcw_risk_stratified",
+      "n_total": 513,
+      "n_train": 256,
+      "n_cal": 128,
+      "n_test": 129,
+      "m_cal_global": 59,
+      "ess_cal_global": 36.77891957108173,
+      "m_test_usable": 61,
+      "coverage": 0.9672131147540983,
+      "weighted_coverage": 0.9636234587287104,
+      "width": 0.9789295917095927,
+      "ccd_abs": 0.09999999999999998,
+      "ccd_range": 0.06451612903225812,
+      "n_signature_genes": 20,
+      "group_metrics": [
+        {
+          "n": 3,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.9694381043396558,
+          "group": 0,
+          "q": 0.6753619650027979
+        },
+        {
+          "n": 31,
+          "coverage": 0.9354838709677419,
+          "weighted_coverage": 0.8908703761861313,
+          "width": 0.993012554035946,
+          "group": 1,
+          "q": 0.5991177144497757
+        },
+        {
+          "n": 27,
+          "coverage": 1.0,
+          "weighted_coverage": 1.0,
+          "width": 0.9638148743019209,
+          "group": 2,
+          "q": 0.7136954692430026
+        }
+      ]
+    }
+  ],
+  "details": {
+    "LUAD": {
+      "n_total": 440,
+      "n_train": 220,
+      "n_cal": 110,
+      "n_test": 110,
+      "signature_genes": [
+        "DKK1",
+        "IRX5",
+        "GLS2",
+        "DAAM2",
+        "PITX3",
+        "CYP17A1",
+        "PLEKHB1",
+        "FAM83A",
+        "INPP5J",
+        "GNMT",
+        "BZRAP1",
+        "GPR98",
+        "ADH4",
+        "ECT2",
+        "LINGO2",
+        "CLEC17A",
+        "PPP1R13B",
+        "VAX1",
+        "ERO1L",
+        "ZFP3"
+      ],
+      "risk_thresholds": [
+        17.45860945505552,
+        30.920451799430925
+      ],
+      "horizons": {
+        "1y": {
+          "q_naive_global": 0.7097979413327595,
+          "q_ipcw_global": 0.5947839045896595,
+          "m_naive_global": 98,
+          "m_ipcw_global": 98,
+          "ess_ipcw_global": 97.96338561327337,
+          "local_calibration": {
+            "0": {
+              "q_naive": 0.1271724047602454,
+              "q_ipcw": 0.07389928164728332,
+              "m_naive": 24,
+              "m_ipcw": 24,
+              "ess_ipcw": 23.997445623440235
+            },
+            "1": {
+              "q_naive": 0.1540465253491245,
+              "q_ipcw": 0.1463545038705013,
+              "m_naive": 34,
+              "m_ipcw": 34,
+              "ess_ipcw": 33.99406008822596
+            },
+            "2": {
+              "q_naive": 0.7757680283061592,
+              "q_ipcw": 0.768522801157429,
+              "m_naive": 40,
+              "m_ipcw": 40,
+              "ess_ipcw": 39.974785436180326
+            }
+          }
+        },
+        "3y": {
+          "q_naive_global": 0.8042336041294654,
+          "q_ipcw_global": 0.7544214058261731,
+          "m_naive_global": 55,
+          "m_ipcw_global": 55,
+          "ess_ipcw_global": 49.31488281189237,
+          "local_calibration": {
+            "0": {
+              "q_naive": 0.8426188097142847,
+              "q_ipcw": 0.8293585989874053,
+              "m_naive": 10,
+              "m_ipcw": 10,
+              "ess_ipcw": 9.436941562528707
+            },
+            "1": {
+              "q_naive": 0.7552980399581217,
+              "q_ipcw": 0.7527640579734161,
+              "m_naive": 19,
+              "m_ipcw": 19,
+              "ess_ipcw": 17.652720496733895
+            },
+            "2": {
+              "q_naive": 0.7128043511162764,
+              "q_ipcw": 0.7091022806270673,
+              "m_naive": 26,
+              "m_ipcw": 26,
+              "ess_ipcw": 22.428915640349928
+            }
+          }
+        },
+        "5y": {
+          "q_naive_global": 0.6144398098218473,
+          "q_ipcw_global": 0.6242436316596482,
+          "m_naive_global": 50,
+          "m_ipcw_global": 50,
+          "ess_ipcw_global": 39.37187786211782,
+          "local_calibration": {
+            "0": {
+              "q_naive": 0.6483685103520089,
+              "q_ipcw": 0.6483685103520089,
+              "m_naive": 9,
+              "m_ipcw": 9,
+              "ess_ipcw": 7.746897844722056
+            },
+            "1": {
+              "q_naive": 0.5210929791787281,
+              "q_ipcw": 0.5207436180090834,
+              "m_naive": 19,
+              "m_ipcw": 19,
+              "ess_ipcw": 16.245474223421347
+            },
+            "2": {
+              "q_naive": 0.6427286733024656,
+              "q_ipcw": 0.7933247985038367,
+              "m_naive": 22,
+              "m_ipcw": 22,
+              "ess_ipcw": 16.355574184140682
+            }
+          }
+        }
+      }
+    },
+    "LIHC": {
+      "n_total": 358,
+      "n_train": 179,
+      "n_cal": 89,
+      "n_test": 90,
+      "signature_genes": [
+        "CBX2",
+        "SOCS2",
+        "ADAMTS5",
+        "GHR",
+        "SLC7A11",
+        "SEC31B",
+        "LPCAT1",
+        "KIF20A",
+        "SRL",
+        "PDE6A",
+        "ENO1",
+        "MTHFS",
+        "FER1L5",
+        "EPO",
+        "LIMS2",
+        "SPP1",
+        "PSRC1",
+        "RAMP3",
+        "GP1BA",
+        "LCAT"
+      ],
+      "risk_thresholds": [
+        14.300444397254061,
+        33.52869231885281
+      ],
+      "horizons": {
+        "1y": {
+          "q_naive_global": 0.754126667229626,
+          "q_ipcw_global": 0.5972111803119874,
+          "m_naive_global": 77,
+          "m_ipcw_global": 77,
+          "ess_ipcw_global": 76.90681062112749,
+          "local_calibration": {
+            "0": {
+              "q_naive": 0.10746886916271932,
+              "q_ipcw": 0.06527052811160838,
+              "m_naive": 26,
+              "m_ipcw": 26,
+              "ess_ipcw": 25.98569584830201
+            },
+            "1": {
+              "q_naive": 0.8373447877481128,
+              "q_ipcw": 0.8264449340966299,
+              "m_naive": 33,
+              "m_ipcw": 33,
+              "ess_ipcw": 32.95323054761921
+            },
+            "2": {
+              "q_naive": 0.749655118891919,
+              "q_ipcw": 0.656695794687472,
+              "m_naive": 18,
+              "m_ipcw": 18,
+              "ess_ipcw": 17.97148222480003
+            }
+          }
+        },
+        "3y": {
+          "q_naive_global": 0.8106291559113827,
+          "q_ipcw_global": 0.7911530341048117,
+          "m_naive_global": 46,
+          "m_ipcw_global": 46,
+          "ess_ipcw_global": 41.515095875865434,
+          "local_calibration": {
+            "0": {
+              "q_naive": 0.883167955190966,
+              "q_ipcw": 0.8080923190568916,
+              "m_naive": 17,
+              "m_ipcw": 17,
+              "ess_ipcw": 16.494685463893084
+            },
+            "1": {
+              "q_naive": 0.568504483620848,
+              "q_ipcw": 0.5567858395266652,
+              "m_naive": 19,
+              "m_ipcw": 19,
+              "ess_ipcw": 16.924516570814482
+            },
+            "2": {
+              "q_naive": 0.8607186755587248,
+              "q_ipcw": 0.8607186755587248,
+              "m_naive": 10,
+              "m_ipcw": 10,
+              "ess_ipcw": 8.467368973785845
+            }
+          }
+        },
+        "5y": {
+          "q_naive_global": 0.7201064053488199,
+          "q_ipcw_global": 0.6894380511026013,
+          "m_naive_global": 36,
+          "m_ipcw_global": 36,
+          "ess_ipcw_global": 28.139190143302727,
+          "local_calibration": {
+            "0": {
+              "q_naive": 0.7809218154442366,
+              "q_ipcw": 0.7271954525795351,
+              "m_naive": 12,
+              "m_ipcw": 12,
+              "ess_ipcw": 10.767044079577163
+            },
+            "1": {
+              "q_naive": 0.5909265767051202,
+              "q_ipcw": 0.5847104381137993,
+              "m_naive": 16,
+              "m_ipcw": 16,
+              "ess_ipcw": 12.42521680238868
+            },
+            "2": {
+              "q_naive": 0.2777443606653728,
+              "q_ipcw": 0.2777443606653728,
+              "m_naive": 8,
+              "m_ipcw": 8,
+              "ess_ipcw": 6.652415560449627
+            }
+          }
+        }
+      }
+    },
+    "KIRC": {
+      "n_total": 311,
+      "n_train": 155,
+      "n_cal": 77,
+      "n_test": 79,
+      "signature_genes": [
+        "FOXA1",
+        "LCTL",
+        "HOXA2",
+        "CILP",
+        "PDK4",
+        "CYP3A7",
+        "PEX5L",
+        "MPV17L",
+        "DONSON",
+        "CYP3A4",
+        "FOXA2",
+        "OTX1",
+        "AMH",
+        "SHOX2",
+        "CHAC1",
+        "ADAM22",
+        "LPPR3",
+        "DNASE1L3",
+        "SEC61A2",
+        "ANKRD30B"
+      ],
+      "risk_thresholds": [
+        5.943891302458086,
+        18.521585216665205
+      ],
+      "horizons": {
+        "1y": {
+          "q_naive_global": 0.6459465342745883,
+          "q_ipcw_global": 0.6270937926108978,
+          "m_naive_global": 69,
+          "m_ipcw_global": 69,
+          "ess_ipcw_global": 68.97266114205264,
+          "local_calibration": {
+            "0": {
+              "q_naive": 0.026607054183338863,
+              "q_ipcw": 0.026607054183338863,
+              "m_naive": 8,
+              "m_ipcw": 8,
+              "ess_ipcw": 8.0
+            },
+            "1": {
+              "q_naive": 0.11238816463101324,
+              "q_ipcw": 0.11010970402910947,
+              "m_naive": 34,
+              "m_ipcw": 34,
+              "ess_ipcw": 33.99707539921245
+            },
+            "2": {
+              "q_naive": 0.8072591604142563,
+              "q_ipcw": 0.7917935212560433,
+              "m_naive": 27,
+              "m_ipcw": 27,
+              "ess_ipcw": 26.979424823084546
+            }
+          }
+        },
+        "3y": {
+          "q_naive_global": 0.6407780262513508,
+          "q_ipcw_global": 0.5757605259839501,
+          "m_naive_global": 55,
+          "m_ipcw_global": 55,
+          "ess_ipcw_global": 54.30086957375471,
+          "local_calibration": {
+            "0": {
+              "q_naive": 0.6407780262513508,
+              "q_ipcw": 0.5757605259839501,
+              "m_naive": 55,
+              "m_ipcw": 55,
+              "ess_ipcw": 54.30086957375471
+            },
+            "1": {
+              "q_naive": 0.8007308857359628,
+              "q_ipcw": 0.7920017256143352,
+              "m_naive": 22,
+              "m_ipcw": 22,
+              "ess_ipcw": 21.89075241551558
+            },
+            "2": {
+              "q_naive": 0.6401359519912198,
+              "q_ipcw": 0.5757605259839501,
+              "m_naive": 26,
+              "m_ipcw": 26,
+              "ess_ipcw": 25.51769309809376
+            }
+          }
+        },
+        "5y": {
+          "q_naive_global": 0.674800182497623,
+          "q_ipcw_global": 0.6288821413779293,
+          "m_naive_global": 41,
+          "m_ipcw_global": 41,
+          "ess_ipcw_global": 38.95535869181192,
+          "local_calibration": {
+            "0": {
+              "q_naive": 0.674800182497623,
+              "q_ipcw": 0.6288821413779293,
+              "m_naive": 41,
+              "m_ipcw": 41,
+              "ess_ipcw": 38.95535869181192
+            },
+            "1": {
+              "q_naive": 0.7896210345311714,
+              "q_ipcw": 0.7314134849833072,
+              "m_naive": 15,
+              "m_ipcw": 15,
+              "ess_ipcw": 14.645637535400645
+            },
+            "2": {
+              "q_naive": 0.5996378624917664,
+              "q_ipcw": 0.596074727346416,
+              "m_naive": 22,
+              "m_ipcw": 22,
+              "ess_ipcw": 20.714770336130687
+            }
+          }
+        }
+      }
+    },
+    "COAD": {
+      "n_total": 270,
+      "n_train": 135,
+      "n_cal": 67,
+      "n_test": 68,
+      "signature_genes": [
+        "TAS2R20",
+        "LRRC69",
+        "GPR156",
+        "PRR4",
+        "ANKRD24",
+        "KRT4",
+        "PANX2",
+        "PPFIA4",
+        "NKAIN4",
+        "KNDC1",
+        "MBL1P",
+        "C1orf61",
+        "KCNMB3",
+        "CRHR1",
+        "TIGD1",
+        "GABRD",
+        "PPARGC1A",
+        "CCDC114",
+        "HMX2",
+        "HIST2H2BE"
+      ],
+      "risk_thresholds": [
+        4.137043500483496,
+        9.617334263334227
+      ],
+      "horizons": {
+        "1y": {
+          "q_naive_global": 0.7411014294356469,
+          "q_ipcw_global": 0.6767666125043457,
+          "m_naive_global": 63,
+          "m_ipcw_global": 63,
+          "ess_ipcw_global": 62.91091662033604,
+          "local_calibration": {
+            "0": {
+              "q_naive": 0.05171340223830423,
+              "q_ipcw": 0.04879933200648201,
+              "m_naive": 10,
+              "m_ipcw": 10,
+              "ess_ipcw": 10.0
+            },
+            "1": {
+              "q_naive": 0.8579241753721687,
+              "q_ipcw": 0.1423451459257773,
+              "m_naive": 30,
+              "m_ipcw": 30,
+              "ess_ipcw": 29.962517382598833
+            },
+            "2": {
+              "q_naive": 0.7680411426205285,
+              "q_ipcw": 0.739019534566511,
+              "m_naive": 23,
+              "m_ipcw": 23,
+              "ess_ipcw": 22.951690822603396
+            }
+          }
+        },
+        "3y": {
+          "q_naive_global": 0.756707022447533,
+          "q_ipcw_global": 0.5636536273789563,
+          "m_naive_global": 30,
+          "m_ipcw_global": 30,
+          "ess_ipcw_global": 25.858918360972382,
+          "local_calibration": {
+            "0": {
+              "q_naive": 0.756707022447533,
+              "q_ipcw": 0.5636536273789563,
+              "m_naive": 30,
+              "m_ipcw": 30,
+              "ess_ipcw": 25.858918360972382
+            },
+            "1": {
+              "q_naive": 0.7751602503231757,
+              "q_ipcw": 0.7566452454535889,
+              "m_naive": 13,
+              "m_ipcw": 13,
+              "ess_ipcw": 11.20496790631887
+            },
+            "2": {
+              "q_naive": 0.5675803438219489,
+              "q_ipcw": 0.5636536273789563,
+              "m_naive": 13,
+              "m_ipcw": 13,
+              "ess_ipcw": 10.781684073352784
+            }
+          }
+        },
+        "5y": {
+          "q_naive_global": 0.690924327699476,
+          "q_ipcw_global": 0.6900803626397805,
+          "m_naive_global": 24,
+          "m_ipcw_global": 24,
+          "ess_ipcw_global": 17.69791999978875,
+          "local_calibration": {
+            "0": {
+              "q_naive": 0.690924327699476,
+              "q_ipcw": 0.6900803626397805,
+              "m_naive": 24,
+              "m_ipcw": 24,
+              "ess_ipcw": 17.69791999978875
+            },
+            "1": {
+              "q_naive": 0.7103355240724727,
+              "q_ipcw": 0.7103355240724727,
+              "m_naive": 11,
+              "m_ipcw": 11,
+              "ess_ipcw": 8.29469515386798
+            },
+            "2": {
+              "q_naive": 0.6900803626397805,
+              "q_ipcw": 0.6900803626397805,
+              "m_naive": 12,
+              "m_ipcw": 12,
+              "ess_ipcw": 8.455672240358766
+            }
+          }
+        }
+      }
+    },
+    "STAD": {
+      "n_total": 362,
+      "n_train": 181,
+      "n_cal": 90,
+      "n_test": 91,
+      "signature_genes": [
+        "APOH",
+        "PCDHB5",
+        "SERPINE1",
+        "APOD",
+        "CD82",
+        "PRR15L",
+        "NT5E",
+        "RAB11FIP4",
+        "MKNK2",
+        "MATN3",
+        "SYN2",
+        "TF",
+        "PACS1",
+        "CPNE8",
+        "TNFAIP2",
+        "ANKRD1",
+        "FAAH",
+        "EPHB3",
+        "LANCL2",
+        "ZBTB7B"
+      ],
+      "risk_thresholds": [
+        16.50599116220074,
+        32.268188663183885
+      ],
+      "horizons": {
+        "1y": {
+          "q_naive_global": 0.8175564046589466,
+          "q_ipcw_global": 0.7727226889858884,
+          "m_naive_global": 76,
+          "m_ipcw_global": 76,
+          "ess_ipcw_global": 75.9194418714231,
+          "local_calibration": {
+            "0": {
+              "q_naive": 0.894042066934969,
+              "q_ipcw": 0.11663699586227683,
+              "m_naive": 13,
+              "m_ipcw": 13,
+              "ess_ipcw": 12.999941786287765
+            },
+            "1": {
+              "q_naive": 0.8314575248738258,
+              "q_ipcw": 0.8179512630554677,
+              "m_naive": 43,
+              "m_ipcw": 43,
+              "ess_ipcw": 42.9645045791193
+            },
+            "2": {
+              "q_naive": 0.7469045172891924,
+              "q_ipcw": 0.7418908088812758,
+              "m_naive": 20,
+              "m_ipcw": 20,
+              "ess_ipcw": 19.95845573618768
+            }
+          }
+        },
+        "3y": {
+          "q_naive_global": 0.6163443200178625,
+          "q_ipcw_global": 0.6329597501430826,
+          "m_naive_global": 42,
+          "m_ipcw_global": 42,
+          "ess_ipcw_global": 30.932519655139295,
+          "local_calibration": {
+            "0": {
+              "q_naive": 0.6163443200178625,
+              "q_ipcw": 0.6329597501430826,
+              "m_naive": 42,
+              "m_ipcw": 42,
+              "ess_ipcw": 30.932519655139295
+            },
+            "1": {
+              "q_naive": 0.5570078034696814,
+              "q_ipcw": 0.5539520978623893,
+              "m_naive": 20,
+              "m_ipcw": 20,
+              "ess_ipcw": 14.218646123254304
+            },
+            "2": {
+              "q_naive": 0.6373203225417268,
+              "q_ipcw": 0.6373203225417268,
+              "m_naive": 15,
+              "m_ipcw": 15,
+              "ess_ipcw": 10.981674490843584
+            }
+          }
+        },
+        "5y": {
+          "q_naive_global": 0.5705173880349296,
+          "q_ipcw_global": 0.6034080902826197,
+          "m_naive_global": 36,
+          "m_ipcw_global": 36,
+          "ess_ipcw_global": 17.031275118281986,
+          "local_calibration": {
+            "0": {
+              "q_naive": 0.5705173880349296,
+              "q_ipcw": 0.6034080902826197,
+              "m_naive": 36,
+              "m_ipcw": 36,
+              "ess_ipcw": 17.031275118281986
+            },
+            "1": {
+              "q_naive": 0.5204565180027907,
+              "q_ipcw": 0.5204565180027907,
+              "m_naive": 15,
+              "m_ipcw": 15,
+              "ess_ipcw": 6.560793358523778
+            },
+            "2": {
+              "q_naive": 0.690752628201377,
+              "q_ipcw": 0.690752628201377,
+              "m_naive": 15,
+              "m_ipcw": 15,
+              "ess_ipcw": 7.076113262705992
+            }
+          }
+        }
+      }
+    },
+    "HNSC": {
+      "n_total": 513,
+      "n_train": 256,
+      "n_cal": 128,
+      "n_test": 129,
+      "signature_genes": [
+        "MASP1",
+        "CELSR3",
+        "EFNB2",
+        "FRMD5",
+        "DKK1",
+        "IGJ",
+        "KIAA0125",
+        "KLK3",
+        "FAM162B",
+        "FGD3",
+        "ZNF763",
+        "CD19",
+        "LCNL1",
+        "SLC35E2",
+        "TCP11",
+        "FAM65C",
+        "OLR1",
+        "MEIS1",
+        "BLK",
+        "FLT3"
+      ],
+      "risk_thresholds": [
+        23.75843697931291,
+        51.34607668620308
+      ],
+      "horizons": {
+        "1y": {
+          "q_naive_global": 0.7072258253585216,
+          "q_ipcw_global": 0.6970435635241923,
+          "m_naive_global": 119,
+          "m_ipcw_global": 119,
+          "ess_ipcw_global": 118.95432142726419,
+          "local_calibration": {
+            "0": {
+              "q_naive": 0.15275070938743457,
+              "q_ipcw": 0.09958892685578546,
+              "m_naive": 20,
+              "m_ipcw": 20,
+              "ess_ipcw": 19.998587808208036
+            },
+            "1": {
+              "q_naive": 0.8458459942713322,
+              "q_ipcw": 0.8113212136733514,
+              "m_naive": 62,
+              "m_ipcw": 62,
+              "ess_ipcw": 61.98431849018441
+            },
+            "2": {
+              "q_naive": 0.7126204112565107,
+              "q_ipcw": 0.7068952731226826,
+              "m_naive": 37,
+              "m_ipcw": 37,
+              "ess_ipcw": 36.974205130278484
+            }
+          }
+        },
+        "3y": {
+          "q_naive_global": 0.6699772458646376,
+          "q_ipcw_global": 0.6546033529590103,
+          "m_naive_global": 75,
+          "m_ipcw_global": 75,
+          "ess_ipcw_global": 67.1700256126198,
+          "local_calibration": {
+            "0": {
+              "q_naive": 0.8673784484648855,
+              "q_ipcw": 0.7642748113019544,
+              "m_naive": 8,
+              "m_ipcw": 8,
+              "ess_ipcw": 7.521144450118915
+            },
+            "1": {
+              "q_naive": 0.6455650769357947,
+              "q_ipcw": 0.6257226246028427,
+              "m_naive": 39,
+              "m_ipcw": 39,
+              "ess_ipcw": 35.46900907636365
+            },
+            "2": {
+              "q_naive": 0.6732382234952156,
+              "q_ipcw": 0.6698298663897942,
+              "m_naive": 28,
+              "m_ipcw": 28,
+              "ess_ipcw": 24.709781835476193
+            }
+          }
+        },
+        "5y": {
+          "q_naive_global": 0.615444168330585,
+          "q_ipcw_global": 0.6753619650027979,
+          "m_naive_global": 59,
+          "m_ipcw_global": 59,
+          "ess_ipcw_global": 36.77891957108173,
+          "local_calibration": {
+            "0": {
+              "q_naive": 0.615444168330585,
+              "q_ipcw": 0.6753619650027979,
+              "m_naive": 59,
+              "m_ipcw": 59,
+              "ess_ipcw": 36.77891957108173
+            },
+            "1": {
+              "q_naive": 0.599615225227209,
+              "q_ipcw": 0.5991177144497757,
+              "m_naive": 31,
+              "m_ipcw": 31,
+              "ess_ipcw": 20.672919874059843
+            },
+            "2": {
+              "q_naive": 0.6915044791107252,
+              "q_ipcw": 0.7136954692430026,
+              "m_naive": 24,
+              "m_ipcw": 24,
+              "ess_ipcw": 14.344257170712309
+            }
+          }
+        }
+      }
+    }
+  }
+}

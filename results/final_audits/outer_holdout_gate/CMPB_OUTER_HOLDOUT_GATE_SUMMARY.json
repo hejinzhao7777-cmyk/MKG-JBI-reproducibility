@@ -1,0 +1,50 @@
+{
+  "estimand": "untouched-test C-index difference between the train-only reconstructed route and the train-only zero-graph selector",
+  "primary_margin": 0.0,
+  "n_outer_holdouts": 18,
+  "n_cancers": 6,
+  "mean_difference_cancer_first": 0.0021198275662023384,
+  "exact_cancer_cluster_bootstrap_95pct_ci": [
+    -0.0022942322441445637,
+    0.0061857878226974266
+  ],
+  "median_run_difference": 0.0,
+  "graph_admission_runs": 13,
+  "rejection_runs": 5,
+  "harmful_heldout_admissions": 5,
+  "harmful_fraction_among_admissions": 0.38461538461538464,
+  "development_delta_test_gain_spearman": 0.1845772926868331,
+  "boundary": "The outer holdouts provide unbiased performance checks for the fitted train-only pipeline. The internal cross-fitted deltas remain development routing scores, not stand-alone unbiased estimates of generalization gain.",
+  "margin_sensitivity": [
+    {
+      "Margin": 0.0,
+      "Mean reconstructed route minus zero": 0.002119827566202338,
+      "Cluster bootstrap low": -0.0022942322441445637,
+      "Cluster bootstrap high": 0.0061857878226974266,
+      "Graph admission runs": 13,
+      "Graph rejection runs": 5,
+      "Harmful held-out admissions": 5,
+      "Harmful fraction among admissions": 0.38461538461538464
+    },
+    {
+      "Margin": 0.005,
+      "Mean reconstructed route minus zero": 0.0015279120340224714,
+      "Cluster bootstrap low": -0.001130376500496855,
+      "Cluster bootstrap high": 0.003676059370731424,
+      "Graph admission runs": 11,
+      "Graph rejection runs": 7,
+      "Harmful held-out admissions": 4,
+      "Harmful fraction among admissions": 0.36363636363636365
+    },
+    {
+      "Margin": 0.01,
+      "Mean reconstructed route minus zero": -0.0006076849389456839,
+      "Cluster bootstrap low": -0.00393200048911688,
+      "Cluster bootstrap high": 0.002141931709761402,
+      "Graph admission runs": 7,
+      "Graph rejection runs": 11,
+      "Harmful held-out admissions": 4,
+      "Harmful fraction among admissions": 0.5714285714285714
+    }
+  ]
+}

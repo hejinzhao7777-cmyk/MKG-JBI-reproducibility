@@ -17,7 +17,7 @@
   "sparsification": "current graph or row-wise top-k absolute methylation edges, symmetrized by maximum",
   "laplacian_normalization": "row-sum upper-bound scaling, applied uniformly to coexpression, CNV, and all methylation-density variants for this sensitivity audit",
   "outputs": {
-    "raw": "GR\u7b2c\u4e8c\u9879\u5de5\u4f5c_\u6574\u7406\\09_JBI_SUBMISSION_LOCK\\MKG_METH_DENSITY_SENSITIVITY.csv",
-    "summary": "GR\u7b2c\u4e8c\u9879\u5de5\u4f5c_\u6574\u7406\\09_JBI_SUBMISSION_LOCK\\MKG_METH_DENSITY_SENSITIVITY_summary.csv"
+    "raw": "results/submission_lock/MKG_METH_DENSITY_SENSITIVITY.csv",
+    "summary": "results/submission_lock/MKG_METH_DENSITY_SENSITIVITY_summary.csv"
   }
 }

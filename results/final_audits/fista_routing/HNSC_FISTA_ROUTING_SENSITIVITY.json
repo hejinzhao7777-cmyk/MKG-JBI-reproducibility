@@ -1,0 +1,388 @@
+{
+  "Cancer": "HNSC",
+  "estimand": "routing conditional on locked layer stability, with converged FISTA Stage-1 fits",
+  "old_route_mode": "dual_driven",
+  "old_weights": {
+    "coexpr": 0.0,
+    "meth": 1.0,
+    "cnv": 0.0
+  },
+  "fista_route_mode": "dual_driven",
+  "fista_weights": {
+    "coexpr": 0.22480416888875163,
+    "meth": 0.7751958311112483,
+    "cnv": 0.0
+  },
+  "development_routing_scores": {
+    "zero": 0.6961346929873333,
+    "coexpr": 0.6981269790330076,
+    "meth": 0.7038244142609181,
+    "cnv": 0.6875701894688363
+  },
+  "candidate_minus_zero_deltas": {
+    "coexpr": 0.001992286045674252,
+    "meth": 0.007689721273584804,
+    "cnv": -0.008564503518497024
+  },
+  "utilities": {
+    "coexpr": 0.0007898950278917201,
+    "meth": 0.0027238077285843564,
+    "cnv": 0.0
+  },
+  "candidate_fit_diagnostics": {
+    "zero": [
+      {
+        "fold": 1,
+        "largest_eigenvalue": 1049.2023175415354,
+        "FISTA iterations": 860,
+        "FISTA converged": true,
+        "FISTA relative change": 4.401687973252942e-07,
+        "FISTA prox-gradient Linf": 9.978538239204988e-07,
+        "FISTA objective": 0.6422202956559864,
+        "FISTA nonzero": 11
+      },
+      {
+        "fold": 2,
+        "largest_eigenvalue": 1098.615329984044,
+        "FISTA iterations": 700,
+        "FISTA converged": true,
+        "FISTA relative change": 6.914026988075725e-07,
+        "FISTA prox-gradient Linf": 9.27208752745789e-07,
+        "FISTA objective": 0.6555697943646015,
+        "FISTA nonzero": 11
+      },
+      {
+        "fold": 3,
+        "largest_eigenvalue": 1036.0993675417767,
+        "FISTA iterations": 700,
+        "FISTA converged": true,
+        "FISTA relative change": 8.582678241787777e-07,
+        "FISTA prox-gradient Linf": 9.631583779591903e-07,
+        "FISTA objective": 0.6436968039133635,
+        "FISTA nonzero": 7
+      },
+      {
+        "fold": 4,
+        "largest_eigenvalue": 1081.1873122981144,
+        "FISTA iterations": 1110,
+        "FISTA converged": true,
+        "FISTA relative change": 9.956020301308194e-09,
+        "FISTA prox-gradient Linf": 3.880772805923057e-07,
+        "FISTA objective": 0.670816799906584,
+        "FISTA nonzero": 14
+      },
+      {
+        "fold": 5,
+        "largest_eigenvalue": 1057.9306728863064,
+        "FISTA iterations": 810,
+        "FISTA converged": true,
+        "FISTA relative change": 5.584908583641905e-07,
+        "FISTA prox-gradient Linf": 9.970822913497168e-07,
+        "FISTA objective": 0.6709489175703645,
+        "FISTA nonzero": 8
+      }
+    ],
+    "coexpr": [
+      {
+        "fold": 1,
+        "largest_eigenvalue": 1052.9549055364794,
+        "FISTA iterations": 530,
+        "FISTA converged": true,
+        "FISTA relative change": 1.885111967706648e-08,
+        "FISTA prox-gradient Linf": 7.591309661091751e-07,
+        "FISTA objective": 0.6465919219821656,
+        "FISTA nonzero": 79
+      },
+      {
+        "fold": 2,
+        "largest_eigenvalue": 1102.2426674773576,
+        "FISTA iterations": 560,
+        "FISTA converged": true,
+        "FISTA relative change": 2.7075917692814542e-08,
+        "FISTA prox-gradient Linf": 5.034362075490942e-07,
+        "FISTA objective": 0.6575392064979049,
+        "FISTA nonzero": 23
+      },
+      {
+        "fold": 3,
+        "largest_eigenvalue": 1040.06486316078,
+        "FISTA iterations": 570,
+        "FISTA converged": true,
+        "FISTA relative change": 4.725440289149014e-07,
+        "FISTA prox-gradient Linf": 6.220937678352116e-07,
+        "FISTA objective": 0.6455466507505213,
+        "FISTA nonzero": 20
+      },
+      {
+        "fold": 4,
+        "largest_eigenvalue": 1085.0397822304733,
+        "FISTA iterations": 550,
+        "FISTA converged": true,
+        "FISTA relative change": 5.142724616450964e-07,
+        "FISTA prox-gradient Linf": 8.151018476223438e-07,
+        "FISTA objective": 0.6746968381763623,
+        "FISTA nonzero": 40
+      },
+      {
+        "fold": 5,
+        "largest_eigenvalue": 1061.3717136918772,
+        "FISTA iterations": 540,
+        "FISTA converged": true,
+        "FISTA relative change": 4.728927057566298e-07,
+        "FISTA prox-gradient Linf": 9.451112795611448e-07,
+        "FISTA objective": 0.6751161956757291,
+        "FISTA nonzero": 36
+      }
+    ],
+    "meth": [
+      {
+        "fold": 1,
+        "largest_eigenvalue": 1054.744276755356,
+        "FISTA iterations": 340,
+        "FISTA converged": true,
+        "FISTA relative change": 1.6365935009294794e-07,
+        "FISTA prox-gradient Linf": 6.536400274928641e-07,
+        "FISTA objective": 0.646905018769628,
+        "FISTA nonzero": 60
+      },
+      {
+        "fold": 2,
+        "largest_eigenvalue": 1104.0134562555913,
+        "FISTA iterations": 350,
+        "FISTA converged": true,
+        "FISTA relative change": 7.754014718587904e-07,
+        "FISTA prox-gradient Linf": 2.4987398933746774e-07,
+        "FISTA objective": 0.6582915262001551,
+        "FISTA nonzero": 33
+      },
+      {
+        "fold": 3,
+        "largest_eigenvalue": 1041.702050364914,
+        "FISTA iterations": 280,
+        "FISTA converged": true,
+        "FISTA relative change": 9.400112285668995e-08,
+        "FISTA prox-gradient Linf": 4.4732599795597987e-07,
+        "FISTA objective": 0.6474546432349481,
+        "FISTA nonzero": 27
+      },
+      {
+        "fold": 4,
+        "largest_eigenvalue": 1086.5135898518433,
+        "FISTA iterations": 460,
+        "FISTA converged": true,
+        "FISTA relative change": 4.477210438646081e-07,
+        "FISTA prox-gradient Linf": 9.406199987828417e-07,
+        "FISTA objective": 0.6770551568246708,
+        "FISTA nonzero": 50
+      },
+      {
+        "fold": 5,
+        "largest_eigenvalue": 1063.4920405419616,
+        "FISTA iterations": 330,
+        "FISTA converged": true,
+        "FISTA relative change": 8.098601745493464e-07,
+        "FISTA prox-gradient Linf": 6.153138681628965e-07,
+        "FISTA objective": 0.6769274016475163,
+        "FISTA nonzero": 47
+      }
+    ],
+    "cnv": [
+      {
+        "fold": 1,
+        "largest_eigenvalue": 1064.2351366757011,
+        "FISTA iterations": 210,
+        "FISTA converged": true,
+        "FISTA relative change": 6.666245188637446e-07,
+        "FISTA prox-gradient Linf": 6.847524233896986e-07,
+        "FISTA objective": 0.648254008619692,
+        "FISTA nonzero": 92
+      },
+      {
+        "fold": 2,
+        "largest_eigenvalue": 1113.3462790488584,
+        "FISTA iterations": 160,
+        "FISTA converged": true,
+        "FISTA relative change": 2.0431544383626793e-07,
+        "FISTA prox-gradient Linf": 3.7825642446542496e-07,
+        "FISTA objective": 0.658950965371413,
+        "FISTA nonzero": 42
+      },
+      {
+        "fold": 3,
+        "largest_eigenvalue": 1051.2441511736743,
+        "FISTA iterations": 170,
+        "FISTA converged": true,
+        "FISTA relative change": 9.939283797541467e-07,
+        "FISTA prox-gradient Linf": 4.799165777532081e-07,
+        "FISTA objective": 0.6483014034179315,
+        "FISTA nonzero": 37
+      },
+      {
+        "fold": 4,
+        "largest_eigenvalue": 1096.0039723768002,
+        "FISTA iterations": 170,
+        "FISTA converged": true,
+        "FISTA relative change": 1.8386130459182038e-07,
+        "FISTA prox-gradient Linf": 8.370681869268118e-07,
+        "FISTA objective": 0.6788972331484744,
+        "FISTA nonzero": 76
+      },
+      {
+        "fold": 5,
+        "largest_eigenvalue": 1072.7966346128248,
+        "FISTA iterations": 170,
+        "FISTA converged": true,
+        "FISTA relative change": 9.480956818211991e-07,
+        "FISTA prox-gradient Linf": 6.208387846447598e-07,
+        "FISTA objective": 0.6784004751461258,
+        "FISTA nonzero": 71
+      }
+    ]
+  },
+  "routed_fit_diagnostics": [
+    {
+      "fold": 1,
+      "largest_eigenvalue": 1054.3332179312442,
+      "FISTA iterations": 300,
+      "FISTA converged": true,
+      "FISTA relative change": 6.779244674439647e-07,
+      "FISTA prox-gradient Linf": 8.274757000997526e-07,
+      "FISTA objective": 0.6471097097134216,
+      "FISTA nonzero": 68
+    },
+    {
+      "fold": 2,
+      "largest_eigenvalue": 1103.607051811984,
+      "FISTA iterations": 410,
+      "FISTA converged": true,
+      "FISTA relative change": 3.326335956332894e-08,
+      "FISTA prox-gradient Linf": 2.1086615645908205e-07,
+      "FISTA objective": 0.6582573605425646,
+      "FISTA nonzero": 33
+    },
+    {
+      "fold": 3,
+      "largest_eigenvalue": 1041.3246166340684,
+      "FISTA iterations": 270,
+      "FISTA converged": true,
+      "FISTA relative change": 8.65989072927908e-08,
+      "FISTA prox-gradient Linf": 8.711866278756752e-07,
+      "FISTA objective": 0.647376532862799,
+      "FISTA nonzero": 27
+    },
+    {
+      "fold": 4,
+      "largest_eigenvalue": 1086.1741010343612,
+      "FISTA iterations": 370,
+      "FISTA converged": true,
+      "FISTA relative change": 8.831785287220528e-07,
+      "FISTA prox-gradient Linf": 9.609171283611044e-07,
+      "FISTA objective": 0.676986372736804,
+      "FISTA nonzero": 51
+    },
+    {
+      "fold": 5,
+      "largest_eigenvalue": 1063.0059863987765,
+      "FISTA iterations": 340,
+      "FISTA converged": true,
+      "FISTA relative change": 8.48702164563767e-07,
+      "FISTA prox-gradient Linf": 8.609551036682012e-07,
+      "FISTA objective": 0.6769358613879463,
+      "FISTA nonzero": 50
+    }
+  ],
+  "signature": {
+    "genes": [
+      "MASP1",
+      "CELSR3",
+      "EFNB2",
+      "FRMD5",
+      "DKK1",
+      "IGJ",
+      "KIAA0125",
+      "FAM162B",
+      "KLK3",
+      "SLC35E2",
+      "ZNF763",
+      "FGD3",
+      "CD19",
+      "LCNL1",
+      "FAM65C",
+      "OLR1",
+      "TCP11",
+      "MEIS1",
+      "FLT3",
+      "BLK"
+    ],
+    "directions": [
+      -1.0,
+      -1.0,
+      1.0,
+      1.0,
+      1.0,
+      -1.0,
+      -1.0,
+      -1.0,
+      1.0,
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0,
+      1.0,
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0
+    ],
+    "scores": [
+      1.0,
+      0.9997576932396414,
+      0.9993325468954317,
+      0.9990307729585655,
+      0.9990152397684168,
+      0.998861247537699,
+      0.9987356561031916,
+      0.9979403925369517,
+      0.9978942395234287,
+      0.9978014869394596,
+      0.9977859537493109,
+      0.9977331436542956,
+      0.9976186473556086,
+      0.9974797417581165,
+      0.9969955747943224,
+      0.9969028222103533,
+      0.996896611685784,
+      0.9968278218436969,
+      0.9960991290923802,
+      0.9960458724404417
+    ],
+    "w_qp": [
+      0.4908420748937486,
+      0.5091579251062514
+    ]
+  },
+  "top20_overlap_with_lock": 19,
+  "top20_jaccard_with_lock": 0.9047619047619048,
+  "training": {
+    "c_index": 0.6941089729410898,
+    "km_p": 1.195484084965799e-12,
+    "auc_1y": 0.730249962580452,
+    "f1": 0.4074074074074074,
+    "precision": 0.27615062761506276,
+    "recall": 0.7764705882352941
+  },
+  "external": {
+    "GSE65858": {
+      "c_index": 0.5337945389984082,
+      "km_p": 0.11180910732169985,
+      "auc_1y": 0.5890313390313391,
+      "f1": 0.2807017543859649,
+      "precision": 0.17777777777777778,
+      "recall": 0.6666666666666666,
+      "n_matched": 20
+    }
+  },
+  "elapsed_minutes": 39.57318492333094
+}

@@ -7,9 +7,9 @@ audited without conflating reruns, locked outputs, and independent validation.
 ## 1. Locked manuscript outputs
 
 `results/submission_lock/` and `results/source_tables/` contain the numerical
-outputs used by the manuscript. Historical filenames containing `JBI` are
-immutable provenance identifiers from the first computational lock. They do
-not identify the current target journal.
+outputs used by the CMPB manuscript. Filenames and internal references follow
+one CMPB naming scheme. The naming migration did not change any numeric table,
+model output, cohort definition, or locked hyperparameter.
 
 ## 2. Mechanism and sensitivity audits
 
@@ -74,8 +74,8 @@ same-cancer frozen-signature replication.
 At the manuscript's 300-tree stage-1 budget, representative seed 42 remained
 reject-all. Boundary seed 71 admitted methylation and CNA and had a held-out
 MKG-minus-zero difference of -0.0169. This computation-budget sensitivity is
-reported as a finite-sample harmful admission: positive OOF eligibility is a
-safeguard, not a guarantee.
+reported as a finite-sample harmful admission: a positive development routing
+score is a safeguard, not a guarantee.
 
 Participant-level METABRIC matrices are not redistributed. The public package
 contains preparation hashes, split-level aggregate outputs, and the full
@@ -99,14 +99,41 @@ contrast, is the source for the main stability figure:
 
 ```bash
 python code/cmpb_full_stability_baseline_figure.py \
-  --input results/source_tables/TableS_expanded_stability_baselines_jbi.csv \
+  --input results/source_tables/TableS_expanded_stability_baselines_cmpb.csv \
   --outdir results/full_stability_baseline
 ```
 
-Every one of the six cancer values is displayed. The paired MKG--Uni-Cox
-interval exhaustively enumerates all \(6^6\) empirical cancer-cluster
-bootstrap resamples. The result supports competitive stability, not uniform
-superiority over Uni-Cox.
+Every one of the six cancer values is displayed. The paired MKG--Uni-Cox and
+MKG--cross-validated-Cox-elastic-net intervals exhaustively enumerate all
+\(6^6\) empirical cancer-cluster bootstrap resamples. The result supports
+competitive stability, not uniform superiority over the strongest comparator.
+
+## Final methodological audits
+
+`results/final_audits/` contains the final pre-submission checks. The supplied
+scripts and result records distinguish four questions that should not be
+conflated:
+
+- conditional feature-ranking stability after freezing the complete-cohort
+  MKG route and fusion weights;
+- external discrimination of Cox-Lasso and Cox elastic net after five-fold
+  development-only penalty selection;
+- downstream sensitivity to an order-invariant directional-maximum
+  methylation graph; and
+- sensitivity of the fixed 300-update proximal-gradient feature generator to
+  a converged accelerated proximal-gradient reference.
+
+The 300-update output is an explicit algorithmic lock, not a claim of exact
+objective minimization. The accelerated-reference audits retain the locked
+data splits, graph candidates, stability scores, and evaluation protocol so
+that numerical optimization sensitivity can be inspected separately from
+sampling and routing sensitivity.
+
+The final audits were executed with Python 3.13.5, NumPy 2.3.4, pandas 2.3.3,
+SciPy 1.16.2, scikit-learn 1.8.0, scikit-survival 0.27.0, lifelines 0.30.3,
+Matplotlib 3.10.7, and PyTorch 2.11.0+cu128. `environment.yml` gives the
+portable dependency specification; this version record identifies the tested
+workstation runtime.
 
 ## Data boundary
 

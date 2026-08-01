@@ -1,0 +1,15 @@
+{
+  "release": "MKG-CMPB-reproducibility",
+  "counts": {
+    "tracked_files": 295,
+    "text_files": 274,
+    "json_files": 78,
+    "csv_files": 133,
+    "pdf_files": 8,
+    "png_files": 4,
+    "svg_files": 8
+  },
+  "naming_check": "no legacy journal tokens in tracked paths or text files",
+  "failures": [],
+  "passed": true
+}

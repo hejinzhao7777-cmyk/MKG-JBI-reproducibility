@@ -3,7 +3,7 @@
 
 The six cancer cohorts are the independent display/analysis units.  Because
 n=6 per method, every cohort value is shown directly; no box or violin
-summary is used.  Paired MKG--Uni-Cox intervals use the exact empirical
+summary is used.  Paired MKG contrasts use the exact empirical
 percentile distribution over all 6^6 cancer-cluster bootstrap resamples.
 """
 
@@ -27,7 +27,7 @@ except ImportError:  # pragma: no cover - optional local QA helper
     audit_layout = print_report = render_preview = None
 
 
-METHOD_ORDER = ["MKG", "Uni-Cox", "CGBoost", "Cox-EN", "Cox-Lasso", "RSF"]
+METHOD_ORDER = ["MKG", "Uni-Cox", "CGBoost", "CV-Cox-EN", "CV-Cox-Lasso", "RSF"]
 CANCER_ORDER = ["LUAD", "LIHC", "KIRC", "COAD", "STAD", "HNSC"]
 METRICS = [
     ("normalized_RBO20", "Normalized RBO@20", "(A)"),
@@ -70,23 +70,23 @@ def analyse(df: pd.DataFrame) -> tuple[pd.DataFrame, dict]:
         pivot = df.pivot(index="Cancer", columns="Method", values=metric).reindex(
             CANCER_ORDER
         )
-        diff = (pivot["MKG"] - pivot["Uni-Cox"]).to_numpy(float)
-        lo, hi = exact_cluster_bootstrap_ci(diff)
-        test = wilcoxon(diff, alternative="two-sided", method="exact")
-        paired[metric] = {
-            "label": label,
-            "contrast": "MKG - Uni-Cox",
-            "n_cancers": int(diff.size),
-            "mean_difference": float(diff.mean()),
-            "median_difference": float(np.median(diff)),
-            "exact_cancer_cluster_bootstrap_95pct_ci": [lo, hi],
-            "mkg_higher_cancers": int(np.sum(diff > 0)),
-            "mkg_lower_cancers": int(np.sum(diff < 0)),
-            "wilcoxon_exact_two_sided_p": float(test.pvalue),
-            "per_cancer_differences": {
-                cancer: float(value) for cancer, value in zip(CANCER_ORDER, diff)
-            },
-        }
+        paired[metric] = {"label": label, "comparisons": {}}
+        for comparator in ("Uni-Cox", "CV-Cox-EN"):
+            diff = (pivot["MKG"] - pivot[comparator]).to_numpy(float)
+            lo, hi = exact_cluster_bootstrap_ci(diff)
+            test = wilcoxon(diff, alternative="two-sided", method="exact")
+            paired[metric]["comparisons"][f"MKG - {comparator}"] = {
+                "n_cancers": int(diff.size),
+                "mean_difference": float(diff.mean()),
+                "median_difference": float(np.median(diff)),
+                "exact_cancer_cluster_bootstrap_95pct_ci": [lo, hi],
+                "mkg_higher_cancers": int(np.sum(diff > 0)),
+                "mkg_lower_cancers": int(np.sum(diff < 0)),
+                "wilcoxon_exact_two_sided_p": float(test.pvalue),
+                "per_cancer_differences": {
+                    cancer: float(value) for cancer, value in zip(CANCER_ORDER, diff)
+                },
+            }
         for method in METHOD_ORDER:
             vals = pivot[method].to_numpy(float)
             rows.append(
@@ -171,7 +171,9 @@ def plot(df: pd.DataFrame, outdir: Path) -> None:
         ax.set_xticks(x)
         ax.set_xticklabels(METHOD_ORDER, rotation=24, ha="right")
         ax.set_ylabel(ylabel)
-        ax.set_ylim(0.0, 0.42 if metric == "normalized_RBO20" else 0.36)
+        observed_max = float(pivot.to_numpy().max())
+        minimum_ceiling = 0.50 if metric == "normalized_RBO20" else 0.42
+        ax.set_ylim(0.0, max(minimum_ceiling, observed_max + 0.05))
         ax.set_xlim(-0.55, len(METHOD_ORDER) - 0.45)
         ax.grid(axis="y", color="#D9D9D9", linewidth=0.45, linestyle="--")
         ax.grid(axis="x", visible=False)
@@ -248,7 +250,7 @@ def main() -> int:
 
     summary, paired = analyse(df)
     summary.to_csv(args.outdir / "CMPB_STABILITY_SIX_METHOD_SUMMARY.csv", index=False)
-    (args.outdir / "CMPB_STABILITY_MKG_VS_UNICOX.json").write_text(
+    (args.outdir / "CMPB_STABILITY_PAIRED_CONTRASTS.json").write_text(
         json.dumps(paired, indent=2), encoding="utf-8"
     )
     plot(df, args.outdir)

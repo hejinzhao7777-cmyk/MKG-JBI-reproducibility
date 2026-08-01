@@ -1,7 +1,9 @@
 # Configuration
 
-`MKG_JBI_SUBMISSION_LOCK_manifest.json` is the provenance manifest generated
-for the original locked analysis. The historical filename is retained so its
-hash remains traceable across manuscript versions. It records the six
-cancers, principal external cohorts, hyperparameters, completed pipeline
-steps, output paths, and SHA-256 hashes.
+`MKG_CMPB_SUBMISSION_LOCK_manifest.json` records the six cancers, principal
+external cohorts, locked hyperparameters, completed pipeline steps, portable
+repository-relative output paths, and SHA-256 hashes for the CMPB release.
+Renaming the release did not alter numerical results.
+
+`MKG_CMPB_SUBMISSION_ADDENDUM_manifest.json` records the additional
+confidence-interval, train-only graph, and final submission-format audits.

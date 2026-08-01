@@ -1,7 +1,8 @@
 """
 经典强队列专用 ETL（生存数据不在 series matrix 内）：
   GSE14520 (LIHC) —— 生存在 GEO 补充文件 GSE14520_Extra_Supplement.txt
-  E-MTAB-1980 (KIRC) —— ArrayExpress
+  E-MTAB-1980 (KIRC) —— exploratory ArrayExpress importer; this cohort was
+  not present in the formal processed-data lock and is not manuscript evidence
 用法: python geo_etl_special.py GSE14520
 """
 import os
@@ -77,4 +78,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

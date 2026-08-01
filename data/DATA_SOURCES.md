@@ -9,16 +9,20 @@ Training data were obtained from the public TCGA program through the NCI Genomic
 
 ## Independent external validation cohorts
 
-| Cancer type | Primary validation cohort | Repository |
-| --- | --- | --- |
-| LUAD | GSE31210 | https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE31210 |
-| LIHC | GSE14520 | https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE14520 |
-| KIRC | GSE29609 | https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE29609 |
-| COAD | GSE39582 | https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE39582 |
-| STAD | GSE84437 | https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE84437 |
-| HNSC | GSE65858 | https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE65858 |
+| Cancer type | Cohort | Analysis role | Repository |
+| --- | --- | --- | --- |
+| LUAD | GSE31210 | Larger cancer-level primary cohort | https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE31210 |
+| LUAD | GSE50081 | Additional within-cancer replication | https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE50081 |
+| LIHC | GSE14520 | Larger cancer-level primary cohort | https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE14520 |
+| LIHC | GSE76427 | Additional within-cancer replication | https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76427 |
+| KIRC | GSE29609 | Small platform-mismatch sensitivity | https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE29609 |
+| COAD | GSE39582 | Cancer-level primary cohort | https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE39582 |
+| STAD | GSE84437 | Cancer-level primary cohort | https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE84437 |
+| HNSC | GSE65858 | Cancer-level primary cohort | https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE65858 |
 
-An additional LUAD cohort (GSE50081), LIHC cohort (GSE76427), and KIRC cohort (E-MTAB-1980) were used where described in the analytical code and manuscript.
+When two locked cohorts were available for a cancer, the larger processed
+cohort defined its cancer-level primary value. The smaller cohort is reported
+separately so LUAD and LIHC are not double-weighted in cross-cancer summaries.
 
 ## Independent complete-stack audit
 
