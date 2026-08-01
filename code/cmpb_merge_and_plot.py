@@ -135,15 +135,38 @@ def plot(summary, pivot_c, pivot_r):
             "axes.unicode_minus": False,
         }
     )
-    fig, axes = plt.subplots(
-        2, 2, figsize=(7.48, 5.15), constrained_layout=True
+    # A fixed GridSpec keeps the four outer panel boxes aligned.  Color bars
+    # are drawn as insets so they do not silently shrink only one subplot.
+    fig = plt.figure(figsize=(7.48, 5.65))
+    gs = fig.add_gridspec(
+        2,
+        2,
+        left=0.105,
+        right=0.985,
+        bottom=0.105,
+        top=0.900,
+        wspace=0.38,
+        hspace=0.52,
+    )
+    axes = np.array(
+        [
+            [fig.add_subplot(gs[0, 0]), fig.add_subplot(gs[0, 1])],
+            [fig.add_subplot(gs[1, 0]), fig.add_subplot(gs[1, 1])],
+        ]
     )
 
     scenarios = list(synthetic["scenario"].drop_duplicates())
     matrix = synthetic.pivot(
         index="scheme", columns="scenario", values="mean_test_gain"
     ).loc[A.SCHEMES, scenarios]
-    im = axes[0, 0].imshow(matrix.values, cmap="RdBu_r", vmin=-0.25, vmax=0.25)
+    im = axes[0, 0].imshow(
+        matrix.values,
+        cmap="RdBu_r",
+        vmin=-0.25,
+        vmax=0.25,
+        aspect="auto",
+        interpolation="nearest",
+    )
     axes[0, 0].set_xticks(range(len(scenarios)))
     axes[0, 0].set_xticklabels(["R1", "R2", "R3", "R4", "R5"])
     axes[0, 0].set_yticks(range(len(A.SCHEMES)))
@@ -161,8 +184,12 @@ def plot(summary, pivot_c, pivot_r):
                 color="white" if abs(value) > 0.14 else "black",
             )
     axes[0, 0].set_title("Independent-test gain in controlled scenarios", loc="left")
-    cbar = fig.colorbar(im, ax=axes[0, 0], fraction=0.046, pad=0.03)
-    cbar.set_label("Negative-MSE gain vs no graph", fontsize=6.5)
+    cax_a = axes[0, 0].inset_axes([0.54, 1.105, 0.46, 0.040])
+    cbar = fig.colorbar(im, cax=cax_a, orientation="horizontal")
+    cbar.set_ticks([-0.2, 0.0, 0.2])
+    cbar.ax.tick_params(labelsize=5.5, length=2, pad=1)
+    cbar.ax.xaxis.set_label_position("top")
+    cbar.set_label("Negative-MSE gain vs no graph", fontsize=5.7, labelpad=1)
 
     x = np.arange(len(A.SCHEMES))
     rbo_means = [summary["normalized_rbo"][s]["mean"] for s in A.SCHEMES]
@@ -239,41 +266,61 @@ def plot(summary, pivot_c, pivot_r):
 
     utility = cancer_rows[cancer_rows["Scheme"] == "utility_only"].set_index("Cancer")
     joint = cancer_rows[cancer_rows["Scheme"] == "joint"].set_index("Cancer")
-    distances = []
-    for cancer in A.CANCERS:
-        columns = ["w_no_relation", "w_coexpr", "w_meth", "w_cnv"]
-        distances.append(float(np.abs(utility.loc[cancer, columns] - joint.loc[cancer, columns]).sum()))
-    d_x = np.arange(len(A.CANCERS))
-    axes[1, 1].vlines(d_x, 0, distances, color="#7A5195", linewidth=1.0)
-    axes[1, 1].scatter(
-        d_x,
-        distances,
-        color="#7A5195",
-        edgecolor="white",
-        linewidth=0.5,
-        s=28,
-        marker="D",
-        zorder=3,
+    columns = ["w_no_relation", "w_coexpr", "w_meth", "w_cnv"]
+    delta = (
+        joint.loc[A.CANCERS, columns].to_numpy(dtype=float)
+        - utility.loc[A.CANCERS, columns].to_numpy(dtype=float)
     )
-    axes[1, 1].set_xticks(np.arange(len(A.CANCERS)))
-    axes[1, 1].set_xticklabels(A.CANCERS)
-    axes[1, 1].set_ylabel("L1 distance between routing weights")
-    axes[1, 1].set_title("Utility-only vs joint routing decisions", loc="left")
-    axes[1, 1].set_ylim(bottom=0)
+    distances = np.abs(delta).sum(axis=1)
+    vmax = max(float(np.abs(delta).max()), 0.01)
+    im_d = axes[1, 1].imshow(
+        delta,
+        cmap="PuOr_r",
+        vmin=-vmax,
+        vmax=vmax,
+        aspect="auto",
+        interpolation="nearest",
+    )
+    axes[1, 1].set_xticks(range(len(columns)))
+    axes[1, 1].set_xticklabels(["No graph", "Coexpr", "Meth", "CNV"])
+    axes[1, 1].set_yticks(range(len(A.CANCERS)))
+    axes[1, 1].set_yticklabels(
+        [f"{c}  (L1 {d:.3f})" for c, d in zip(A.CANCERS, distances)]
+    )
+    for i in range(delta.shape[0]):
+        for j in range(delta.shape[1]):
+            value = delta[i, j]
+            axes[1, 1].text(
+                j,
+                i,
+                f"{value:+.3f}",
+                ha="center",
+                va="center",
+                fontsize=5.8,
+                color="white" if abs(value) > 0.55 * vmax else "black",
+            )
+    axes[1, 1].set_title("Joint minus utility-only routing weights", loc="left")
+    cax_d = axes[1, 1].inset_axes([0.62, 1.105, 0.38, 0.040])
+    cbar_d = fig.colorbar(im_d, cax=cax_d, orientation="horizontal")
+    cbar_d.set_ticks([-vmax, 0.0, vmax])
+    cbar_d.ax.tick_params(labelsize=5.5, length=2, pad=1)
+    cbar_d.ax.xaxis.set_label_position("top")
+    cbar_d.set_label("Weight difference", fontsize=5.7, labelpad=1)
 
     for label, axis in zip(("(A)", "(B)", "(C)", "(D)"), axes.flat):
         axis.text(
-            -0.16,
-            1.03,
+            -0.20,
+            1.20,
             label,
             transform=axis.transAxes,
             fontweight="bold",
             fontsize=8.5,
         )
-    fig.savefig(FIGURE_PATH)
-    fig.savefig(FIGURE_PNG_PATH, dpi=600)
-    fig.savefig(FIGURE_PATH.with_suffix(".svg"))
-    fig.savefig(FIGURE_PATH.with_suffix(".tiff"), dpi=600)
+    save_kwargs = {"bbox_inches": "tight", "pad_inches": 0.04}
+    fig.savefig(FIGURE_PATH, **save_kwargs)
+    fig.savefig(FIGURE_PNG_PATH, dpi=600, **save_kwargs)
+    fig.savefig(FIGURE_PATH.with_suffix(".svg"), **save_kwargs)
+    fig.savefig(FIGURE_PATH.with_suffix(".tiff"), dpi=600, **save_kwargs)
     plt.close(fig)
 
 

@@ -71,12 +71,20 @@ Submission-facing audits:
 - `cmpb_merge_and_plot.py` merges the completed five-arm workers, recomputes
   cancer-bootstrap summaries, and renders the submission figure with every
   cancer displayed directly.
+- `routing_reliability_simulation.py` regenerates the two-panel routing
+  reliability stress-test figure and its aggregate CSV/JSON outputs.
+- `make_figures.py` contains the source-table-based legacy figure builders;
+  call `fig6()` to reproduce the final hyperparameter-sensitivity panel.
+- `make_fig9.py` regenerates the submission-lock ablation and external
+  decision-curve panel. The two figure scripts accept `MKG_RESULTS_DIR` and
+  `MKG_FIGURE_DIR` environment variables for portable input/output paths.
 - `make_cmpb_graphical_abstract.py` regenerates the simplified four-stage
   vector graphical abstract and its PDF, SVG, PNG, and TIFF exports.
 - `cmpb_final_submission_qa.py` checks word limits, citations, referenced
   figures, highlights, stale terminology, and final LaTeX logs.
 
-The sensitivity, repeated-audit, complete-stability, and five-arm scripts
-generate their own source tables or figures. Numerical source tables are
-supplied for historical plots whose original figure-generation scripts
-remain outside the public release.
+The sensitivity, decision-curve, routing-simulation, repeated-audit,
+complete-stability, and five-arm scripts generate their own source tables or
+figures. Numerical source tables are supplied for the remaining historical
+plots whose original figure-generation scripts remain outside the public
+release.

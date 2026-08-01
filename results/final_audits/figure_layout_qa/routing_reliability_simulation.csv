@@ -1,0 +1,17 @@
+scenario,layer,mean_weight,sd_weight,mean_gain,mean_stability,routing_gain_definition
+R1_one_reliable,adversarial,0.01564819585617595,0.03652242098767397,-0.052022840947160025,0.613472579516809,validation ridge negative-MSE gain versus no-relation baseline; no true support used
+R1_one_reliable,neutral,0.006398049218118038,0.016437898211156855,-0.044570199138162694,0.618590693602274,validation ridge negative-MSE gain versus no-relation baseline; no true support used
+R1_one_reliable,no_relation,0.0,0.0,,,validation ridge negative-MSE gain versus no-relation baseline; no true support used
+R1_one_reliable,reliable,0.977953754925706,0.04640542598945479,0.2677605722303059,0.6958672041288569,validation ridge negative-MSE gain versus no-relation baseline; no true support used
+R2_complementary,adversarial,0.013499780085504266,0.03297603870547336,-0.04576929903133843,0.6132057708124442,validation ridge negative-MSE gain versus no-relation baseline; no true support used
+R2_complementary,module_A,0.5591779891773538,0.25277623032901675,0.12364950327838076,0.7513772854336827,validation ridge negative-MSE gain versus no-relation baseline; no true support used
+R2_complementary,module_B,0.4273222307371418,0.2533868686270739,0.10368766070346086,0.6796437373097727,validation ridge negative-MSE gain versus no-relation baseline; no true support used
+R2_complementary,no_relation,0.0,0.0,,,validation ridge negative-MSE gain versus no-relation baseline; no true support used
+R3_adversarial,adversarial,0.01894834183782493,0.04505174589161222,-0.046366984891634086,0.6137471012532691,validation ridge negative-MSE gain versus no-relation baseline; no true support used
+R3_adversarial,neutral,0.05078909465622809,0.18197332104889916,-0.039975289902376136,0.6140560807784816,validation ridge negative-MSE gain versus no-relation baseline; no true support used
+R3_adversarial,no_relation,0.1,0.3,,,validation ridge negative-MSE gain versus no-relation baseline; no true support used
+R3_adversarial,weak_reliable,0.830262563505947,0.3387736927113337,0.08842177497124312,0.7638707975833774,validation ridge negative-MSE gain versus no-relation baseline; no true support used
+R4_all_harmful,harmful_A,0.11808226339500004,0.2929153098746658,-0.062132382760892974,0.6187909107868321,validation ridge negative-MSE gain versus no-relation baseline; no true support used
+R4_all_harmful,harmful_B,0.07913766406964458,0.24312279557793398,-0.06204309139937733,0.6140566984310728,validation ridge negative-MSE gain versus no-relation baseline; no true support used
+R4_all_harmful,harmful_C,0.14278007253535538,0.31261343162365635,-0.04712163797501078,0.6166925326901999,validation ridge negative-MSE gain versus no-relation baseline; no true support used
+R4_all_harmful,no_relation,0.66,0.4737087712930804,,,validation ridge negative-MSE gain versus no-relation baseline; no true support used

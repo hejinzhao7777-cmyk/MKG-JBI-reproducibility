@@ -1,0 +1,146 @@
+[
+  {
+    "scenario": "R1_one_reliable",
+    "layer": "adversarial",
+    "mean_weight": 0.01564819585617595,
+    "sd_weight": 0.03652242098767397,
+    "mean_gain": -0.052022840947160025,
+    "mean_stability": 0.613472579516809,
+    "routing_gain_definition": "validation ridge negative-MSE gain versus no-relation baseline; no true support used"
+  },
+  {
+    "scenario": "R1_one_reliable",
+    "layer": "neutral",
+    "mean_weight": 0.006398049218118038,
+    "sd_weight": 0.016437898211156855,
+    "mean_gain": -0.044570199138162694,
+    "mean_stability": 0.618590693602274,
+    "routing_gain_definition": "validation ridge negative-MSE gain versus no-relation baseline; no true support used"
+  },
+  {
+    "scenario": "R1_one_reliable",
+    "layer": "no_relation",
+    "mean_weight": 0.0,
+    "sd_weight": 0.0,
+    "mean_gain": NaN,
+    "mean_stability": NaN,
+    "routing_gain_definition": "validation ridge negative-MSE gain versus no-relation baseline; no true support used"
+  },
+  {
+    "scenario": "R1_one_reliable",
+    "layer": "reliable",
+    "mean_weight": 0.977953754925706,
+    "sd_weight": 0.04640542598945479,
+    "mean_gain": 0.2677605722303059,
+    "mean_stability": 0.6958672041288569,
+    "routing_gain_definition": "validation ridge negative-MSE gain versus no-relation baseline; no true support used"
+  },
+  {
+    "scenario": "R2_complementary",
+    "layer": "adversarial",
+    "mean_weight": 0.013499780085504266,
+    "sd_weight": 0.03297603870547336,
+    "mean_gain": -0.04576929903133843,
+    "mean_stability": 0.6132057708124442,
+    "routing_gain_definition": "validation ridge negative-MSE gain versus no-relation baseline; no true support used"
+  },
+  {
+    "scenario": "R2_complementary",
+    "layer": "module_A",
+    "mean_weight": 0.5591779891773538,
+    "sd_weight": 0.25277623032901675,
+    "mean_gain": 0.12364950327838076,
+    "mean_stability": 0.7513772854336827,
+    "routing_gain_definition": "validation ridge negative-MSE gain versus no-relation baseline; no true support used"
+  },
+  {
+    "scenario": "R2_complementary",
+    "layer": "module_B",
+    "mean_weight": 0.4273222307371418,
+    "sd_weight": 0.2533868686270739,
+    "mean_gain": 0.10368766070346086,
+    "mean_stability": 0.6796437373097727,
+    "routing_gain_definition": "validation ridge negative-MSE gain versus no-relation baseline; no true support used"
+  },
+  {
+    "scenario": "R2_complementary",
+    "layer": "no_relation",
+    "mean_weight": 0.0,
+    "sd_weight": 0.0,
+    "mean_gain": NaN,
+    "mean_stability": NaN,
+    "routing_gain_definition": "validation ridge negative-MSE gain versus no-relation baseline; no true support used"
+  },
+  {
+    "scenario": "R3_adversarial",
+    "layer": "adversarial",
+    "mean_weight": 0.01894834183782493,
+    "sd_weight": 0.04505174589161222,
+    "mean_gain": -0.046366984891634086,
+    "mean_stability": 0.6137471012532691,
+    "routing_gain_definition": "validation ridge negative-MSE gain versus no-relation baseline; no true support used"
+  },
+  {
+    "scenario": "R3_adversarial",
+    "layer": "neutral",
+    "mean_weight": 0.05078909465622809,
+    "sd_weight": 0.18197332104889916,
+    "mean_gain": -0.039975289902376136,
+    "mean_stability": 0.6140560807784816,
+    "routing_gain_definition": "validation ridge negative-MSE gain versus no-relation baseline; no true support used"
+  },
+  {
+    "scenario": "R3_adversarial",
+    "layer": "no_relation",
+    "mean_weight": 0.1,
+    "sd_weight": 0.3,
+    "mean_gain": NaN,
+    "mean_stability": NaN,
+    "routing_gain_definition": "validation ridge negative-MSE gain versus no-relation baseline; no true support used"
+  },
+  {
+    "scenario": "R3_adversarial",
+    "layer": "weak_reliable",
+    "mean_weight": 0.830262563505947,
+    "sd_weight": 0.3387736927113337,
+    "mean_gain": 0.08842177497124312,
+    "mean_stability": 0.7638707975833774,
+    "routing_gain_definition": "validation ridge negative-MSE gain versus no-relation baseline; no true support used"
+  },
+  {
+    "scenario": "R4_all_harmful",
+    "layer": "harmful_A",
+    "mean_weight": 0.11808226339500004,
+    "sd_weight": 0.2929153098746658,
+    "mean_gain": -0.062132382760892974,
+    "mean_stability": 0.6187909107868321,
+    "routing_gain_definition": "validation ridge negative-MSE gain versus no-relation baseline; no true support used"
+  },
+  {
+    "scenario": "R4_all_harmful",
+    "layer": "harmful_B",
+    "mean_weight": 0.07913766406964458,
+    "sd_weight": 0.24312279557793398,
+    "mean_gain": -0.06204309139937733,
+    "mean_stability": 0.6140566984310728,
+    "routing_gain_definition": "validation ridge negative-MSE gain versus no-relation baseline; no true support used"
+  },
+  {
+    "scenario": "R4_all_harmful",
+    "layer": "harmful_C",
+    "mean_weight": 0.14278007253535538,
+    "sd_weight": 0.31261343162365635,
+    "mean_gain": -0.04712163797501078,
+    "mean_stability": 0.6166925326901999,
+    "routing_gain_definition": "validation ridge negative-MSE gain versus no-relation baseline; no true support used"
+  },
+  {
+    "scenario": "R4_all_harmful",
+    "layer": "no_relation",
+    "mean_weight": 0.66,
+    "sd_weight": 0.4737087712930804,
+    "mean_gain": NaN,
+    "mean_stability": NaN,
+    "routing_gain_definition": "validation ridge negative-MSE gain versus no-relation baseline; no true support used"
+  }
+]

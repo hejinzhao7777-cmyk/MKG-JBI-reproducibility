@@ -25,6 +25,10 @@ not redistributed.
 - `conditional_stability/` and `cv_tuned_cox_stability/`: matched-subsample
   conditional fused-ranking stability results for all six methods.
 - `updated_figure/`: final cross-audit summary tables and Figure 4 source data.
+- `figure_layout_qa/`: source JSON/CSV files and the final vector exports for
+  the routing-reliability, sensitivity, and decision-curve figures after the
+  submission-layout audit. Plot values are unchanged; only layout and visible
+  axis ranges were corrected.
 
 The submission lock remains the primary algorithmic configuration. These
 folders expose sensitivity to cohort inclusion, graph construction, numerical

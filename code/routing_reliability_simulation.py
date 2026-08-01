@@ -1,4 +1,5 @@
 import json
+import os
 from pathlib import Path
 
 import numpy as np
@@ -6,8 +7,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-OUT = Path(__file__).resolve().parent
-FIG = OUT.parent / "07_论文初稿" / "figures"
+OUT = Path(os.environ.get("MKG_ROUTING_SIM_OUT", str(Path(__file__).resolve().parent)))
+FIG = Path(
+    os.environ.get(
+        "MKG_ROUTING_SIM_FIG_DIR", str(OUT.parent / "07_论文初稿" / "figures")
+    )
+)
 FIG.mkdir(parents=True, exist_ok=True)
 
 RNG = np.random.default_rng(42)
@@ -201,7 +206,23 @@ def run():
     df.to_csv(OUT / "routing_reliability_simulation.csv", index=False)
     json.dump(rows, open(OUT / "routing_reliability_simulation.json", "w", encoding="utf-8"), indent=2)
 
-    fig, axes = plt.subplots(1, 2, figsize=(10.5, 4.2), gridspec_kw={"width_ratios": [1.35, 1]})
+    plt.rcParams.update(
+        {
+            "font.family": "Arial",
+            "font.size": 7.5,
+            "axes.labelsize": 7.5,
+            "axes.titlesize": 8.0,
+            "xtick.labelsize": 6.5,
+            "ytick.labelsize": 6.5,
+            "axes.spines.top": False,
+            "axes.spines.right": False,
+            "pdf.fonttype": 42,
+            "svg.fonttype": "none",
+        }
+    )
+    fig, axes = plt.subplots(
+        1, 2, figsize=(7.48, 3.05), gridspec_kw={"width_ratios": [1.25, 1]}
+    )
     piv = df.pivot(index="scenario", columns="layer", values="mean_weight").fillna(0)
     order = ["R1_one_reliable", "R2_complementary", "R3_adversarial", "R4_all_harmful"]
     piv = piv.loc[order]
@@ -220,8 +241,8 @@ def run():
     axes[0].set_xticklabels(["R1\none reliable", "R2\ncomplementary", "R3\nadversarial", "R4\nall harmful"])
     axes[0].set_ylabel("Mean routing weight")
     axes[0].set_ylim(0, 1.05)
-    axes[0].legend(fontsize=7, ncol=5, frameon=False, loc="upper center", bbox_to_anchor=(1.05, -0.28))
-    axes[0].set_title("A. Routing weights")
+    handles, labels = axes[0].get_legend_handles_labels()
+    axes[0].set_title("Routing weights", loc="left")
 
     gain_df = df[df["layer"] != "no_relation"].copy()
     gain_df["scenario_short"] = gain_df["scenario"].map({
@@ -232,15 +253,56 @@ def run():
     axes[1].axhline(0, color="#333333", linewidth=0.8)
     axes[1].bar(x, gain_df["mean_gain"], color=[colors.get(v, "#7570B3") for v in gain_df["layer"]])
     axes[1].set_xticks(x)
-    axes[1].set_xticklabels([f"{a}\n{b}" for a, b in zip(gain_df["scenario_short"], gain_df["layer"])],
-                            rotation=90, fontsize=7)
+    display_layer = {
+        "adversarial": "adversarial",
+        "reliable": "reliable",
+        "module_A": "module A",
+        "module_B": "module B",
+        "weak_reliable": "weak reliable",
+        "neutral": "neutral",
+        "harmful_A": "harmful A",
+        "harmful_B": "harmful B",
+        "harmful_C": "harmful C",
+    }
+    axes[1].set_xticklabels(
+        [
+            f"{a}\n{display_layer.get(b, b)}"
+            for a, b in zip(gain_df["scenario_short"], gain_df["layer"])
+        ],
+        rotation=55,
+        ha="right",
+        fontsize=5.8,
+    )
     axes[1].set_ylabel("Mean validation prediction gain")
-    axes[1].set_title("B. Utility signal")
-    fig.tight_layout(rect=(0, 0.12, 1, 1))
-    fig.savefig(FIG / "FigJBI_routing_reliability_simulation.pdf")
-    fig.savefig(FIG / "FigJBI_routing_reliability_simulation.png", dpi=300)
+    axes[1].set_title("Utility signal", loc="left")
+    for label, ax in zip(("(A)", "(B)"), axes):
+        ax.text(
+            -0.15,
+            1.07,
+            label,
+            transform=ax.transAxes,
+            fontsize=8.5,
+            fontweight="bold",
+        )
+    fig.legend(
+        handles,
+        [x.replace("_", " ") for x in labels],
+        ncol=5,
+        frameon=False,
+        fontsize=6.0,
+        loc="lower center",
+        bbox_to_anchor=(0.5, 0.005),
+        columnspacing=1.0,
+        handlelength=1.6,
+    )
+    fig.subplots_adjust(left=0.09, right=0.985, top=0.90, bottom=0.30, wspace=0.33)
+    stem = FIG / "FigJBI_routing_reliability_simulation"
+    kwargs = {"bbox_inches": "tight", "pad_inches": 0.04}
+    fig.savefig(stem.with_suffix(".pdf"), **kwargs)
+    fig.savefig(stem.with_suffix(".svg"), **kwargs)
+    fig.savefig(stem.with_suffix(".png"), dpi=600, **kwargs)
+    fig.savefig(stem.with_suffix(".tiff"), dpi=600, **kwargs)
 
 
 if __name__ == "__main__":
     run()
-
