@@ -4,7 +4,7 @@
 统一口径（以导师汇报 PDF 为准）：
   - 谱归一化拉普拉斯 (normalize_laplacian)
   - λ₂ = 50.0
-  - 稳定-预测双驱动权重 w_k ∝ S_k·max(Δ_k,0) (Bootstrap B=30, RBO p=0.9)
+  - 稳定-预测双驱动权重 w_k ∝ S_k·max(Δ_k,0) (80% subsampling B=30, RBO p=0.9)
   - QP 加权 γ=10, eCDF rank 融合, TOP_K=20
 对比方法：GR-SAFS_v2(双驱动) / GR-SAFS_v1(共表达) / v2_equal(等权) /
           Cox-Lasso / Cox-EN / Uni-Cox / RSF / DeepSurv
@@ -47,7 +47,7 @@ RSF_TREES = int(os.environ.get("FINAL_RSF_TREES", "100"))
 DEEPSURV_EPOCHS = int(os.environ.get("FINAL_DEEPSURV_EPOCHS", "50"))
 BOOTSTRAP_RATIO, RBO_P = 0.8, 0.9
 EXTERNAL = {"LUAD": ["GSE31210", "GSE50081"],
-            "LIHC": ["GSE76427", "GSE14520"], "KIRC": ["GSE29609", "E-MTAB-1980"],
+            "LIHC": ["GSE14520", "GSE76427"], "KIRC": ["GSE29609"],
             "COAD": ["GSE39582"], "STAD": ["GSE84437"], "HNSC": ["GSE65858"]}
 
 
@@ -74,20 +74,49 @@ def estimate_lipschitz(G, L, l2=LAMBDA2, n_iter=PGD_POWER_ITER):
     return max(Lip * 1.05, 1e-8)
 
 
-def graph_lasso_pgd(G, y, L, l1=LAMBDA1, l2=LAMBDA2, max_iter=PGD_MAX_ITER, tol=1e-5):
+def graph_lasso_pgd(
+    G, y, L, l1=LAMBDA1, l2=LAMBDA2, max_iter=PGD_MAX_ITER, tol=1e-5,
+    return_diagnostics=False,
+):
     n, p = G.shape
     def H(v): return G.T @ (G @ v) / n + l2 * (L @ v)
     Lip = estimate_lipschitz(G, L, l2=l2)
     eta = 1.0 / Lip
     Gty = G.T @ y / n
     beta = np.zeros(p)
+    converged = False
+    rel = np.inf
     for k in range(max_iter):
         bn = soft_threshold(beta - eta * (H(beta) - Gty), eta * l1)
         rel = np.linalg.norm(bn - beta) / max(np.linalg.norm(beta), 1e-10)
         beta = bn
         if rel < tol and k > 10:
+            converged = True
             break
-    return beta
+    if not return_diagnostics:
+        return beta
+    residual = G @ beta - y
+    objective = (
+        0.5 * float(residual @ residual) / n
+        + 0.5 * l2 * float(beta @ (L @ beta))
+        + l1 * float(np.abs(beta).sum())
+    )
+    gradient = H(beta) - Gty
+    prox = soft_threshold(beta - eta * gradient, eta * l1)
+    gradient_mapping = (beta - prox) / eta
+    diagnostics = {
+        "converged": bool(converged),
+        "iterations": int(k + 1),
+        "hit_iteration_cap": bool(not converged),
+        "relative_change": float(rel),
+        "objective": float(objective),
+        "lipschitz_estimate": float(Lip),
+        "step_size": float(eta),
+        "prox_gradient_l2": float(np.linalg.norm(gradient_mapping)),
+        "prox_gradient_linf": float(np.max(np.abs(gradient_mapping))),
+        "nonzero": int(np.sum(np.abs(beta) > 1e-8)),
+    }
+    return beta, diagnostics
 
 
 def normalize_laplacian(L, p):
@@ -132,6 +161,9 @@ def rbo_score(l1, l2, p=RBO_P):
     denom = 1 - p ** k
     if denom <= 0:
         return 0.0
+    # Finite-list RBO is normalized to one for identical rankings.  The depth
+    # index starts at zero in ``agree``, hence the exponent is d rather than
+    # d+1 (the previous expression imposed an unintended constant factor p).
     return (1 - p) * sum((p ** d) * agree[d] for d in range(k)) / denom
 
 
@@ -378,7 +410,7 @@ def run(cancer):
     Lid = Lzero  # compatibility for legacy cleanup line; zero Laplacian is the true no-graph baseline
 
     # 双驱动权重
-    print("  [权重] Bootstrap 稳定性 + Stage2 增益...", flush=True)
+    print("  [权重] 80% subsampling stability + Stage2 routing score...", flush=True)
     s_base = bootstrap_stability(G, y, Lzero)
     stab = {k: bootstrap_stability(G, y, L) for k, L in Ls.items()}
     base_top, _, _, _, _ = stage1_select(G, y, Lzero)
@@ -497,4 +529,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

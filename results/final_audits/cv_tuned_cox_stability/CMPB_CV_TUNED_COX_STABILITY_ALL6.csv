@@ -1,0 +1,13 @@
+Cancer,Method,Selected alpha,n_subsamples,n_pairs,normalized_RBO20,Jaccard,Stability estimand,Sampling
+LUAD,CV-Cox-Lasso,0.0264068564815093,30,435,0.0910626880547613,0.0821448819964542,method ranking conditional on development-CV-selected alpha,30 x 80% without replacement
+LUAD,CV-Cox-EN,0.1358323176772845,30,435,0.2576718679885742,0.2043421541627203,method ranking conditional on development-CV-selected alpha,30 x 80% without replacement
+LIHC,CV-Cox-Lasso,0.0791393084935513,30,435,0.1965197941230793,0.1657025209408716,method ranking conditional on development-CV-selected alpha,30 x 80% without replacement
+LIHC,CV-Cox-EN,0.1582786169871027,30,435,0.1973808098463481,0.1724012225181335,method ranking conditional on development-CV-selected alpha,30 x 80% without replacement
+KIRC,CV-Cox-Lasso,0.0588942160748127,30,435,0.2130891368294008,0.1533030716666128,method ranking conditional on development-CV-selected alpha,30 x 80% without replacement
+KIRC,CV-Cox-EN,0.1177884321496254,30,435,0.2250408824864682,0.1604410009049495,method ranking conditional on development-CV-selected alpha,30 x 80% without replacement
+COAD,CV-Cox-Lasso,0.0090514272655486,30,435,0.2516925812693378,0.0869101035601826,method ranking conditional on development-CV-selected alpha,30 x 80% without replacement
+COAD,CV-Cox-EN,0.0055581024638697,30,435,0.448562136664994,0.3237892959366606,method ranking conditional on development-CV-selected alpha,30 x 80% without replacement
+STAD,CV-Cox-Lasso,0.0553737129154249,30,435,0.1515588396491954,0.1425940996731727,method ranking conditional on development-CV-selected alpha,30 x 80% without replacement
+STAD,CV-Cox-EN,0.1107474258308498,30,435,0.1639322607739364,0.1445322939861015,method ranking conditional on development-CV-selected alpha,30 x 80% without replacement
+HNSC,CV-Cox-Lasso,0.070121196203952,30,435,0.2640558232275971,0.2204990644650517,method ranking conditional on development-CV-selected alpha,30 x 80% without replacement
+HNSC,CV-Cox-EN,0.140242392407904,30,435,0.2781475765322856,0.2287298411450331,method ranking conditional on development-CV-selected alpha,30 x 80% without replacement

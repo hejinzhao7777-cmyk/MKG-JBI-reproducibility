@@ -1,0 +1,4 @@
+Cancer,Old route,FISTA route,Old coexpr/meth/cnv,FISTA coexpr/meth/cnv,Top20 overlap,Top20 Jaccard,GSE39582 C-index,Elapsed minutes,GSE65858 C-index,GSE84437 C-index
+COAD,dual_driven,dual_driven,0.000/0.834/0.166,0.256/0.544/0.199,20,1.0,0.5155660959326634,36.2254708925883,,
+HNSC,dual_driven,dual_driven,0.000/1.000/0.000,0.225/0.775/0.000,19,0.9047619047619048,,39.57318492333094,0.5337945389984082,
+STAD,reject_all_graphs,dual_driven,0.000/0.000/0.000,0.330/0.328/0.341,19,0.9047619047619048,,36.34762142499288,,0.5497070541363956

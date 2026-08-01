@@ -1,0 +1,9 @@
+{
+  "fits": 30,
+  "submission_lock_converged": 0,
+  "submission_lock_hit_cap": 30,
+  "minimum_estimated_to_exact_lipschitz_ratio": 0.9918294071748873,
+  "minimum_top20_overlap": 10,
+  "median_top20_overlap": 19.0,
+  "maximum_current_minus_robust_objective": 0.00617662629768867
+}

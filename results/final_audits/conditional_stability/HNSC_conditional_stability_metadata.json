@@ -1,0 +1,20 @@
+{
+  "cancer": "HNSC",
+  "n": 513,
+  "p": 8254,
+  "repeats": 30,
+  "fraction": 0.8,
+  "seed": 42,
+  "route_weights": {
+    "coexpr": 0.0,
+    "meth": 1.0,
+    "cnv": 0.0
+  },
+  "qp_weights": [
+    0.49035587114979695,
+    0.509644128850203
+  ],
+  "qp_source": "deterministically recomputed from full development cohort",
+  "elapsed_min": 97.01452788114548,
+  "interpretation": "MKG refits both graph-Lasso and random-forest ranking engines while keeping the development-lock route and QP fusion weights fixed. Route variability is quantified by the separate full-configuration repeated-routing audit."
+}

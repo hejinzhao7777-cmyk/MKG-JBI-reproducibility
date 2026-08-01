@@ -4,9 +4,9 @@ CMPB five-arm routing ablation for the locked MKG analysis.
 The experiment isolates the two routing signals under one protocol:
   1. no_graph: zero Laplacian;
   2. equal: equal weights over all available graph layers;
-  3. stability_only: weights proportional to bootstrap stability;
-  4. utility_only: weights proportional to positive OOF C-index gain;
-  5. joint: weights proportional to stability * positive OOF gain.
+  3. stability_only: weights proportional to repeated-subsample stability;
+  4. utility_only: weights proportional to a positive development routing score;
+  5. joint: weights proportional to stability times that positive routing score.
 
 All signatures are selected from the TCGA cohort. External cohorts are used
 only after the genes, directions, and scores have been frozen. Results are

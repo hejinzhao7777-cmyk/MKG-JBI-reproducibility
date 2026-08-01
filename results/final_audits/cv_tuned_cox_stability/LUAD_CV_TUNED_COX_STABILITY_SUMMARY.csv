@@ -1,0 +1,3 @@
+Cancer,Method,Selected alpha,n_subsamples,n_pairs,normalized_RBO20,Jaccard,Stability estimand,Sampling
+LUAD,CV-Cox-Lasso,0.026406856481509398,30,435,0.09106268805476138,0.08214488199645427,method ranking conditional on development-CV-selected alpha,30 x 80% without replacement
+LUAD,CV-Cox-EN,0.13583231767728454,30,435,0.2576718679885742,0.20434215416272034,method ranking conditional on development-CV-selected alpha,30 x 80% without replacement

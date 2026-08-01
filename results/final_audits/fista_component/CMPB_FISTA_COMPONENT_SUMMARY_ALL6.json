@@ -1,0 +1,8 @@
+﻿{
+    "fits":  12,
+    "converged":  12,
+    "minimum_top20_overlap":  7,
+    "median_top20_overlap":  15,
+    "maximum_objective_gap":  0.0064119776010921337,
+    "maximum_FISTA_prox_gradient_Linf":  9.8276270230920573E-07
+}

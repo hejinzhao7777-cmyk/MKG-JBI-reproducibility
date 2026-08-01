@@ -40,14 +40,41 @@ Submission-facing audits:
   reconstructed contrasts at three gate margins.
 - `assemble_repeated_train_only_graph_audit.py` combines completed
   cancer-by-split audits and computes cancer-clustered intervals.
+- `cmpb_conditional_fused_stability.py` refits both MKG ranking engines and
+  five comparators on the same 30 independent 80% subsamples while freezing
+  only the complete-cohort MKG route and fusion weights.
+- `cmpb_cv_tuned_cox_baselines.py` selects Cox-Lasso and Cox elastic-net
+  penalties by five-fold development-only cross-validation before external
+  transfer; `cmpb_tuned_cox_patient_bootstrap.py` adds patient-bootstrap
+  uncertainty for their frozen external scores.
+- `cmpb_additional_external_cohorts.py` reports the smaller within-cancer
+  cohorts already present in the external lock, without double-weighting
+  those cancers in primary summaries.
+- `cmpb_build_final_external_source_table.py` combines the locked-score,
+  cross-validated sparse-Cox, and additional-cohort patient-bootstrap outputs
+  into the final eight-cohort comparison table.
+- `cmpb_directional_methylation_graph_audit.py` rebuilds all six methylation
+  graphs using both ordered directions; `cmpb_directional_methylation_routing_audit.py`
+  reruns the formal route with only that layer changed.
+- `cmpb_pgd_convergence_audit.py`, `cmpb_fista_component_audit.py`, and
+  `cmpb_fista_routing_sensitivity.py` compare the 300-update lock with a
+  high-accuracy accelerated proximal-gradient reference.
+- `cmpb_finalize_all6_sensitivity_audits.py` merges split-worker FISTA and
+  directional-graph reruns and adds matched primary-score contrasts.
 - `cmpb_full_stability_baseline_figure.py` regenerates the complete
   six-method cancer-level stability comparison and its exact paired
-  MKG--Uni-Cox cancer-cluster bootstrap intervals.
+  cancer-cluster bootstrap intervals against Uni-Cox and cross-validated
+  Cox elastic net.
+- `cmpb_combine_stability_results.py` joins the conditional MKG/comparator
+  stability output with the development-CV-tuned sparse-Cox stability output
+  before the final figure is rendered.
 - `cmpb_merge_and_plot.py` merges the completed five-arm workers, recomputes
   cancer-bootstrap summaries, and renders the submission figure with every
   cancer displayed directly.
 - `make_cmpb_graphical_abstract.py` regenerates the simplified four-stage
   vector graphical abstract and its PDF, SVG, PNG, and TIFF exports.
+- `cmpb_final_submission_qa.py` checks word limits, citations, referenced
+  figures, highlights, stale terminology, and final LaTeX logs.
 
 The sensitivity, repeated-audit, complete-stability, and five-arm scripts
 generate their own source tables or figures. Numerical source tables are

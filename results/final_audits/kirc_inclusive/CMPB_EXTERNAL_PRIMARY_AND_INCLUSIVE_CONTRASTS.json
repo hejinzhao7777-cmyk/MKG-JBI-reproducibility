@@ -1,0 +1,39 @@
+[
+  {
+    "analysis": "five-cohort primary summary",
+    "cancers": [
+      "LUAD",
+      "LIHC",
+      "COAD",
+      "STAD",
+      "HNSC"
+    ],
+    "contrast": "MKG minus Uni-Cox",
+    "mean_difference": 0.006832629707963123,
+    "exact_cohort_bootstrap_95pct_ci": [
+      -0.010551675334446165,
+      0.0285129952377964
+    ],
+    "MKG_higher_cohorts": 2,
+    "MKG_lower_cohorts": 3
+  },
+  {
+    "analysis": "six-cohort KIRC-inclusive sensitivity",
+    "cancers": [
+      "LUAD",
+      "LIHC",
+      "KIRC",
+      "COAD",
+      "STAD",
+      "HNSC"
+    ],
+    "contrast": "MKG minus Uni-Cox",
+    "mean_difference": -0.009392348806582454,
+    "exact_cohort_bootstrap_95pct_ci": [
+      -0.04705876891094297,
+      0.022272530315731138
+    ],
+    "MKG_higher_cohorts": 2,
+    "MKG_lower_cohorts": 4
+  }
+]
